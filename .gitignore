@@ -13,3 +13,6 @@ results/r11r1/
 results/r11r2/
 results/post-audit-regressions/
 results/r13/product-api-acceptance.json
+results/ci-current-fixture/
+.railway/*snapshot*
+.railway/.cache/
