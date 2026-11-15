@@ -9,6 +9,7 @@ A team declares what a production deployment requires. Admissary turns that cont
 > **Can this exact model ship for this exact workload under this exact policy — and is that authority still valid now?**
 
 **Live app:** https://admissary-production.up.railway.app/  
+**Demo:** https://youtu.be/slHDuLVuyjs  
 **Challenge:** SERV Hackathon 02 · Dolphin Track  
 **CI:** 205/205 passing  
 **Production:** Railway + PostgreSQL · persistence verified across restart
