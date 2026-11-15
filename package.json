@@ -24,10 +24,9 @@
     "r10c5:gate": "node scripts/r10c5-product-api-gate.mjs",
     "r10d:gate": "node scripts/r10d-canonical-cases-gate.mjs",
     "r11:gate": "node scripts/r11-adversarial-acceptance-gate.mjs",
-    "r11r1:gate": "node scripts/r11r1-post-audit-remediation-gate.mjs",
-    "r11r2:gate": "node scripts/r11r2-freeze-closure-gate.mjs",
     "proof:historical": "node scripts/verify-historical-proof.mjs",
-    "r13:gate": "node scripts/r13-final-live-candidate-evidence-gate.mjs"
+    "r13:gate": "node scripts/r13-final-live-candidate-evidence-gate.mjs",
+    "persistence:verify": "node scripts/verify-postgres.mjs"
   },
   "engines": {
     "node": ">=22 <25"
