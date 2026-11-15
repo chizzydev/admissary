@@ -23,7 +23,7 @@ export async function verifyPostgres(connectionString) {
       let assurance = new PostgresStateRepository(pool, 'assurance');
       await product.initialize(emptyProductApplicationState());
       await assurance.initialize(emptyContinuousAssuranceState());
-      const event = id => ({ eventId: id, occurredAt: '2026-11-15T00:00:00Z', actorId: 'persistence-test', type: 'QUALIFICATION_REQUESTED', subjectId: id, detail: 'ACCEPTANCE_FIXTURE persistence only' });
+      const event = id => ({ eventId: id, occurredAt: '2026-11-15T00:00:00.000Z', actorId: 'persistence-test', type: 'QUALIFICATION_REQUESTED', subjectId: id, detail: 'ACCEPTANCE_FIXTURE persistence only' });
       await Promise.all(Array.from({length: 12}, (_, i) => product.transact(s => { s.events.push(event('event-'+i)); })));
       assert.equal((await product.read()).revision, 12);
       await product.transact(() => {});
