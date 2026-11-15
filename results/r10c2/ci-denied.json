@@ -1,0 +1,17 @@
+{
+  "schema": "admissary-historical-manifest-proof/v1",
+  "decision": "INVALID",
+  "valid": false,
+  "authorityScope": "HISTORICAL_PROOF_ONLY",
+  "manifestDigest": "1d51410dbe31e35ffd6e55d4ace6cc4db15ea4939a2b6a76ba345bd72025b881",
+  "contextDigest": "e5cb8bc056462668aaaed6081c28e8818167f478579feff98f60519ba6ded1b9",
+  "reasonCodes": [
+    "CANDIDATE_REVISION_MISMATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CANDIDATE_REVISION_MISMATCH",
+      "detail": "manifest=0123456789abcdef0123456789abcdef01234567; current=changed-after-approval"
+    }
+  ]
+}

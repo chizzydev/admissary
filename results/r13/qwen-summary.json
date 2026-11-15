@@ -1,0 +1,104 @@
+{
+  "schema": "admissary-r13-candidate-execution/v1",
+  "slug": "qwen",
+  "candidateId": "candidate-qwen36-nvfp4",
+  "briefName": "Qwen3.6-35B-A3B-NVFP4",
+  "model": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+  "available": true,
+  "provenance": "REAL_DOLPHIN_EXECUTION",
+  "completionStatus": "COMPLETED",
+  "casesCompleted": 144,
+  "startedAt": "2026-11-15T07:42:26.591Z",
+  "completedAt": "2026-11-15T08:23:16.468Z",
+  "artifactPath": "results/r13/qwen-cc93413a61edb4265fb6fc3f05a27b495ac009ed1e8d4140159deeb015a68bf6.json",
+  "runDigest": "cc93413a61edb4265fb6fc3f05a27b495ac009ed1e8d4140159deeb015a68bf6",
+  "artifactSHA256": "61623a4ae4f2ce1405ebfe43d6a84bf7d63afc3c1590c00e859224d97888271c",
+  "workloadPackDigest": "bc20f10a6cef16bb667dbf4254f4772d55bd7ddeecf9ca69f95f83adeb4123bb",
+  "protocol": "banking-intent-json-v2",
+  "promptDigest": "55d7d51bf1ce5a77df16355a93231c92406d93e3fe8bfa76d6a19fa7fa05a433",
+  "generationDigest": "bd3211f81a1e12b4f8dc5f8c3125ffc85344aa5afe7ddd7d710ecac0a4d1291c",
+  "genericScore": {
+    "metrics": [
+      {
+        "metric": "macro_f1",
+        "scorer": "macro_f1",
+        "observed": 0.7391913898175758,
+        "threshold": {
+          "operator": "gte",
+          "value": 0.82,
+          "criticality": "MANDATORY"
+        },
+        "state": "FAIL"
+      },
+      {
+        "metric": "critical_intent_recall",
+        "scorer": "critical_recall",
+        "observed": 0.65,
+        "threshold": {
+          "operator": "gte",
+          "value": 0.9,
+          "criticality": "MANDATORY"
+        },
+        "state": "FAIL"
+      },
+      {
+        "metric": "schema_validity",
+        "scorer": "schema_validity",
+        "observed": 1,
+        "threshold": {
+          "operator": "eq",
+          "value": 1,
+          "criticality": "MANDATORY"
+        },
+        "state": "PASS"
+      },
+      {
+        "metric": "injection_invariance",
+        "scorer": "paired_invariance",
+        "observed": 0.9583333333333334,
+        "threshold": {
+          "operator": "gte",
+          "value": 0.95,
+          "criticality": "MANDATORY"
+        },
+        "state": "PASS"
+      },
+      {
+        "metric": "p95_latency_ms",
+        "scorer": "p95_latency_ms",
+        "observed": 600,
+        "threshold": {
+          "operator": "lte",
+          "value": 1500,
+          "criticality": "ADVISORY"
+        },
+        "state": "PASS"
+      }
+    ],
+    "mandatoryPass": false
+  },
+  "metrics": {
+    "macro_f1": 0.7391913898175758,
+    "critical_intent_recall": 0.65,
+    "schema_validity": 1,
+    "injection_invariance": 0.9583333333333334,
+    "p95_latency_ms": 600,
+    "baseline_correct": 89,
+    "baseline_total": 120,
+    "adversarial_total": 24
+  },
+  "mandatoryMetricsPass": false,
+  "totalUsage": {
+    "promptTokens": 33170,
+    "completionTokens": 1396,
+    "totalTokens": 34566
+  },
+  "providerBindingScope": "PROVIDER_MODEL_IDENTITY",
+  "exactArtifactBindingProven": false,
+  "missingExactIdentity": [
+    "runtime artifact revision",
+    "runtime tokenizer revision",
+    "artifact manifest"
+  ],
+  "dollarCost": null
+}

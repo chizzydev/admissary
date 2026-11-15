@@ -1,0 +1,35 @@
+{
+  "schema": "qualification-manifest/v1",
+  "candidate": {
+    "repository": "fixture/qualified-model",
+    "revision": "0123456789abcdef0123456789abcdef01234567",
+    "tokenizerRevision": "89abcdef0123456789abcdef0123456789abcdef",
+    "artifactManifestDigest": "sha256:fixture-artifact-manifest"
+  },
+  "contract": {
+    "id": "banking-support-prod",
+    "version": "1.0.0",
+    "digest": "sha256:fixture-contract"
+  },
+  "policyPack": {
+    "version": "1.0.0",
+    "digest": "sha256:fixture-policy"
+  },
+  "evaluation": {
+    "suite": "banking-routing-v1",
+    "digest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2"
+  },
+  "evidenceGraph": {
+    "rootDigest": "sha256:fixture-evidence-root"
+  },
+  "qualification": {
+    "state": "QUALIFIED"
+  },
+  "authorization": {
+    "state": "APPROVED"
+  },
+  "validity": {
+    "state": "CURRENT"
+  },
+  "manifestDigest": "52ff50d5470332cc364ea4dd88e7ac077fec3948ca4b338e74ab9174ab923416"
+}

@@ -1,0 +1,90 @@
+{
+  "apiVersion": "qualification/v1alpha1",
+  "kind": "DeploymentContract",
+  "metadata": {
+    "id": "banking-support-prod",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "purpose": {
+      "workload": "customer-support-intent-routing",
+      "environment": "production",
+      "audience": "customers"
+    },
+    "deployment": {
+      "commercialUse": true,
+      "regions": [
+        "eu",
+        "uk"
+      ],
+      "dataClasses": [
+        "internal",
+        "confidential"
+      ]
+    },
+    "artifact": {
+      "immutableRevision": "required",
+      "allowedWeightFormats": [
+        "safetensors"
+      ],
+      "remoteRepositoryCode": {
+        "mode": "forbidden"
+      },
+      "tokenizerRevision": {
+        "immutable": "required"
+      }
+    },
+    "provenance": {
+      "publisherIdentity": {
+        "required": true
+      },
+      "declaredLineage": {
+        "required": true
+      }
+    },
+    "licensing": {
+      "approvedIdentifiers": [
+        "apache-2.0",
+        "mit",
+        "bsd-3-clause"
+      ],
+      "unlistedLicense": {
+        "action": "review"
+      }
+    },
+    "workloadAcceptance": {
+      "suite": "banking-routing-v1",
+      "requirements": [
+        {
+          "metric": "macro_f1",
+          "operator": "gte",
+          "value": 0.82
+        },
+        {
+          "metric": "critical_intent_recall",
+          "operator": "gte",
+          "value": 0.9
+        },
+        {
+          "metric": "schema_validity",
+          "operator": "eq",
+          "value": 1
+        },
+        {
+          "metric": "injection_invariance",
+          "operator": "gte",
+          "value": 0.95
+        },
+        {
+          "metric": "p95_latency_ms",
+          "operator": "lte",
+          "value": 1500,
+          "criticality": "ADVISORY"
+        }
+      ]
+    },
+    "authorization": {
+      "humanApproval": "required"
+    }
+  }
+}

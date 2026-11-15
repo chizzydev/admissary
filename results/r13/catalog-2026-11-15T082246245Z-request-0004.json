@@ -1,0 +1,15 @@
+{
+  "schema": "admissary-r13-provider-request/v1",
+  "kind": "CATALOG",
+  "ordinal": 4,
+  "model": null,
+  "caseId": null,
+  "startedAt": "2026-11-15T08:22:50.384Z",
+  "method": "GET",
+  "url": "https://lighthouse.dphn.ai/run/text-v/v1/models",
+  "body": null,
+  "status": "RESPONSE_RECEIVED",
+  "receivedAt": "2026-11-15T08:22:52.865Z",
+  "httpStatus": 200,
+  "responseBody": "{\"object\":\"list\",\"data\":[{\"id\":\"deepseek-ai/DeepSeek-V4.1-Flash\",\"object\":\"model\",\"created\":0,\"owned_by\":\"dolphinpod\",\"context_length\":1048576},{\"id\":\"nvidia/Gemma-4-26B-A4B-NVFP4\",\"object\":\"model\",\"created\":0,\"owned_by\":\"dolphinpod\",\"context_length\":262144},{\"id\":\"nvidia/Qwen3.6-35B-A3B-NVFP4\",\"object\":\"model\",\"created\":0,\"owned_by\":\"dolphinpod\",\"context_length\":32768}]}\n"
+}

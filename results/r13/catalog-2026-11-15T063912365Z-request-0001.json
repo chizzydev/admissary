@@ -1,0 +1,14 @@
+{
+  "schema": "admissary-r13-provider-request/v1",
+  "kind": "CATALOG",
+  "ordinal": 1,
+  "model": null,
+  "caseId": null,
+  "startedAt": "2026-11-15T06:39:29.079Z",
+  "method": "GET",
+  "url": "https://lighthouse.dphn.ai/run/text-v/v1/models",
+  "body": null,
+  "status": "TRANSPORT_ERROR",
+  "completedAt": "2026-11-15T06:39:29.239Z",
+  "error": "fetch failed"
+}

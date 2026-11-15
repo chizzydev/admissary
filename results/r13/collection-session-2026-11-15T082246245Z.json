@@ -1,0 +1,15 @@
+{
+  "schema": "admissary-r13-collection-session/v1",
+  "startedAt": "2026-11-15T08:22:52.888Z",
+  "qwenFirst": true,
+  "targetOrder": [
+    "nvidia/Qwen3.6-35B-A3B-NVFP4"
+  ],
+  "initialCases": {
+    "qwen": 99
+  },
+  "completedAt": "2026-11-15T08:23:16.500Z",
+  "paidRequestAttempts": 45,
+  "catalogRequestAttempts": 4,
+  "creditExhausted": false
+}

@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+.env.*
+*.log
+artifacts/
+.admissary-backups/
+
+# Generated local acceptance outputs (frozen tracked evidence stays versioned).
+results/ADMISSARY_R11*.json
+results/ADMISSARY_R13_FINAL*.json
+results/r11r1/
+results/r11r2/
+results/post-audit-regressions/
+results/r13/product-api-acceptance.json

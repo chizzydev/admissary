@@ -1,0 +1,228 @@
+{
+  "schema": "admissary-canonical-case-portfolio/v1",
+  "primitiveClaim": "COMPOSITION_VOCABULARY_ONLY",
+  "generatedAt": "2026-11-15T08:44:53.842Z",
+  "sharedPrimitives": [
+    "registry",
+    "deployment-contract",
+    "evidence-graph",
+    "SERV-semantic-evidence",
+    "empirical-evaluation",
+    "deterministic-qualification",
+    "approval",
+    "signed-attestation",
+    "admission-verifier",
+    "watcher-staleness",
+    "history"
+  ],
+  "cases": [
+    {
+      "id": "CASE_A",
+      "title": "Strong model, unsafe deployment",
+      "claimScope": "REAL",
+      "headline": "Strong aggregate quality still fails the workload that matters.",
+      "judgeTakeaway": "Aggregate quality is not deployment fitness.",
+      "outcome": "DEPLOY_DENIED",
+      "primitives": [
+        "registry",
+        "deployment-contract",
+        "evidence-graph",
+        "SERV-semantic-evidence",
+        "empirical-evaluation",
+        "deterministic-qualification",
+        "approval",
+        "signed-attestation",
+        "admission-verifier",
+        "watcher-staleness",
+        "history"
+      ],
+      "evidenceRefs": [
+        "R5:real-dolphin-144-case-run",
+        "R6:deterministic-qualification",
+        "R7:real-deployment-denial"
+      ],
+      "steps": [
+        "Team proposes a respected open model.",
+        "Dolphin runs the frozen 144-case banking workload.",
+        "Macro F1 and injection invariance look strong.",
+        "Mandatory critical-intent recall fails.",
+        "Mandatory schema validity fails.",
+        "Deterministic qualification refuses deployment."
+      ],
+      "facts": {
+        "model": "deepseek-ai/DeepSeek-V4.1-Flash",
+        "macroF1": 0.8914080795390529,
+        "criticalIntentRecall": 0.825,
+        "schemaValidity": 0.9930555555555556,
+        "injectionInvariance": 0.9583333333333334,
+        "empiricalFitness": "UNFIT",
+        "overallQualification": "REVIEW_REQUIRED",
+        "deployAllowed": false
+      }
+    },
+    {
+      "id": "CASE_B",
+      "title": "Approved yesterday, stale today",
+      "claimScope": "ACCEPTANCE_FIXTURE_WITH_REAL_WATCHER",
+      "headline": "Approval belongs to exact proof, not a model name.",
+      "judgeTakeaway": "Approval belongs to an exact deployment proof, not to a model name forever.",
+      "outcome": "ALLOW_TO_DENY_ON_DRIFT",
+      "primitives": [
+        "registry",
+        "deployment-contract",
+        "evidence-graph",
+        "SERV-semantic-evidence",
+        "empirical-evaluation",
+        "deterministic-qualification",
+        "approval",
+        "signed-attestation",
+        "admission-verifier",
+        "watcher-staleness",
+        "history"
+      ],
+      "evidenceRefs": [
+        "R10C3:continuous-assurance",
+        "R10C3:real-hugging-face-watcher",
+        "R10C2:signed-attestation-and-admission"
+      ],
+      "steps": [
+        "Exact candidate qualifies and receives scoped human approval.",
+        "A signed qualification attestation is accepted.",
+        "Deployment admission returns ALLOW.",
+        "A protected identity input changes.",
+        "Watcher marks only affected proof branches stale.",
+        "Historical approval remains in history but no longer authorizes the changed deployment.",
+        "Admission returns DENY and reassessment is requested."
+      ],
+      "facts": {
+        "initialAllowed": true,
+        "driftAllowed": false,
+        "historicalApprovalPreserved": true,
+        "invalidatedNodes": [
+          "control:license-policy",
+          "control:workload",
+          "decision:qualification",
+          "evaluation:workload",
+          "evidence:artifact",
+          "source:artifact"
+        ],
+        "reassessmentRequested": true,
+        "requalificationInheritedApproval": false,
+        "realWatcherRepository": "Qwen/Qwen3-0.6B",
+        "realWatcherOutcome": "UNCHANGED"
+      }
+    },
+    {
+      "id": "CASE_C",
+      "title": "Choose the best admissible replacement",
+      "claimScope": "MIXED_REAL_FAILURES_FIXTURE_QUALIFIED",
+      "headline": "Qualification gates the leaderboard.",
+      "judgeTakeaway": "Admissary turns model selection into an admissible decision, not a leaderboard.",
+      "outcome": "QUALIFICATION_FIRST_SELECTION",
+      "primitives": [
+        "registry",
+        "deployment-contract",
+        "evidence-graph",
+        "SERV-semantic-evidence",
+        "empirical-evaluation",
+        "deterministic-qualification",
+        "approval",
+        "signed-attestation",
+        "admission-verifier",
+        "watcher-staleness",
+        "history"
+      ],
+      "evidenceRefs": [
+        "R2:real-remote-code-disqualification",
+        "R5:real-deepseek-unfit",
+        "R10C4:qualification-first-selection"
+      ],
+      "steps": [
+        "The same deployment contract is applied to every candidate.",
+        "Deterministic failures are excluded before optimization.",
+        "Empirically unfit or incomplete candidates are excluded before optimization.",
+        "Only qualified, exact-bound candidates may enter cost/latency/resource comparison.",
+        "The selected candidate retains explicit evidence provenance."
+      ],
+      "facts": {
+        "selectedCandidateId": "fixture-qualified-efficient",
+        "realCandidateStates": [
+          "real-remote-code-disqualified: DISQUALIFIED; exact binding PROVEN",
+          "real-deepseek-v41-flash: REVIEW_REQUIRED; exact binding UNPROVEN",
+          "candidate-gemma4-nvfp4: REVIEW_REQUIRED; exact binding UNPROVEN",
+          "candidate-qwen36-nvfp4: REVIEW_REQUIRED; exact binding UNPROVEN"
+        ],
+        "realSelectionStatus": "NO_REAL_ADMISSIBLE_SELECTION",
+        "selectedClaimScope": "FIXTURE_ONLY",
+        "excludedCandidateIds": [
+          "candidate-gemma4-nvfp4",
+          "candidate-qwen36-nvfp4",
+          "real-deepseek-v41-flash",
+          "real-remote-code-disqualified"
+        ],
+        "realQualifiedCandidateExists": false,
+        "fakeWinner": false
+      }
+    },
+    {
+      "id": "CASE_D",
+      "title": "Audit, incident and safe rollback",
+      "claimScope": "ACCEPTANCE_FIXTURE",
+      "headline": "Operational memory survives the incident.",
+      "judgeTakeaway": "Admissary is operational memory and control, not only pre-deployment testing.",
+      "outcome": "INCIDENT_DENY_WITH_SAFE_ROLLBACK",
+      "primitives": [
+        "registry",
+        "deployment-contract",
+        "evidence-graph",
+        "SERV-semantic-evidence",
+        "empirical-evaluation",
+        "deterministic-qualification",
+        "approval",
+        "signed-attestation",
+        "admission-verifier",
+        "watcher-staleness",
+        "history"
+      ],
+      "evidenceRefs": [
+        "R10D:deployment-audit-api",
+        "R10D:safe-rollback-filter",
+        "R10C5:durable-product-history"
+      ],
+      "steps": [
+        "Security asks which exact model was running and who approved it.",
+        "Audit returns exact candidate, contract, policy, evaluation and evidence-root identity.",
+        "Signed attestation and approval remain visible in history.",
+        "Incident revocation makes the current deployment non-admissible.",
+        "Rollback query searches only qualified, exact-bound, approved, current and attested deployments in the same workload/environment.",
+        "The last safe deployment is returned as rollback target."
+      ],
+      "facts": {
+        "incidentDeploymentId": "deployment-r10d-current",
+        "incidentAllowed": false,
+        "historicalAttestationCryptographicallyValid": true,
+        "currentAuthorityAllowed": false,
+        "approvalId": "approval-3092cab5432082ff9613cd6a",
+        "attestationDigest": "5f11f815d741fbb813ffefbac5fb12e61a0370fb60b29f21ce0bd783701f14ed",
+        "timelineEvents": 8,
+        "rollbackTargetId": "deployment-r10d-baseline",
+        "rollbackTargetCount": 1,
+        "auditDigest": "04034ff0ad60f92c92fc6c18d1d6b73a6827e0a761eeb492540b9dcbacdc9c69"
+      }
+    }
+  ],
+  "demoCausalChain": [
+    "Show one frozen production contract and the candidate states.",
+    "Show real DeepSeek: strong macro F1, still UNFIT and denied.",
+    "Show an explicitly labeled qualified exact-bound acceptance deployment and its signed approval.",
+    "Verify deterministic admission ALLOW.",
+    "Trigger one protected identity change.",
+    "Show watcher invalidation and stale proof.",
+    "Verify admission flips to DENY.",
+    "Show historical approval/attestation still present in audit history.",
+    "Show the minimal requalification or safe rollback path."
+  ],
+  "realQualifiedCandidateExists": false,
+  "selectedQualifiedCandidateClaimScope": "FIXTURE_ONLY",
+  "portfolioDigest": "a21788118548dc25cc1d24816f37edb829310dbcd04a5f7e51a664ed3067b215"
+}

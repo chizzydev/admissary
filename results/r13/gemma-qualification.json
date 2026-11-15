@@ -1,0 +1,176 @@
+{
+  "schema": "admissary-r13-real-qualification/v1",
+  "candidateId": "candidate-gemma4-nvfp4",
+  "model": "nvidia/Gemma-4-26B-A4B-NVFP4",
+  "provenance": "REAL_DOLPHIN_EXECUTION",
+  "completionStatus": "COMPLETED",
+  "casesCompleted": 144,
+  "empiricalFitness": "UNFIT",
+  "fullQualification": "REVIEW_REQUIRED",
+  "decision": {
+    "state": "REVIEW_REQUIRED",
+    "decisiveObligations": [
+      "LIC_DEPLOYMENT_COMPATIBILITY",
+      "PROV_LINEAGE"
+    ],
+    "coverage": {
+      "expectedObligations": [
+        "ART_REMOTE_CODE",
+        "ART_REVISION_IMMUTABLE",
+        "ART_TOKENIZER_IMMUTABLE",
+        "ART_WEIGHT_FORMAT",
+        "EVAL_CRITICAL_INTENT_RECALL",
+        "EVAL_INJECTION_INVARIANCE",
+        "EVAL_MACRO_F1",
+        "EVAL_P95_LATENCY_MS",
+        "EVAL_SCHEMA_VALIDITY",
+        "LIC_DECLARED",
+        "LIC_DEPLOYMENT_COMPATIBILITY",
+        "PROV_LINEAGE",
+        "PROV_PUBLISHER"
+      ],
+      "suppliedObligations": [
+        "EVAL_CRITICAL_INTENT_RECALL",
+        "EVAL_INJECTION_INVARIANCE",
+        "EVAL_MACRO_F1",
+        "EVAL_P95_LATENCY_MS",
+        "EVAL_SCHEMA_VALIDITY"
+      ],
+      "missingObligations": [
+        "ART_REMOTE_CODE",
+        "ART_REVISION_IMMUTABLE",
+        "ART_TOKENIZER_IMMUTABLE",
+        "ART_WEIGHT_FORMAT",
+        "LIC_DECLARED",
+        "LIC_DEPLOYMENT_COMPATIBILITY",
+        "PROV_LINEAGE",
+        "PROV_PUBLISHER"
+      ],
+      "synthesizedUnknownObligations": [
+        "ART_REMOTE_CODE",
+        "ART_REVISION_IMMUTABLE",
+        "ART_TOKENIZER_IMMUTABLE",
+        "ART_WEIGHT_FORMAT",
+        "LIC_DECLARED",
+        "LIC_DEPLOYMENT_COMPATIBILITY",
+        "PROV_LINEAGE",
+        "PROV_PUBLISHER"
+      ]
+    },
+    "obligationResults": [
+      {
+        "obligationId": "ART_REMOTE_CODE",
+        "kind": "DETERMINISTIC",
+        "criticality": "MANDATORY",
+        "state": "UNKNOWN",
+        "detail": "No current evidence result supplied"
+      },
+      {
+        "obligationId": "ART_REVISION_IMMUTABLE",
+        "kind": "DETERMINISTIC",
+        "criticality": "MANDATORY",
+        "state": "UNKNOWN",
+        "detail": "No current evidence result supplied"
+      },
+      {
+        "obligationId": "ART_TOKENIZER_IMMUTABLE",
+        "kind": "DETERMINISTIC",
+        "criticality": "MANDATORY",
+        "state": "UNKNOWN",
+        "detail": "No current evidence result supplied"
+      },
+      {
+        "obligationId": "ART_WEIGHT_FORMAT",
+        "kind": "DETERMINISTIC",
+        "criticality": "MANDATORY",
+        "state": "UNKNOWN",
+        "detail": "No current evidence result supplied"
+      },
+      {
+        "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+        "kind": "EMPIRICAL",
+        "criticality": "MANDATORY",
+        "state": "FAIL",
+        "detail": "critical_intent_recall observed=0.775 gte 0.9"
+      },
+      {
+        "obligationId": "EVAL_INJECTION_INVARIANCE",
+        "kind": "EMPIRICAL",
+        "criticality": "MANDATORY",
+        "state": "FAIL",
+        "detail": "injection_invariance observed=0.9166666666666666 gte 0.95"
+      },
+      {
+        "obligationId": "EVAL_MACRO_F1",
+        "kind": "EMPIRICAL",
+        "criticality": "MANDATORY",
+        "state": "PASS",
+        "detail": "macro_f1 observed=0.8414803026375918 gte 0.82"
+      },
+      {
+        "obligationId": "EVAL_P95_LATENCY_MS",
+        "kind": "EMPIRICAL",
+        "criticality": "ADVISORY",
+        "state": "FAIL",
+        "detail": "p95_latency_ms observed=39992 lte 1500"
+      },
+      {
+        "obligationId": "EVAL_SCHEMA_VALIDITY",
+        "kind": "EMPIRICAL",
+        "criticality": "MANDATORY",
+        "state": "PASS",
+        "detail": "schema_validity observed=1 eq 1"
+      },
+      {
+        "obligationId": "LIC_DECLARED",
+        "kind": "DETERMINISTIC",
+        "criticality": "MANDATORY",
+        "state": "UNKNOWN",
+        "detail": "No current evidence result supplied"
+      },
+      {
+        "obligationId": "LIC_DEPLOYMENT_COMPATIBILITY",
+        "kind": "SEMANTIC",
+        "criticality": "MANDATORY",
+        "state": "UNKNOWN",
+        "detail": "No current evidence result supplied"
+      },
+      {
+        "obligationId": "PROV_LINEAGE",
+        "kind": "SEMANTIC",
+        "criticality": "MANDATORY",
+        "state": "UNKNOWN",
+        "detail": "No current evidence result supplied"
+      },
+      {
+        "obligationId": "PROV_PUBLISHER",
+        "kind": "DETERMINISTIC",
+        "criticality": "MANDATORY",
+        "state": "UNKNOWN",
+        "detail": "No current evidence result supplied"
+      }
+    ]
+  },
+  "providerBindingScope": "PROVIDER_MODEL_IDENTITY",
+  "exactArtifactBindingProven": false,
+  "deploymentAllowed": false,
+  "sourceArtifact": "results/r13/gemma-2c54c415705d247f8e847bb278127aa81b0283572e383e2844cabda5979a29ee.json",
+  "sourceRunDigest": "2c54c415705d247f8e847bb278127aa81b0283572e383e2844cabda5979a29ee",
+  "sourceExecutionDigest": null,
+  "blockers": [
+    "LIC_DEPLOYMENT_COMPATIBILITY",
+    "PROV_LINEAGE",
+    "EXACT_ARTIFACT_BINDING_UNPROVEN"
+  ],
+  "unresolvedCandidateSpecificEvidence": [
+    "license and permitted use",
+    "remote repository code",
+    "semantic controls",
+    "runtime artifact revision",
+    "runtime tokenizer revision",
+    "artifact manifest"
+  ],
+  "servCalls": 0,
+  "servOmissionReason": "No truthful exact repository/runtime mapping or candidate-specific persisted semantic evidence; SERV interpretation cannot establish missing identity.",
+  "proofDigest": "38a7bea5ab42bb3b4d673f0b398c57d90990538fba21f854f82129ea531f3d0b"
+}

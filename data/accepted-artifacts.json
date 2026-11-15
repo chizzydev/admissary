@@ -1,0 +1,55 @@
+{
+  "schema": "admissary-accepted-historical-artifacts/v1",
+  "artifacts": {
+    "ADMISSARY_R2_HF_EVIDENCE_": {
+      "file": "ADMISSARY_R2_HF_EVIDENCE_2026-11-14T151915699Z.json",
+      "sha256": "a8cff6abd358aaff97d8d6b244122de8f21ddd89bb90f2864fee1b128eb73282",
+      "schema": "admissary-r2-live-evidence/v1"
+    },
+    "ADMISSARY_R3_SERV_EVIDENCE_": {
+      "file": "ADMISSARY_R3_SERV_EVIDENCE_2026-11-14T151922810Z.json",
+      "sha256": "d671809d5b99859ac2b6339d731e9aea1b469872618e76fa68ea141ed647bcd8",
+      "schema": "admissary-r3-live-serv/v1"
+    },
+    "ADMISSARY_R5_DOLPHIN_": {
+      "file": "ADMISSARY_R5_DOLPHIN_2026-11-14T171917513Z.json",
+      "sha256": "733d25b5fee0fb608bc63b9e92ca94952e37e8da08a5f749bcc1ce8a8b39b5ca",
+      "schema": "admissary-dolphin-evaluation/v1"
+    },
+    "ADMISSARY_R6_ORCHESTRATION_": {
+      "file": "ADMISSARY_R6_ORCHESTRATION_2026-11-14T173823521Z.json",
+      "sha256": "e01122ad97a75ef81e8fa187872acc013511dddc28741c3d1eaa8dbce75f6deb",
+      "schema": "admissary-r6-orchestration/v1"
+    },
+    "ADMISSARY_R7_PERSISTENCE_": {
+      "file": "ADMISSARY_R7_PERSISTENCE_2026-11-14T173823945Z.json",
+      "sha256": "e65575e97586d88ea92f4f1c9d29c3352be5bb6b8d5525dfea053dea2def8b88",
+      "schema": "admissary-r7-persistence-proof/v1"
+    },
+    "ADMISSARY_R8_VALID_MANIFEST_": {
+      "file": "ADMISSARY_R8_VALID_MANIFEST_2026-11-14T173824312Z.json",
+      "sha256": "d238d7a4056b9f64eb458c2c056435e3993b1a7b05cac6b275d29ddb96db4378",
+      "schema": "qualification-manifest/v1"
+    },
+    "ADMISSARY_R8_DEPLOYMENT_CONTEXT_": {
+      "file": "ADMISSARY_R8_DEPLOYMENT_CONTEXT_2026-11-14T173824312Z.json",
+      "sha256": "bf25ad84b7b3ab6499f6246745dffec117fa03d340661bdb687e265c708fbed8",
+      "schema": "admissary-deployment-context/v1"
+    },
+    "ADMISSARY_R8_VERIFIER_": {
+      "file": "ADMISSARY_R8_VERIFIER_2026-11-14T173824312Z.json",
+      "sha256": "1d8b04e686f1c680382ab4e149b23e21c32e060e29a6b1a7b6422411e8d0c87d",
+      "schema": "admissary-r8-verifier-proof/v1"
+    },
+    "ADMISSARY_R9_JUDGE_VIEW_": {
+      "file": "ADMISSARY_R9_JUDGE_VIEW_2026-11-14T200003747Z.json",
+      "sha256": "79089c7ff1ec0dcde233fe59565ce3dd678ecaa2452b62a9fe0d7372d6a07bc1",
+      "schema": "admissary-judge-view/v1"
+    },
+    "ADMISSARY_R10C3_HISTORICAL_": {
+      "file": "ADMISSARY_R10C3_HISTORICAL_WATCH.json",
+      "sha256": "7db26dd5d10fb92aa34d2fbf96b4a91d7586a90d22566dedcfefdc168edc97b5",
+      "schema": "admissary-r10c3-continuous-assurance-proof/v1"
+    }
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "schema": "admissary-model-registry/v1",
+  "revision": 15,
+  "organizations": [
+    {
+      "id": "org-demo-bank",
+      "name": "Demo Bank AI Platform"
+    }
+  ],
+  "environments": [
+    {
+      "id": "env-prod-eu",
+      "organizationId": "org-demo-bank",
+      "name": "Production / EU",
+      "tier": "PRODUCTION",
+      "region": "eu"
+    },
+    {
+      "id": "env-staging",
+      "organizationId": "org-demo-bank",
+      "name": "Staging",
+      "tier": "STAGING"
+    }
+  ],
+  "workloads": [
+    {
+      "id": "workload-banking-routing",
+      "packId": "banking-routing-v1",
+      "packVersion": "1.0.0",
+      "packDigest": "bc20f10a6cef16bb667dbf4254f4772d55bd7ddeecf9ca69f95f83adeb4123bb",
+      "name": "BANKING77 Production Intent Routing"
+    },
+    {
+      "id": "workload-release-risk",
+      "packId": "release-risk-triage-v1",
+      "packVersion": "1.0.0",
+      "packDigest": "ff7eb6cec56a5b2413bcfaec2a8dc035ccf57d0502b4fd769926010375537932",
+      "name": "Release Risk Triage"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "candidate-deepseek-v41-flash",
+      "organizationId": "org-demo-bank",
+      "displayName": "DeepSeek V4.1 Flash",
+      "source": "DOLPHIN",
+      "repositoryOrModelId": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "accountableOwner": "AI Platform",
+      "createdAt": "2026-11-14T19:11:00.000Z"
+    },
+    {
+      "id": "candidate-gemma4-nvfp4",
+      "organizationId": "org-demo-bank",
+      "displayName": "Gemma 4 26B A4B NVFP4",
+      "source": "DOLPHIN",
+      "repositoryOrModelId": "nvidia/Gemma-4-26B-A4B-NVFP4",
+      "accountableOwner": "AI Platform",
+      "createdAt": "2026-11-14T19:11:01.000Z"
+    },
+    {
+      "id": "candidate-qwen36-nvfp4",
+      "organizationId": "org-demo-bank",
+      "displayName": "Qwen 3.6 35B A3B NVFP4",
+      "source": "DOLPHIN",
+      "repositoryOrModelId": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+      "accountableOwner": "AI Platform",
+      "createdAt": "2026-11-14T19:11:02.000Z"
+    }
+  ],
+  "artifactRevisions": [
+    {
+      "id": "artifact-candidate-deepseek-v41-flash",
+      "candidateId": "candidate-deepseek-v41-flash",
+      "immutableRevision": null,
+      "tokenizerRevision": null,
+      "artifactDigest": null,
+      "runtimeBindingScope": "PROVIDER_MODEL_IDENTITY",
+      "exactArtifactBindingProven": false,
+      "createdAt": "2026-11-14T19:12:00.000Z"
+    },
+    {
+      "id": "artifact-candidate-gemma4-nvfp4",
+      "candidateId": "candidate-gemma4-nvfp4",
+      "immutableRevision": null,
+      "tokenizerRevision": null,
+      "artifactDigest": null,
+      "runtimeBindingScope": "PROVIDER_MODEL_IDENTITY",
+      "exactArtifactBindingProven": false,
+      "createdAt": "2026-11-14T19:12:01.000Z"
+    },
+    {
+      "id": "artifact-candidate-qwen36-nvfp4",
+      "candidateId": "candidate-qwen36-nvfp4",
+      "immutableRevision": null,
+      "tokenizerRevision": null,
+      "artifactDigest": null,
+      "runtimeBindingScope": "PROVIDER_MODEL_IDENTITY",
+      "exactArtifactBindingProven": false,
+      "createdAt": "2026-11-14T19:12:02.000Z"
+    }
+  ],
+  "deployments": [
+    {
+      "id": "deployment-deepseek-banking-prod",
+      "organizationId": "org-demo-bank",
+      "environmentId": "env-prod-eu",
+      "workloadId": "workload-banking-routing",
+      "contractId": "banking-support-prod",
+      "contractVersion": "1.0.0",
+      "candidateId": "candidate-deepseek-v41-flash",
+      "artifactRevisionId": "artifact-candidate-deepseek-v41-flash",
+      "qualificationState": "REVIEW_REQUIRED",
+      "authorizationState": "NOT_REQUESTED",
+      "validityState": "CURRENT",
+      "activeBlockers": [
+        "QUALIFICATION_REVIEW_REQUIRED",
+        "EXACT_ARTIFACT_BINDING_UNPROVEN"
+      ],
+      "latestQualificationRunId": "r6-deepseek-live",
+      "latestAttestationDigest": null,
+      "nextReassessmentAt": null,
+      "updatedAt": "2026-11-14T17:38:23.523Z"
+    },
+    {
+      "id": "deployment-gemma-banking-staging",
+      "organizationId": "org-demo-bank",
+      "environmentId": "env-staging",
+      "workloadId": "workload-banking-routing",
+      "contractId": "banking-support-prod",
+      "contractVersion": "1.0.0",
+      "candidateId": "candidate-gemma4-nvfp4",
+      "artifactRevisionId": "artifact-candidate-gemma4-nvfp4",
+      "qualificationState": "REVIEW_REQUIRED",
+      "authorizationState": "NOT_REQUESTED",
+      "validityState": "CURRENT",
+      "activeBlockers": [
+        "LIC_DEPLOYMENT_COMPATIBILITY",
+        "PROV_LINEAGE",
+        "EXACT_ARTIFACT_BINDING_UNPROVEN"
+      ],
+      "latestQualificationRunId": "2c54c415705d247f8e847bb278127aa81b0283572e383e2844cabda5979a29ee",
+      "latestAttestationDigest": null,
+      "nextReassessmentAt": null,
+      "updatedAt": "2026-11-15T08:44:36.177Z"
+    },
+    {
+      "id": "deployment-qwen-banking-staging",
+      "organizationId": "org-demo-bank",
+      "environmentId": "env-staging",
+      "workloadId": "workload-banking-routing",
+      "contractId": "banking-support-prod",
+      "contractVersion": "1.0.0",
+      "candidateId": "candidate-qwen36-nvfp4",
+      "artifactRevisionId": "artifact-candidate-qwen36-nvfp4",
+      "qualificationState": "REVIEW_REQUIRED",
+      "authorizationState": "NOT_REQUESTED",
+      "validityState": "CURRENT",
+      "activeBlockers": [
+        "LIC_DEPLOYMENT_COMPATIBILITY",
+        "PROV_LINEAGE",
+        "EXACT_ARTIFACT_BINDING_UNPROVEN"
+      ],
+      "latestQualificationRunId": "cc93413a61edb4265fb6fc3f05a27b495ac009ed1e8d4140159deeb015a68bf6",
+      "latestAttestationDigest": null,
+      "nextReassessmentAt": null,
+      "updatedAt": "2026-11-15T08:44:36.187Z"
+    },
+    {
+      "id": "deployment-deepseek-release-risk-staging",
+      "organizationId": "org-demo-bank",
+      "environmentId": "env-staging",
+      "workloadId": "workload-release-risk",
+      "contractId": "release-risk-triage-demo",
+      "contractVersion": "1.0.0",
+      "candidateId": "candidate-deepseek-v41-flash",
+      "artifactRevisionId": "artifact-candidate-deepseek-v41-flash",
+      "qualificationState": "INCOMPLETE",
+      "authorizationState": "NOT_REQUESTED",
+      "validityState": "CURRENT",
+      "activeBlockers": [
+        "NOT_EVALUATED",
+        "NO_DEPLOYMENT_CONTRACT_RESULT"
+      ],
+      "latestQualificationRunId": null,
+      "latestAttestationDigest": null,
+      "nextReassessmentAt": null,
+      "updatedAt": "2026-11-14T19:14:00.000Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "organization_registered-6fe73921134b4f5ef810",
+      "type": "ORGANIZATION_REGISTERED",
+      "entityId": "org-demo-bank",
+      "occurredAt": "2026-11-14T19:10:00.000Z",
+      "detail": "Demo Bank AI Platform"
+    },
+    {
+      "id": "environment_registered-f06543eff3d1f12eb725",
+      "type": "ENVIRONMENT_REGISTERED",
+      "entityId": "env-prod-eu",
+      "occurredAt": "2026-11-14T19:10:01.000Z",
+      "detail": "Production / EU"
+    },
+    {
+      "id": "environment_registered-d032932336345f609311",
+      "type": "ENVIRONMENT_REGISTERED",
+      "entityId": "env-staging",
+      "occurredAt": "2026-11-14T19:10:02.000Z",
+      "detail": "Staging"
+    },
+    {
+      "id": "workload_registered-aaea6cfa923375381dbe",
+      "type": "WORKLOAD_REGISTERED",
+      "entityId": "workload-banking-routing",
+      "occurredAt": "2026-11-14T19:10:03.000Z",
+      "detail": "banking-routing-v1@1.0.0"
+    },
+    {
+      "id": "workload_registered-b2873c85dfe56130fd7b",
+      "type": "WORKLOAD_REGISTERED",
+      "entityId": "workload-release-risk",
+      "occurredAt": "2026-11-14T19:10:04.000Z",
+      "detail": "release-risk-triage-v1@1.0.0"
+    },
+    {
+      "id": "candidate_registered-11e100e56ff58109bbb7",
+      "type": "CANDIDATE_REGISTERED",
+      "entityId": "candidate-deepseek-v41-flash",
+      "occurredAt": "2026-11-14T19:11:00.000Z",
+      "detail": "deepseek-ai/DeepSeek-V4.1-Flash"
+    },
+    {
+      "id": "artifact_registered-359f9d323c5297609eb1",
+      "type": "ARTIFACT_REGISTERED",
+      "entityId": "artifact-candidate-deepseek-v41-flash",
+      "occurredAt": "2026-11-14T19:12:00.000Z",
+      "detail": "PROVIDER_MODEL_IDENTITY"
+    },
+    {
+      "id": "candidate_registered-732e11857414d0e2dbc0",
+      "type": "CANDIDATE_REGISTERED",
+      "entityId": "candidate-gemma4-nvfp4",
+      "occurredAt": "2026-11-14T19:11:01.000Z",
+      "detail": "nvidia/Gemma-4-26B-A4B-NVFP4"
+    },
+    {
+      "id": "artifact_registered-bca3867cbcd5bb99871d",
+      "type": "ARTIFACT_REGISTERED",
+      "entityId": "artifact-candidate-gemma4-nvfp4",
+      "occurredAt": "2026-11-14T19:12:01.000Z",
+      "detail": "PROVIDER_MODEL_IDENTITY"
+    },
+    {
+      "id": "candidate_registered-40b520cbbc5ac8cfcb71",
+      "type": "CANDIDATE_REGISTERED",
+      "entityId": "candidate-qwen36-nvfp4",
+      "occurredAt": "2026-11-14T19:11:02.000Z",
+      "detail": "nvidia/Qwen3.6-35B-A3B-NVFP4"
+    },
+    {
+      "id": "artifact_registered-21502da9abfffb750584",
+      "type": "ARTIFACT_REGISTERED",
+      "entityId": "artifact-candidate-qwen36-nvfp4",
+      "occurredAt": "2026-11-14T19:12:02.000Z",
+      "detail": "PROVIDER_MODEL_IDENTITY"
+    },
+    {
+      "id": "deployment_registered-dc3bd961fd0fdba17cf1",
+      "type": "DEPLOYMENT_REGISTERED",
+      "entityId": "deployment-deepseek-banking-prod",
+      "occurredAt": "2026-11-14T19:13:00.000Z",
+      "detail": "env-prod-eu:workload-banking-routing:candidate-deepseek-v41-flash"
+    },
+    {
+      "id": "deployment_registered-18930e9bea0a5aba1cd7",
+      "type": "DEPLOYMENT_REGISTERED",
+      "entityId": "deployment-gemma-banking-staging",
+      "occurredAt": "2026-11-15T08:44:36.177Z",
+      "detail": "env-staging:workload-banking-routing:candidate-gemma4-nvfp4"
+    },
+    {
+      "id": "deployment_registered-b113226f92964217e6e3",
+      "type": "DEPLOYMENT_REGISTERED",
+      "entityId": "deployment-qwen-banking-staging",
+      "occurredAt": "2026-11-15T08:44:36.187Z",
+      "detail": "env-staging:workload-banking-routing:candidate-qwen36-nvfp4"
+    },
+    {
+      "id": "deployment_registered-51b018343f09e5d383cd",
+      "type": "DEPLOYMENT_REGISTERED",
+      "entityId": "deployment-deepseek-release-risk-staging",
+      "occurredAt": "2026-11-14T19:14:00.000Z",
+      "detail": "env-staging:workload-release-risk:candidate-deepseek-v41-flash"
+    }
+  ]
+}

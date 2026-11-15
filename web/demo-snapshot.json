@@ -1,0 +1,389 @@
+{
+  "generatedAt": "2026-11-15T08:44:33.189Z",
+  "contract": {
+    "id": "banking-support-prod",
+    "version": "1.0.0",
+    "digest": "4708b4e1eaedb0d8abe537b26c8cb55cb591a7205e8d4e8a2cb7bd27f5e3ba01",
+    "workload": "customer-support-intent-routing",
+    "environment": "production"
+  },
+  "candidate": {
+    "model": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "provider": "Dolphin",
+    "providerHost": "lighthouse.dphn.ai",
+    "bindingScope": "PROVIDER_MODEL_IDENTITY",
+    "exactArtifactBindingProven": false,
+    "empiricalFitness": "UNFIT",
+    "overallQualification": "REVIEW_REQUIRED",
+    "deployAllowed": false
+  },
+  "metrics": [
+    {
+      "id": "macro_f1",
+      "label": "Macro F1",
+      "observed": 0.8914080795390529,
+      "operator": "gte",
+      "threshold": 0.82,
+      "criticality": "MANDATORY",
+      "state": "PASS"
+    },
+    {
+      "id": "critical_intent_recall",
+      "label": "Critical intent recall",
+      "observed": 0.825,
+      "operator": "gte",
+      "threshold": 0.9,
+      "criticality": "MANDATORY",
+      "state": "FAIL"
+    },
+    {
+      "id": "schema_validity",
+      "label": "Schema validity",
+      "observed": 0.9930555555555556,
+      "operator": "eq",
+      "threshold": 1,
+      "criticality": "MANDATORY",
+      "state": "FAIL"
+    },
+    {
+      "id": "injection_invariance",
+      "label": "Injection invariance",
+      "observed": 0.9583333333333334,
+      "operator": "gte",
+      "threshold": 0.95,
+      "criticality": "MANDATORY",
+      "state": "PASS"
+    },
+    {
+      "id": "p95_latency_ms",
+      "label": "P95 latency (ms)",
+      "observed": 3817,
+      "operator": "lte",
+      "threshold": 1500,
+      "criticality": "ADVISORY",
+      "state": "FAIL"
+    }
+  ],
+  "empiricalBlockers": [
+    "EVAL_CRITICAL_INTENT_RECALL",
+    "EVAL_SCHEMA_VALIDITY"
+  ],
+  "deploymentBlockers": [
+    "QUALIFICATION_REVIEW_REQUIRED",
+    "AUTHORIZATION_NOT_REQUESTED",
+    "EXACT_ARTIFACT_BINDING_UNPROVEN"
+  ],
+  "missingObligations": [
+    "ART_REMOTE_CODE",
+    "ART_REVISION_IMMUTABLE",
+    "ART_TOKENIZER_IMMUTABLE",
+    "ART_WEIGHT_FORMAT",
+    "LIC_DECLARED",
+    "LIC_DEPLOYMENT_COMPATIBILITY",
+    "PROV_LINEAGE",
+    "PROV_PUBLISHER"
+  ],
+  "requalification": {
+    "unchanged": {
+      "reused": 10,
+      "recomputed": 0
+    },
+    "policyChange": {
+      "reused": [
+        "control:workload",
+        "evaluation:workload",
+        "evidence:artifact",
+        "source:artifact",
+        "source:suite"
+      ],
+      "recomputed": [
+        "control:license-policy",
+        "decision:qualification",
+        "source:policy"
+      ]
+    },
+    "artifactChange": {
+      "reused": [
+        "source:policy",
+        "source:suite"
+      ],
+      "recomputed": [
+        "control:license-policy",
+        "control:workload",
+        "decision:qualification",
+        "evaluation:workload",
+        "evidence:artifact",
+        "source:artifact"
+      ]
+    }
+  },
+  "authorization": {
+    "approvalDeniedForRealRun": true,
+    "realDeployAllowed": false,
+    "viewerApprovalDenied": true,
+    "fixtureApprovedDeployAllowed": true,
+    "fixtureStaleDeployAllowed": false,
+    "fixtureStaleAuthorization": "APPROVED",
+    "fixtureStaleValidity": "STALE",
+    "fixtureRevokedAuthorization": "REVOKED"
+  },
+  "verifier": {
+    "valid": "ALLOW",
+    "tampered": "DENY",
+    "tamperedReason": "MANIFEST_INTEGRITY_ERROR",
+    "rehashedRevisionChange": "DENY",
+    "rehashedRevisionChangeReason": "CANDIDATE_REVISION_MISMATCH",
+    "stale": "DENY",
+    "staleReason": "VALIDITY_NOT_CURRENT",
+    "unapproved": "DENY",
+    "unapprovedReason": "AUTHORIZATION_NOT_APPROVED",
+    "contractMismatch": "DENY",
+    "contractMismatchReason": "CONTRACT_DIGEST_MISMATCH",
+    "networkCalls": 0
+  },
+  "integrations": {
+    "serv": {
+      "liveArtifactPresent": true,
+      "artifactFile": "ADMISSARY_R3_SERV_EVIDENCE_2026-11-14T151922810Z.json",
+      "role": "SERV interprets bounded natural-language evidence; Admissary verifies evidence references and keeps deterministic qualification authority."
+    },
+    "dolphin": {
+      "liveArtifactPresent": true,
+      "artifactFile": "ADMISSARY_R5_DOLPHIN_2026-11-14T171917513Z.json",
+      "runDigest": "1e56c082af49d232f834b67cc09901627557b019ef0eca32b12eafca8eae1628",
+      "cases": 144,
+      "role": "Dolphin executes the frozen production workload so qualification depends on what the model actually does, not only repository metadata."
+    }
+  },
+  "artifacts": [
+    {
+      "phase": "R2",
+      "label": "Hugging Face evidence",
+      "file": "ADMISSARY_R2_HF_EVIDENCE_2026-11-14T151915699Z.json",
+      "digest": "a8cff6abd358aaff97d8d6b244122de8f21ddd89bb90f2864fee1b128eb73282",
+      "role": "Exact repository evidence and remote-code preflight"
+    },
+    {
+      "phase": "R3",
+      "label": "SERV semantic evidence",
+      "file": "ADMISSARY_R3_SERV_EVIDENCE_2026-11-14T151922810Z.json",
+      "digest": "d671809d5b99859ac2b6339d731e9aea1b469872618e76fa68ea141ed647bcd8",
+      "role": "Bounded semantic evidence interpretation"
+    },
+    {
+      "phase": "R5",
+      "label": "Dolphin empirical run",
+      "file": "ADMISSARY_R5_DOLPHIN_2026-11-14T171917513Z.json",
+      "digest": "733d25b5fee0fb608bc63b9e92ca94952e37e8da08a5f749bcc1ce8a8b39b5ca",
+      "role": "Frozen 144-case production-workload measurement"
+    },
+    {
+      "phase": "R6",
+      "label": "Qualification DAG",
+      "file": "ADMISSARY_R6_ORCHESTRATION_2026-11-14T173823521Z.json",
+      "digest": "e01122ad97a75ef81e8fa187872acc013511dddc28741c3d1eaa8dbce75f6deb",
+      "role": "Content-addressed orchestration and invalidation"
+    },
+    {
+      "phase": "R7",
+      "label": "Authorization proof",
+      "file": "ADMISSARY_R7_PERSISTENCE_2026-11-14T173823945Z.json",
+      "digest": "e65575e97586d88ea92f4f1c9d29c3352be5bb6b8d5525dfea053dea2def8b88",
+      "role": "Approval, stale, revocation, and deployment authority"
+    },
+    {
+      "phase": "R8",
+      "label": "Deploy verifier proof",
+      "file": "ADMISSARY_R8_VERIFIER_2026-11-14T173824312Z.json",
+      "digest": "1d8b04e686f1c680382ab4e149b23e21c32e060e29a6b1a7b6422411e8d0c87d",
+      "role": "Zero-LLM manifest/context enforcement"
+    },
+    {
+      "phase": "R13",
+      "label": "nvidia/Gemma-4-26B-A4B-NVFP4 real workload run",
+      "file": "r13/gemma-2c54c415705d247f8e847bb278127aa81b0283572e383e2844cabda5979a29ee.json",
+      "digest": "98a21bdb7fc9480de0df74c08c8939b21d6307f49fe586661dee883d21e92446",
+      "role": "REAL_DOLPHIN_EXECUTION · 144 frozen cases · PROVIDER_MODEL_IDENTITY · exact artifact binding unproven"
+    },
+    {
+      "phase": "R13",
+      "label": "nvidia/Qwen3.6-35B-A3B-NVFP4 real workload run",
+      "file": "r13/qwen-cc93413a61edb4265fb6fc3f05a27b495ac009ed1e8d4140159deeb015a68bf6.json",
+      "digest": "61623a4ae4f2ce1405ebfe43d6a84bf7d63afc3c1590c00e859224d97888271c",
+      "role": "REAL_DOLPHIN_EXECUTION · 144 frozen cases · PROVIDER_MODEL_IDENTITY · exact artifact binding unproven"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "hf-custom-resnet50d",
+      "label": "sgugger/custom-resnet50d",
+      "provenance": "REAL_EVIDENCE",
+      "stage": "Deterministic preflight",
+      "qualificationState": "DISQUALIFIED",
+      "deploymentState": "DENY",
+      "explanation": "R2 evidence indicates custom remote code is required while the deployment contract forbids remote repository code."
+    },
+    {
+      "id": "dolphin-deepseek-v41-flash",
+      "label": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "provenance": "REAL_EVIDENCE",
+      "stage": "Empirical qualification",
+      "qualificationState": "REVIEW_REQUIRED",
+      "empiricalFitness": "UNFIT",
+      "deploymentState": "DENY",
+      "explanation": "The real Dolphin run completed 144/144 cases. Aggregate quality was strong, but mandatory critical-recall and schema-validity gates failed; full exact-artifact qualification remains review-required because runtime artifact binding is unproven."
+    },
+    {
+      "id": "candidate-gemma4-nvfp4",
+      "label": "nvidia/Gemma-4-26B-A4B-NVFP4",
+      "provenance": "REAL_EVIDENCE",
+      "stage": "Empirical qualification",
+      "qualificationState": "REVIEW_REQUIRED",
+      "empiricalFitness": "UNFIT",
+      "deploymentState": "DENY",
+      "explanation": "Provider execution status: COMPLETED, 144/144 frozen cases. Empirical UNFIT; full REVIEW_REQUIRED. PROVIDER_MODEL_IDENTITY only; exact runtime artifact, tokenizer and manifest remain unproven. Candidate-specific deterministic and semantic evidence is UNKNOWN. ",
+      "execution": {
+        "provenance": "REAL_DOLPHIN_EXECUTION",
+        "completionStatus": "COMPLETED",
+        "casesCompleted": 144,
+        "caseCount": 144,
+        "bindingScope": "PROVIDER_MODEL_IDENTITY",
+        "exactArtifactBindingProven": false,
+        "runDigest": "2c54c415705d247f8e847bb278127aa81b0283572e383e2844cabda5979a29ee",
+        "metrics": [
+          {
+            "id": "macro_f1",
+            "label": "Macro F1",
+            "observed": 0.8414803026375918,
+            "operator": "gte",
+            "threshold": 0.82,
+            "criticality": "MANDATORY",
+            "state": "PASS"
+          },
+          {
+            "id": "critical_intent_recall",
+            "label": "Critical intent recall",
+            "observed": 0.775,
+            "operator": "gte",
+            "threshold": 0.9,
+            "criticality": "MANDATORY",
+            "state": "FAIL"
+          },
+          {
+            "id": "schema_validity",
+            "label": "Schema validity",
+            "observed": 1,
+            "operator": "eq",
+            "threshold": 1,
+            "criticality": "MANDATORY",
+            "state": "PASS"
+          },
+          {
+            "id": "injection_invariance",
+            "label": "Injection invariance",
+            "observed": 0.9166666666666666,
+            "operator": "gte",
+            "threshold": 0.95,
+            "criticality": "MANDATORY",
+            "state": "FAIL"
+          },
+          {
+            "id": "p95_latency_ms",
+            "label": "P95 latency (ms)",
+            "observed": 39992,
+            "operator": "lte",
+            "threshold": 1500,
+            "criticality": "ADVISORY",
+            "state": "FAIL"
+          }
+        ]
+      }
+    },
+    {
+      "id": "candidate-qwen36-nvfp4",
+      "label": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+      "provenance": "REAL_EVIDENCE",
+      "stage": "Empirical qualification",
+      "qualificationState": "REVIEW_REQUIRED",
+      "empiricalFitness": "UNFIT",
+      "deploymentState": "DENY",
+      "explanation": "Provider execution status: COMPLETED, 144/144 frozen cases. Empirical UNFIT; full REVIEW_REQUIRED. PROVIDER_MODEL_IDENTITY only; exact runtime artifact, tokenizer and manifest remain unproven. Candidate-specific deterministic and semantic evidence is UNKNOWN. ",
+      "execution": {
+        "provenance": "REAL_DOLPHIN_EXECUTION",
+        "completionStatus": "COMPLETED",
+        "casesCompleted": 144,
+        "caseCount": 144,
+        "bindingScope": "PROVIDER_MODEL_IDENTITY",
+        "exactArtifactBindingProven": false,
+        "runDigest": "cc93413a61edb4265fb6fc3f05a27b495ac009ed1e8d4140159deeb015a68bf6",
+        "metrics": [
+          {
+            "id": "macro_f1",
+            "label": "Macro F1",
+            "observed": 0.7391913898175758,
+            "operator": "gte",
+            "threshold": 0.82,
+            "criticality": "MANDATORY",
+            "state": "FAIL"
+          },
+          {
+            "id": "critical_intent_recall",
+            "label": "Critical intent recall",
+            "observed": 0.65,
+            "operator": "gte",
+            "threshold": 0.9,
+            "criticality": "MANDATORY",
+            "state": "FAIL"
+          },
+          {
+            "id": "schema_validity",
+            "label": "Schema validity",
+            "observed": 1,
+            "operator": "eq",
+            "threshold": 1,
+            "criticality": "MANDATORY",
+            "state": "PASS"
+          },
+          {
+            "id": "injection_invariance",
+            "label": "Injection invariance",
+            "observed": 0.9583333333333334,
+            "operator": "gte",
+            "threshold": 0.95,
+            "criticality": "MANDATORY",
+            "state": "PASS"
+          },
+          {
+            "id": "p95_latency_ms",
+            "label": "P95 latency (ms)",
+            "observed": 600,
+            "operator": "lte",
+            "threshold": 1500,
+            "criticality": "ADVISORY",
+            "state": "PASS"
+          }
+        ]
+      }
+    },
+    {
+      "id": "authorization-acceptance-fixture",
+      "label": "Verifier acceptance fixture",
+      "provenance": "ACCEPTANCE_FIXTURE",
+      "stage": "Authorization + deploy verifier",
+      "qualificationState": "QUALIFIED",
+      "deploymentState": "ALLOW",
+      "explanation": "Explicit non-production fixture used only to prove the positive QUALIFIED → APPROVED → deploy lifecycle and subsequent stale/revoked denial paths."
+    }
+  ],
+  "schema": "admissary-judge-view/v1",
+  "authoritySemantics": {
+    "historicalProof": "Offline fixture consistency only; may remain valid after revocation.",
+    "currentAdmission": "State-aware Product admission and CI require current approval, signed proof and fresh Assurance; historical proof alone grants no authority."
+  },
+  "thesis": "A model name is not a deployment decision. Admissary proves whether the exact model you are about to ship is fit for this workload.",
+  "punchline": "Change the model, policy, evidence, or workload — and the proof expires.",
+  "headlineState": "BLOCKED",
+  "headlineReason": "QUALIFICATION_REVIEW_REQUIRED · AUTHORIZATION_NOT_REQUESTED · EXACT_ARTIFACT_BINDING_UNPROVEN",
+  "judgeSummary": "The model looks strong on aggregate, but 2 mandatory production gates failed. Admissary blocks deployment instead of averaging the failures away.",
+  "snapshotDigest": "9185c39c60f1bd1867f682c7b2f6fa1795175d8e6385a6a65da4c8483c53bab0"
+}

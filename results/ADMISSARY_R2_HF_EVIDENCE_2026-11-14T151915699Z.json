@@ -1,0 +1,63 @@
+{
+  "schema": "admissary-r2-live-evidence/v1",
+  "capturedAt": "2026-11-14T15:19:15.699Z",
+  "targets": [
+    {
+      "repository": "Qwen/Qwen3-0.6B",
+      "requestedRevision": "main",
+      "resolvedRevision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "fileCount": 10,
+      "modelCard": true,
+      "licenseFile": true,
+      "config": true,
+      "remoteCode": {
+        "state": "NOT_INDICATED",
+        "reasons": [
+          "no auto_map declaration or repository custom-code indicators were found in collected evidence"
+        ],
+        "evidencePaths": [
+          "config.json"
+        ]
+      },
+      "bundleDigest": "b206ddf0141f14d7be9705f153bef940bd4a8b4f29701e327a924156bac0f28e"
+    },
+    {
+      "repository": "Qwen/Qwen3-4B",
+      "requestedRevision": "main",
+      "resolvedRevision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "fileCount": 13,
+      "modelCard": true,
+      "licenseFile": true,
+      "config": true,
+      "remoteCode": {
+        "state": "NOT_INDICATED",
+        "reasons": [
+          "no auto_map declaration or repository custom-code indicators were found in collected evidence"
+        ],
+        "evidencePaths": [
+          "config.json"
+        ]
+      },
+      "bundleDigest": "9c9e0bfaabf009e59ac88e70b3d2b194a6a37bede369590ddc15f7d98dcc7de6"
+    },
+    {
+      "repository": "sgugger/custom-resnet50d",
+      "requestedRevision": "main",
+      "resolvedRevision": "ed94a7c6247d8aedce4647f00f20de6875b5b292",
+      "fileCount": 5,
+      "modelCard": false,
+      "licenseFile": false,
+      "config": true,
+      "remoteCode": {
+        "state": "REQUIRED",
+        "reasons": [
+          "config.json declares auto_map entries for custom AutoClass loading"
+        ],
+        "evidencePaths": [
+          "config.json"
+        ]
+      },
+      "bundleDigest": "44db1f4f5760d52ccdbf222f6cb7d88bcf9582629f88b2940473a6ca9b118c25"
+    }
+  ]
+}

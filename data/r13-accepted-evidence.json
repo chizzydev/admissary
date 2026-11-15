@@ -1,0 +1,23 @@
+{
+  "schema": "admissary-r13-accepted-evidence/v1",
+  "candidates": [
+    {
+      "slug": "gemma",
+      "candidateId": "candidate-gemma4-nvfp4",
+      "model": "nvidia/Gemma-4-26B-A4B-NVFP4",
+      "summaryPath": "results/r13/gemma-summary.json",
+      "summarySHA256": "df56da24050ba575e0aca39d02fbeeeb89a1bc4685e5cfea14925ed37caa520c",
+      "artifactPath": "results/r13/gemma-2c54c415705d247f8e847bb278127aa81b0283572e383e2844cabda5979a29ee.json",
+      "artifactSHA256": "98a21bdb7fc9480de0df74c08c8939b21d6307f49fe586661dee883d21e92446"
+    },
+    {
+      "slug": "qwen",
+      "candidateId": "candidate-qwen36-nvfp4",
+      "model": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+      "summaryPath": "results/r13/qwen-summary.json",
+      "summarySHA256": "8029a0147af23260349f5469853cdba8c407792102bb7119d9698d920240906f",
+      "artifactPath": "results/r13/qwen-cc93413a61edb4265fb6fc3f05a27b495ac009ed1e8d4140159deeb015a68bf6.json",
+      "artifactSHA256": "61623a4ae4f2ce1405ebfe43d6a84bf7d63afc3c1590c00e859224d97888271c"
+    }
+  ]
+}

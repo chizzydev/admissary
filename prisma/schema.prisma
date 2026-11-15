@@ -1,0 +1,75 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model QualificationRun {
+  id                         String   @id
+  contractId                 String
+  contractVersion            String
+  contractDigest             String
+  candidateIdentity          String
+  qualificationState         String
+  graphRootDigest            String
+  exactArtifactBindingProven Boolean
+  finalizedAt                DateTime
+  sourceArtifactDigest       String
+  createdAt                  DateTime @default(now())
+
+  authorizationEvents AuthorizationEvent[]
+  validityEvents      ValidityEvent[]
+  auditEvents         AuditEvent[]
+
+  @@index([contractId, contractVersion])
+  @@index([candidateIdentity])
+  @@index([finalizedAt])
+}
+
+model AuthorizationEvent {
+  id          String   @id
+  runId       String
+  state       String
+  actorId     String
+  actorRoles  Json
+  occurredAt  DateTime
+  reason      String
+  createdAt   DateTime @default(now())
+
+  run QualificationRun @relation(fields: [runId], references: [id], onDelete: Restrict)
+
+  @@index([runId, occurredAt])
+  @@index([actorId])
+}
+
+model ValidityEvent {
+  id          String   @id
+  runId       String
+  state       String
+  actorId     String
+  occurredAt  DateTime
+  reason      String
+  createdAt   DateTime @default(now())
+
+  run QualificationRun @relation(fields: [runId], references: [id], onDelete: Restrict)
+
+  @@index([runId, occurredAt])
+}
+
+model AuditEvent {
+  id          String   @id
+  type        String
+  runId       String
+  actorId     String
+  occurredAt  DateTime
+  detail      String
+  createdAt   DateTime @default(now())
+
+  run QualificationRun @relation(fields: [runId], references: [id], onDelete: Restrict)
+
+  @@index([runId, occurredAt])
+  @@index([type])
+}

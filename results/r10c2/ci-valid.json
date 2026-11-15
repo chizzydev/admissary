@@ -1,0 +1,10 @@
+{
+  "schema": "admissary-historical-manifest-proof/v1",
+  "decision": "VALID",
+  "valid": true,
+  "authorityScope": "HISTORICAL_PROOF_ONLY",
+  "manifestDigest": "1d51410dbe31e35ffd6e55d4ace6cc4db15ea4939a2b6a76ba345bd72025b881",
+  "contextDigest": "24368cc537b671a89a850bd9b9c73796eb4f45ca2ba54b0b5920d8e1dccff393",
+  "reasonCodes": [],
+  "reasons": []
+}

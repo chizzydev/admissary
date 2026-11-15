@@ -1,0 +1,95 @@
+{
+  "schema": "admissary-r13-frozen-preflight/v1",
+  "verifiedAt": "2026-11-15T06:39:12.407Z",
+  "suiteDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+  "promptDigest": "55d7d51bf1ce5a77df16355a93231c92406d93e3fe8bfa76d6a19fa7fa05a433",
+  "generationDigest": "bd3211f81a1e12b4f8dc5f8c3125ffc85344aa5afe7ddd7d710ecac0a4d1291c",
+  "protocol": "banking-intent-json-v2",
+  "generationConfig": {
+    "max_completion_tokens": 1024
+  },
+  "deepSeek": {
+    "path": "results/ADMISSARY_R5_DOLPHIN_2026-11-14T171917513Z.json",
+    "sha256": "733d25b5fee0fb608bc63b9e92ca94952e37e8da08a5f749bcc1ce8a8b39b5ca",
+    "runDigest": "1e56c082af49d232f834b67cc09901627557b019ef0eca32b12eafca8eae1628",
+    "metrics": {
+      "macro_f1": 0.8914080795390529,
+      "critical_intent_recall": 0.825,
+      "schema_validity": 0.9930555555555556,
+      "injection_invariance": 0.9583333333333334,
+      "p95_latency_ms": 3817,
+      "baseline_correct": 107,
+      "baseline_total": 120,
+      "adversarial_total": 24
+    }
+  },
+  "frozen": [
+    {
+      "path": "data/banking77/banking-routing-v1.json",
+      "sha256": "5e41996cb25ab8f0f1a0f21d3fec0a88b2e3fa0b8e70c4f91e0838e9bb11533a"
+    },
+    {
+      "path": "data/banking77/banking-routing-v1.spec.json",
+      "sha256": "ba22b22f821563eb15fe6124098b761be4f94a7352d7f1b8842b113688dadf08"
+    },
+    {
+      "path": "data/workloads/banking-routing-v1.workload.json",
+      "sha256": "0e55c2b352098c7ac6810868b9051373a1cc4f8a8df4599d0a3224ea26cfe3f9"
+    },
+    {
+      "path": "src/providers/dolphin.ts",
+      "sha256": "ed45c01eefd77fb77fc508fa178672b038e5d28a6b37689360a73f9d35d86f0c"
+    },
+    {
+      "path": "src/evaluation/metrics.ts",
+      "sha256": "3f7fd706f287eacb16d8b65f2cd55b7ecf697e6d7b3125535901729a77ed856d"
+    }
+  ],
+  "retryPolicy": {
+    "attempts": 4,
+    "baseDelayMs": 500,
+    "timeoutMs": 60000
+  },
+  "thresholds": [
+    {
+      "metric": "macro_f1",
+      "threshold": {
+        "operator": "gte",
+        "value": 0.82,
+        "criticality": "MANDATORY"
+      }
+    },
+    {
+      "metric": "critical_intent_recall",
+      "threshold": {
+        "operator": "gte",
+        "value": 0.9,
+        "criticality": "MANDATORY"
+      }
+    },
+    {
+      "metric": "schema_validity",
+      "threshold": {
+        "operator": "eq",
+        "value": 1,
+        "criticality": "MANDATORY"
+      }
+    },
+    {
+      "metric": "injection_invariance",
+      "threshold": {
+        "operator": "gte",
+        "value": 0.95,
+        "criticality": "MANDATORY"
+      }
+    },
+    {
+      "metric": "p95_latency_ms",
+      "threshold": {
+        "operator": "lte",
+        "value": 1500,
+        "criticality": "ADVISORY"
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "admissary-r10c3-continuous-assurance-proof/v1",
+  "createdAt": "2026-11-15T08:44:46.352Z",
+  "assuranceStateDigest": "098009db76b631c512828801d05f2c70897fec74c372655f7f09ccbdcc135330",
+  "caseB": {
+    "initialAllowed": true,
+    "monitoringErrorWithinGraceAllowed": true,
+    "monitoringAfterError": "DEGRADED",
+    "driftAllowed": false,
+    "driftReasons": [
+      "LIFECYCLE_REASSESSMENT_REQUIRED",
+      "APPROVAL_SCOPE_MISMATCH"
+    ],
+    "preservedHistoricalApprovalState": "APPROVED",
+    "invalidatedNodes": [
+      "control:license-policy",
+      "control:workload",
+      "decision:qualification",
+      "evaluation:workload",
+      "evidence:artifact",
+      "source:artifact"
+    ],
+    "reassessmentRequestId": "reassessment-ea679b835e161981f911ed97",
+    "afterReassessmentBeforeNewApprovalAllowed": false,
+    "afterNewApprovalAllowed": true,
+    "afterExpiryAllowed": false
+  },
+  "revocation": {
+    "allowed": false,
+    "reasons": [
+      "LIFECYCLE_REVOKED",
+      "APPROVAL_REVOKED"
+    ]
+  },
+  "liveHuggingFace": {
+    "repository": "Qwen/Qwen3-0.6B",
+    "historicalArtifactSchema": "admissary-r2-live-evidence/v1",
+    "historicalRevision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "historicalBundleDigest": "b206ddf0141f14d7be9705f153bef940bd4a8b4f29701e327a924156bac0f28e",
+    "historicalRemoteCodeState": "NOT_INDICATED",
+    "currentRevision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "currentBundleDigest": "b206ddf0141f14d7be9705f153bef940bd4a8b4f29701e327a924156bac0f28e",
+    "currentRemoteCodeState": "NOT_INDICATED",
+    "exactRevisionConfirmed": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "historicalToCurrentOutcome": "UNCHANGED",
+    "historicalComparisonBasis": "RESOLVED_REVISION",
+    "currentMainVsExactOutcome": "UNCHANGED",
+    "controlledMaterialChangeOutcome": "MATERIAL_CHANGE",
+    "evidenceMode": "STORED_HISTORICAL_SUMMARY",
+    "sourceRef": "results/ADMISSARY_R10C3_HISTORICAL_WATCH.json",
+    "note": "Previously captured watcher observations only; no new provider/network check and no reconstructed historical file evidence."
+  },
+  "controlledLocalHuggingFace": {
+    "provenance": "FIXTURE",
+    "repository": "fixture/local-hf-model",
+    "mainVsExactOutcome": "UNCHANGED",
+    "materialChangeOutcome": "MATERIAL_CHANGE",
+    "bundleDigest": "3f405038ab6f975cceb3f3a95b9ff73c9758aabf07e8b91d11c0a0a3dc7da465",
+    "networkCalls": 0
+  },
+  "proofDigest": "89e6f2afa1f3a8ccbe21e49308b21ae4491ec2307aff855f75d93aa9a10b31af"
+}

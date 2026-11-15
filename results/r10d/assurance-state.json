@@ -1,0 +1,296 @@
+{
+  "schema": "admissary-continuous-assurance/v1",
+  "revision": 8,
+  "deployments": [
+    {
+      "deploymentId": "deployment-deepseek-banking-prod",
+      "qualificationRunId": "qualification-4d79a8b73db160ae26862ed7",
+      "qualificationState": "REVIEW_REQUIRED",
+      "exactArtifactBindingProven": false,
+      "identity": {
+        "candidateRepository": "deepseek-ai/DeepSeek-V4.1-Flash",
+        "candidateRevision": "UNPROVEN:deepseek-ai/DeepSeek-V4.1-Flash",
+        "tokenizerRevision": "UNPROVEN",
+        "artifactManifestDigest": "UNPROVEN",
+        "contractId": "banking-support-prod",
+        "contractVersion": "1.0.0",
+        "contractDigest": "4708b4e1eaedb0d8abe537b26c8cb55cb591a7205e8d4e8a2cb7bd27f5e3ba01",
+        "policyVersion": "qualification-compiler/v1",
+        "policyDigest": "83efecff3ecec59c5f76412293a94c30703d80c4e051d3f7d263ab55c2874a77",
+        "evaluationSuite": "banking-routing-v1",
+        "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+        "evidenceGraphRootDigest": "83a17ad2d48897543aac014ca92aaa765fba644a57a4f28c3bafba310a7550b6",
+        "environmentId": "env-prod-eu",
+        "workloadId": "workload-banking-routing"
+      },
+      "lifecycleState": "CURRENT",
+      "activeApprovalId": null,
+      "monitoringStatus": "HEALTHY",
+      "monitoringPolicy": {
+        "maxEvidenceAgeMs": 86400000,
+        "failClosedWhenOverdue": true
+      },
+      "lastSuccessfulCheckAt": "2026-11-14T19:50:02.000Z",
+      "lastCheckAt": "2026-11-14T19:50:02.000Z",
+      "latestInvalidatedNodes": [],
+      "createdAt": "2026-11-14T19:50:02.000Z",
+      "updatedAt": "2026-11-14T19:50:02.000Z"
+    },
+    {
+      "deploymentId": "deployment-gemma-banking-prod",
+      "qualificationRunId": "qualification-492b1fa88021b7a54173065d",
+      "qualificationState": "REVIEW_REQUIRED",
+      "exactArtifactBindingProven": false,
+      "identity": {
+        "candidateRepository": "nvidia/Gemma-4-26B-A4B-NVFP4",
+        "candidateRevision": "UNPROVEN:nvidia/Gemma-4-26B-A4B-NVFP4",
+        "tokenizerRevision": "UNPROVEN",
+        "artifactManifestDigest": "UNPROVEN",
+        "contractId": "banking-support-prod",
+        "contractVersion": "1.0.0",
+        "contractDigest": "4708b4e1eaedb0d8abe537b26c8cb55cb591a7205e8d4e8a2cb7bd27f5e3ba01",
+        "policyVersion": "qualification-compiler/v1",
+        "policyDigest": "83efecff3ecec59c5f76412293a94c30703d80c4e051d3f7d263ab55c2874a77",
+        "evaluationSuite": "banking-routing-v1",
+        "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+        "evidenceGraphRootDigest": "5f276f4e403a31269ca0bd6409915728b0705a39f9dfe5b93bcae6cad4145fef",
+        "environmentId": "env-prod-eu",
+        "workloadId": "workload-banking-routing"
+      },
+      "lifecycleState": "CURRENT",
+      "activeApprovalId": null,
+      "monitoringStatus": "HEALTHY",
+      "monitoringPolicy": {
+        "maxEvidenceAgeMs": 86400000,
+        "failClosedWhenOverdue": true
+      },
+      "lastSuccessfulCheckAt": "2026-11-15T08:35:04.861Z",
+      "lastCheckAt": "2026-11-15T08:35:04.861Z",
+      "latestInvalidatedNodes": [],
+      "createdAt": "2026-11-15T08:35:04.861Z",
+      "updatedAt": "2026-11-15T08:35:04.861Z"
+    },
+    {
+      "deploymentId": "deployment-qwen-banking-prod",
+      "qualificationRunId": "qualification-5ecb7fa0f7902828beceaac6",
+      "qualificationState": "REVIEW_REQUIRED",
+      "exactArtifactBindingProven": false,
+      "identity": {
+        "candidateRepository": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+        "candidateRevision": "UNPROVEN:nvidia/Qwen3.6-35B-A3B-NVFP4",
+        "tokenizerRevision": "UNPROVEN",
+        "artifactManifestDigest": "UNPROVEN",
+        "contractId": "banking-support-prod",
+        "contractVersion": "1.0.0",
+        "contractDigest": "4708b4e1eaedb0d8abe537b26c8cb55cb591a7205e8d4e8a2cb7bd27f5e3ba01",
+        "policyVersion": "qualification-compiler/v1",
+        "policyDigest": "83efecff3ecec59c5f76412293a94c30703d80c4e051d3f7d263ab55c2874a77",
+        "evaluationSuite": "banking-routing-v1",
+        "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+        "evidenceGraphRootDigest": "0d4d605c62ee16d1cbf25517b0acbf7351bbdcc115462a6e53ce48524c4ee14b",
+        "environmentId": "env-prod-eu",
+        "workloadId": "workload-banking-routing"
+      },
+      "lifecycleState": "CURRENT",
+      "activeApprovalId": null,
+      "monitoringStatus": "HEALTHY",
+      "monitoringPolicy": {
+        "maxEvidenceAgeMs": 86400000,
+        "failClosedWhenOverdue": true
+      },
+      "lastSuccessfulCheckAt": "2026-11-15T08:23:16.468Z",
+      "lastCheckAt": "2026-11-15T08:23:16.468Z",
+      "latestInvalidatedNodes": [],
+      "createdAt": "2026-11-15T08:23:16.468Z",
+      "updatedAt": "2026-11-15T08:23:16.468Z"
+    },
+    {
+      "deploymentId": "deployment-r10d-baseline",
+      "qualificationRunId": "qualification-a71dd01c05a9d8dc66b54787",
+      "qualificationState": "QUALIFIED",
+      "exactArtifactBindingProven": true,
+      "identity": {
+        "candidateRepository": "admissary-fixture/baseline",
+        "candidateRevision": "1111111111111111111111111111111111111111",
+        "tokenizerRevision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "artifactManifestDigest": "c60de73800de6d1d309688bbd18800788d59385d61c00e4b9ff99f7fb5a81a1b",
+        "contractId": "r10d-audit-contract",
+        "contractVersion": "1.0.0",
+        "contractDigest": "1c6de99bfe798dad9551dca7db5a80367403705ddbe19f3b25c4115e21f0ee72",
+        "policyVersion": "1.0.0",
+        "policyDigest": "d7a32ab506dafa271ff2e59d5073f68c2258c17e7f1ed8a634dd0b9901191596",
+        "evaluationSuite": "banking-routing-v1",
+        "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+        "evidenceGraphRootDigest": "dc644a867461bbbdb4baea51ba66599ec1cf274cdc58f4cd6a4f2ac293529029",
+        "environmentId": "r10d-audit-production",
+        "workloadId": "banking-routing-v1"
+      },
+      "lifecycleState": "CURRENT",
+      "activeApprovalId": "approval-6cb0837e835a2e981ab78387",
+      "monitoringStatus": "HEALTHY",
+      "monitoringPolicy": {
+        "maxEvidenceAgeMs": 86400000,
+        "failClosedWhenOverdue": true
+      },
+      "lastSuccessfulCheckAt": "2026-11-14T20:33:00.000Z",
+      "lastCheckAt": "2026-11-14T20:33:00.000Z",
+      "latestInvalidatedNodes": [],
+      "createdAt": "2026-11-14T20:33:00.000Z",
+      "updatedAt": "2026-11-14T20:34:00.000Z"
+    },
+    {
+      "deploymentId": "deployment-r10d-current",
+      "qualificationRunId": "qualification-4739098b3c98a158c4bb031c",
+      "qualificationState": "QUALIFIED",
+      "exactArtifactBindingProven": true,
+      "identity": {
+        "candidateRepository": "admissary-fixture/current",
+        "candidateRevision": "2222222222222222222222222222222222222222",
+        "tokenizerRevision": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "artifactManifestDigest": "c53792fd93890a024df00b3d60e6e875831599d090927e92f36c95a0a34815ed",
+        "contractId": "r10d-audit-contract",
+        "contractVersion": "1.0.0",
+        "contractDigest": "1c6de99bfe798dad9551dca7db5a80367403705ddbe19f3b25c4115e21f0ee72",
+        "policyVersion": "1.0.0",
+        "policyDigest": "d7a32ab506dafa271ff2e59d5073f68c2258c17e7f1ed8a634dd0b9901191596",
+        "evaluationSuite": "banking-routing-v1",
+        "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+        "evidenceGraphRootDigest": "dc644a867461bbbdb4baea51ba66599ec1cf274cdc58f4cd6a4f2ac293529029",
+        "environmentId": "r10d-audit-production",
+        "workloadId": "banking-routing-v1"
+      },
+      "lifecycleState": "REVOKED",
+      "activeApprovalId": "approval-3092cab5432082ff9613cd6a",
+      "monitoringStatus": "HEALTHY",
+      "monitoringPolicy": {
+        "maxEvidenceAgeMs": 86400000,
+        "failClosedWhenOverdue": true
+      },
+      "lastSuccessfulCheckAt": "2026-11-14T20:43:00.000Z",
+      "lastCheckAt": "2026-11-14T20:43:00.000Z",
+      "latestInvalidatedNodes": [],
+      "createdAt": "2026-11-14T20:43:00.000Z",
+      "updatedAt": "2026-11-14T20:50:00.000Z"
+    }
+  ],
+  "approvals": [
+    {
+      "approvalId": "approval-6cb0837e835a2e981ab78387",
+      "scope": {
+        "deploymentId": "deployment-r10d-baseline",
+        "qualificationRunId": "qualification-a71dd01c05a9d8dc66b54787",
+        "environmentId": "r10d-audit-production",
+        "workloadId": "banking-routing-v1",
+        "candidateIdentityDigest": "94b0eca3156d9c74d36265b783533edefe81f38c8f2dbf7a1be2d7f8c69c5638",
+        "contractDigest": "1c6de99bfe798dad9551dca7db5a80367403705ddbe19f3b25c4115e21f0ee72",
+        "policyDigest": "d7a32ab506dafa271ff2e59d5073f68c2258c17e7f1ed8a634dd0b9901191596",
+        "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+        "evidenceGraphRootDigest": "dc644a867461bbbdb4baea51ba66599ec1cf274cdc58f4cd6a4f2ac293529029",
+        "fullIdentityDigest": "ac05c5208160074fc304ea48647df78bfc54a2e47fc905ef8dd5b0a7debeb746"
+      },
+      "state": "APPROVED",
+      "actorId": "APPROVER",
+      "issuedAt": "2026-11-14T20:34:00.000Z",
+      "expiresAt": null,
+      "stateChangedAt": "2026-11-14T20:34:00.000Z",
+      "reason": "Approve last-known-good baseline fixture"
+    },
+    {
+      "approvalId": "approval-3092cab5432082ff9613cd6a",
+      "scope": {
+        "deploymentId": "deployment-r10d-current",
+        "qualificationRunId": "qualification-4739098b3c98a158c4bb031c",
+        "environmentId": "r10d-audit-production",
+        "workloadId": "banking-routing-v1",
+        "candidateIdentityDigest": "f57f45e958bf0dc3d23e500ad25488cb5677bacacc79ab9f2755cc56b91d03a8",
+        "contractDigest": "1c6de99bfe798dad9551dca7db5a80367403705ddbe19f3b25c4115e21f0ee72",
+        "policyDigest": "d7a32ab506dafa271ff2e59d5073f68c2258c17e7f1ed8a634dd0b9901191596",
+        "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+        "evidenceGraphRootDigest": "dc644a867461bbbdb4baea51ba66599ec1cf274cdc58f4cd6a4f2ac293529029",
+        "fullIdentityDigest": "44c0ab7e12ec780665eb4b98f7eb19dd9ac799dae2afbd2b2a4d31e0c1e8e26c"
+      },
+      "state": "REVOKED",
+      "actorId": "APPROVER",
+      "issuedAt": "2026-11-14T20:44:00.000Z",
+      "expiresAt": null,
+      "stateChangedAt": "2026-11-14T20:50:00.000Z",
+      "reason": "Incident response: current release revoked; investigate and roll back"
+    }
+  ],
+  "watchChecks": [],
+  "reassessments": [],
+  "events": [
+    {
+      "recordedAt": "2026-11-15T08:44:48.271Z",
+      "appendSequence": 1,
+      "eventId": "deployment_registered-fd3edaab9a8e7c059d55e8e0",
+      "deploymentId": "deployment-deepseek-banking-prod",
+      "occurredAt": "2026-11-14T19:50:02.000Z",
+      "type": "DEPLOYMENT_REGISTERED",
+      "detail": "identity=ceb0a755d26091d5a3c59b1f9c818ca7210c91305af05dbc3b27a32d5e716b47"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:48.482Z",
+      "appendSequence": 2,
+      "eventId": "deployment_registered-6795418fdcdba9ae8a56be8e",
+      "deploymentId": "deployment-gemma-banking-prod",
+      "occurredAt": "2026-11-15T08:35:04.861Z",
+      "type": "DEPLOYMENT_REGISTERED",
+      "detail": "identity=9896d7ecf391280123b17bd26e8b1aa815607a15e023db1fc88f4c65dc9cef6c"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:48.698Z",
+      "appendSequence": 3,
+      "eventId": "deployment_registered-fd71ebbf3ef5a045cf189ef0",
+      "deploymentId": "deployment-qwen-banking-prod",
+      "occurredAt": "2026-11-15T08:23:16.468Z",
+      "type": "DEPLOYMENT_REGISTERED",
+      "detail": "identity=23cbc469694f06dcd59019484884b24f630665dae910956466eb9098e89013f6"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:52.721Z",
+      "appendSequence": 4,
+      "eventId": "deployment_registered-09adb2a2ac1d9d6697817209",
+      "deploymentId": "deployment-r10d-baseline",
+      "occurredAt": "2026-11-14T20:33:00.000Z",
+      "type": "DEPLOYMENT_REGISTERED",
+      "detail": "identity=ac05c5208160074fc304ea48647df78bfc54a2e47fc905ef8dd5b0a7debeb746"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:52.792Z",
+      "appendSequence": 5,
+      "eventId": "approval_granted-7ad4da747ff5b773ad50edd0",
+      "deploymentId": "deployment-r10d-baseline",
+      "occurredAt": "2026-11-14T20:34:00.000Z",
+      "type": "APPROVAL_GRANTED",
+      "detail": "approval=approval-6cb0837e835a2e981ab78387; scope=ac05c5208160074fc304ea48647df78bfc54a2e47fc905ef8dd5b0a7debeb746"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:53.135Z",
+      "appendSequence": 6,
+      "eventId": "deployment_registered-50127c6d8727214289df51b0",
+      "deploymentId": "deployment-r10d-current",
+      "occurredAt": "2026-11-14T20:43:00.000Z",
+      "type": "DEPLOYMENT_REGISTERED",
+      "detail": "identity=44c0ab7e12ec780665eb4b98f7eb19dd9ac799dae2afbd2b2a4d31e0c1e8e26c"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:53.208Z",
+      "appendSequence": 7,
+      "eventId": "approval_granted-a2fe49ce4ddf9eb88c19fd9a",
+      "deploymentId": "deployment-r10d-current",
+      "occurredAt": "2026-11-14T20:44:00.000Z",
+      "type": "APPROVAL_GRANTED",
+      "detail": "approval=approval-3092cab5432082ff9613cd6a; scope=44c0ab7e12ec780665eb4b98f7eb19dd9ac799dae2afbd2b2a4d31e0c1e8e26c"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:53.420Z",
+      "appendSequence": 8,
+      "eventId": "approval_revoked-6d32cb3a0899128013dd8984",
+      "deploymentId": "deployment-r10d-current",
+      "occurredAt": "2026-11-14T20:50:00.000Z",
+      "type": "APPROVAL_REVOKED",
+      "detail": "approval-3092cab5432082ff9613cd6a; actor=APPROVER; Incident response: current release revoked; investigate and roll back"
+    }
+  ]
+}

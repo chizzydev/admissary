@@ -1,0 +1,38 @@
+{
+  "schema": "admissary-r13-live-catalog/v1",
+  "retrievedAt": "2026-11-15T08:26:34.558Z",
+  "endpoint": "https://lighthouse.dphn.ai/run/text-v/v1/models",
+  "catalog": {
+    "models": [
+      {
+        "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+        "ownedBy": "dolphinpod"
+      },
+      {
+        "id": "nvidia/Gemma-4-26B-A4B-NVFP4",
+        "ownedBy": "dolphinpod"
+      },
+      {
+        "id": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+        "ownedBy": "dolphinpod"
+      }
+    ],
+    "digest": "a53a5278dcdb7fde46aed1afd2385443256a592a9aa8f9bb5e8931455a3beb60"
+  },
+  "targets": [
+    {
+      "slug": "gemma",
+      "candidateId": "candidate-gemma4-nvfp4",
+      "briefName": "Gemma-4-26B-A4B-NVFP4",
+      "model": "nvidia/Gemma-4-26B-A4B-NVFP4",
+      "available": true
+    },
+    {
+      "slug": "qwen",
+      "candidateId": "candidate-qwen36-nvfp4",
+      "briefName": "Qwen3.6-35B-A3B-NVFP4",
+      "model": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+      "available": true
+    }
+  ]
+}

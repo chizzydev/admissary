@@ -1,0 +1,122 @@
+{
+  "schema": "admissary-persistence/v1",
+  "revision": 5,
+  "qualificationRuns": [
+    {
+      "runId": "r6-deepseek-live",
+      "contractId": "banking-support-prod",
+      "contractVersion": "1.0.0",
+      "contractDigest": "4708b4e1eaedb0d8abe537b26c8cb55cb591a7205e8d4e8a2cb7bd27f5e3ba01",
+      "candidateIdentity": "dolphin:deepseek-ai/DeepSeek-V4.1-Flash",
+      "qualificationState": "REVIEW_REQUIRED",
+      "graphRootDigest": "a49d15cd2e86ff0d235a86bada97949d64ee23d8b0d61b984e3c2fb62975c1f3",
+      "exactArtifactBindingProven": false,
+      "finalizedAt": "2026-11-14T17:29:05.232Z",
+      "sourceArtifactDigest": "d5e85dfbd04214b7b22d0c8eb2eef3b01857aba535c80b7b5322231075821a54"
+    },
+    {
+      "runId": "authorization-acceptance-fixture",
+      "contractId": "fixture-contract",
+      "contractVersion": "1.0.0",
+      "contractDigest": "fixture-contract-digest",
+      "candidateIdentity": "fixture:model@sha256:exact",
+      "qualificationState": "QUALIFIED",
+      "graphRootDigest": "fixture-graph-root",
+      "exactArtifactBindingProven": true,
+      "finalizedAt": "2026-11-14T18:31:00.000Z",
+      "sourceArtifactDigest": "fixture:authorization-acceptance"
+    }
+  ],
+  "authorizationEvents": [
+    {
+      "id": "authorization-5be42de41210bc21b6b18fa1",
+      "runId": "authorization-acceptance-fixture",
+      "state": "APPROVED",
+      "actorId": "demo-approver",
+      "actorRoles": [
+        "APPROVER"
+      ],
+      "occurredAt": "2026-11-14T18:33:00.000Z",
+      "reason": "authorization acceptance fixture"
+    },
+    {
+      "id": "authorization-4e4407463e5647279cc8e58b",
+      "runId": "authorization-acceptance-fixture",
+      "state": "REVOKED",
+      "actorId": "demo-approver",
+      "actorRoles": [
+        "APPROVER"
+      ],
+      "occurredAt": "2026-11-14T18:35:00.000Z",
+      "reason": "fixture revocation retained for history"
+    }
+  ],
+  "validityEvents": [
+    {
+      "id": "validity-ac5003e3bc44419c67550924",
+      "runId": "r6-deepseek-live",
+      "state": "CURRENT",
+      "actorId": "system",
+      "occurredAt": "2026-11-14T17:29:05.232Z",
+      "reason": "Qualification finalized"
+    },
+    {
+      "id": "validity-dd54f370141ed3b08a7afd96",
+      "runId": "authorization-acceptance-fixture",
+      "state": "CURRENT",
+      "actorId": "system",
+      "occurredAt": "2026-11-14T18:31:00.000Z",
+      "reason": "Qualification finalized"
+    },
+    {
+      "id": "validity-7b7f19e93255b01441a2faf1",
+      "runId": "authorization-acceptance-fixture",
+      "state": "STALE",
+      "actorId": "system",
+      "occurredAt": "2026-11-14T18:34:00.000Z",
+      "reason": "artifact revision changed"
+    }
+  ],
+  "auditEvents": [
+    {
+      "id": "audit-7e615fe1facd1452906c623e",
+      "type": "QUALIFICATION_FINALIZED",
+      "runId": "r6-deepseek-live",
+      "actorId": "system",
+      "occurredAt": "2026-11-14T17:29:05.232Z",
+      "detail": "qualification=REVIEW_REQUIRED; source=d5e85dfbd04214b7b22d0c8eb2eef3b01857aba535c80b7b5322231075821a54"
+    },
+    {
+      "id": "audit-43be2f77bcf041d0485f9ec0",
+      "type": "QUALIFICATION_FINALIZED",
+      "runId": "authorization-acceptance-fixture",
+      "actorId": "system",
+      "occurredAt": "2026-11-14T18:31:00.000Z",
+      "detail": "qualification=QUALIFIED; source=fixture:authorization-acceptance"
+    },
+    {
+      "id": "audit-9e7c47d046fb09ea68fde192",
+      "type": "AUTHORIZATION_APPROVED",
+      "runId": "authorization-acceptance-fixture",
+      "actorId": "demo-approver",
+      "occurredAt": "2026-11-14T18:33:00.000Z",
+      "detail": "authorization acceptance fixture"
+    },
+    {
+      "id": "audit-b206398e2c90c1b6ddc633f5",
+      "type": "VALIDITY_STALE",
+      "runId": "authorization-acceptance-fixture",
+      "actorId": "system",
+      "occurredAt": "2026-11-14T18:34:00.000Z",
+      "detail": "artifact revision changed"
+    },
+    {
+      "id": "audit-1fbfa31e83cf2635910578ff",
+      "type": "AUTHORIZATION_REVOKED",
+      "runId": "authorization-acceptance-fixture",
+      "actorId": "demo-approver",
+      "occurredAt": "2026-11-14T18:35:00.000Z",
+      "detail": "fixture revocation retained for history"
+    }
+  ]
+}

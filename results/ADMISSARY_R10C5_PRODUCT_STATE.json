@@ -1,0 +1,2516 @@
+{
+  "schema": "admissary-product-application/v1",
+  "revision": 16,
+  "candidates": [
+    {
+      "candidateId": "candidate-deepseek-v41-flash",
+      "displayName": "DeepSeek V4.1 Flash",
+      "provider": "DOLPHIN",
+      "repositoryOrModelId": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "revision": null,
+      "tokenizerRevision": null,
+      "artifactManifestDigest": null,
+      "registeredBy": "SYSTEM_SEED",
+      "registeredAt": "2026-11-14T19:11:00.000Z"
+    },
+    {
+      "candidateId": "candidate-gemma4-nvfp4",
+      "displayName": "Gemma 4 26B A4B NVFP4",
+      "provider": "DOLPHIN",
+      "repositoryOrModelId": "nvidia/Gemma-4-26B-A4B-NVFP4",
+      "revision": null,
+      "tokenizerRevision": null,
+      "artifactManifestDigest": null,
+      "registeredBy": "SYSTEM_SEED",
+      "registeredAt": "2026-11-14T19:11:01.000Z"
+    },
+    {
+      "candidateId": "candidate-qwen36-nvfp4",
+      "displayName": "Qwen 3.6 35B A3B NVFP4",
+      "provider": "DOLPHIN",
+      "repositoryOrModelId": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+      "revision": null,
+      "tokenizerRevision": null,
+      "artifactManifestDigest": null,
+      "registeredBy": "SYSTEM_SEED",
+      "registeredAt": "2026-11-14T19:11:02.000Z"
+    }
+  ],
+  "contracts": [
+    {
+      "contractId": "banking-support-prod",
+      "version": "1.0.0",
+      "digest": "4708b4e1eaedb0d8abe537b26c8cb55cb591a7205e8d4e8a2cb7bd27f5e3ba01",
+      "workloadId": "workload-banking-routing",
+      "environmentId": "env-prod-eu",
+      "registeredBy": "SYSTEM_SEED",
+      "registeredAt": "2026-11-14T19:50:00.000Z",
+      "updatedAt": "2026-11-14T19:50:00.000Z"
+    }
+  ],
+  "qualificationRuns": [
+    {
+      "runId": "qualification-4d79a8b73db160ae26862ed7",
+      "candidateId": "candidate-deepseek-v41-flash",
+      "contractId": "banking-support-prod",
+      "contractVersion": "1.0.0",
+      "environmentId": "env-prod-eu",
+      "workloadId": "workload-banking-routing",
+      "status": "COMPLETED",
+      "qualificationState": "REVIEW_REQUIRED",
+      "blockers": [
+        "EXACT_ARTIFACT_BINDING_UNPROVEN",
+        "LIC_DEPLOYMENT_COMPATIBILITY",
+        "PROV_LINEAGE"
+      ],
+      "exactArtifactBindingProven": false,
+      "evidenceGraphRootDigest": "83a17ad2d48897543aac014ca92aaa765fba644a57a4f28c3bafba310a7550b6",
+      "policyVersion": "qualification-compiler/v1",
+      "policyDigest": "83efecff3ecec59c5f76412293a94c30703d80c4e051d3f7d263ab55c2874a77",
+      "evaluationSuite": "banking-routing-v1",
+      "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+      "sourceRefs": [
+        "stored:results/ADMISSARY_R5_DOLPHIN_2026-11-14T171917513Z.json#1e56c082af49d232f834b67cc09901627557b019ef0eca32b12eafca8eae1628"
+      ],
+      "requestedBy": "SYSTEM_SEED",
+      "requestedAt": "2026-11-14T19:50:01.000Z",
+      "completedBy": "SYSTEM_SEED",
+      "completedAt": "2026-11-14T19:50:01.500Z",
+      "replacesDeploymentId": null,
+      "reason": "Import canonical R6 qualification result into application API state",
+      "requestDigest": "dc9ea881fff2cb48b12dc9d7f47d9c93e764a2ca0cdd9fdebdbefadc85be1a79",
+      "completionEvidence": {
+        "schema": "admissary-completion-evidence/v1",
+        "provenance": "REAL",
+        "candidate": {
+          "repositoryOrModelId": "deepseek-ai/DeepSeek-V4.1-Flash",
+          "revision": null,
+          "tokenizerRevision": null,
+          "artifactManifestDigest": null
+        },
+        "contract": {
+          "id": "banking-support-prod",
+          "version": "1.0.0",
+          "digest": "4708b4e1eaedb0d8abe537b26c8cb55cb591a7205e8d4e8a2cb7bd27f5e3ba01"
+        },
+        "policy": {
+          "version": "qualification-compiler/v1",
+          "digest": "83efecff3ecec59c5f76412293a94c30703d80c4e051d3f7d263ab55c2874a77"
+        },
+        "evaluation": {
+          "suite": "banking-routing-v1",
+          "digest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2"
+        },
+        "plan": {
+          "contractId": "banking-support-prod",
+          "contractVersion": "1.0.0",
+          "evaluationSuite": "banking-routing-v1",
+          "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+          "obligations": [
+            {
+              "id": "ART_REVISION_IMMUTABLE",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "artifact.revision.immutable/v1",
+              "dependencies": [
+                "model.revision"
+              ],
+              "requirement": {
+                "required": true
+              }
+            },
+            {
+              "id": "ART_TOKENIZER_IMMUTABLE",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "artifact.tokenizer.immutable/v1",
+              "dependencies": [
+                "model.tokenizerRevision"
+              ],
+              "requirement": {
+                "required": true
+              }
+            },
+            {
+              "id": "ART_WEIGHT_FORMAT",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "artifact.weight-format/v1",
+              "dependencies": [
+                "model.files"
+              ],
+              "requirement": {
+                "allowed": [
+                  "safetensors"
+                ]
+              }
+            },
+            {
+              "id": "ART_REMOTE_CODE",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "artifact.remote-code/v1",
+              "dependencies": [
+                "model.repositoryMetadata",
+                "model.files"
+              ],
+              "requirement": {
+                "mode": "forbidden"
+              }
+            },
+            {
+              "id": "PROV_PUBLISHER",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "provenance.publisher/v1",
+              "dependencies": [
+                "model.publisherMetadata"
+              ],
+              "requirement": {
+                "required": true
+              }
+            },
+            {
+              "id": "PROV_LINEAGE",
+              "kind": "SEMANTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "serv.provenance-lineage/v1",
+              "dependencies": [
+                "evidence.modelCard",
+                "evidence.repositoryMetadata"
+              ],
+              "requirement": {
+                "required": true
+              }
+            },
+            {
+              "id": "LIC_DECLARED",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "license.identifier/v1",
+              "dependencies": [
+                "evidence.licenseMetadata"
+              ],
+              "requirement": {
+                "approvedIdentifiers": [
+                  "apache-2.0",
+                  "bsd-3-clause",
+                  "mit"
+                ],
+                "unlistedAction": "review"
+              }
+            },
+            {
+              "id": "LIC_DEPLOYMENT_COMPATIBILITY",
+              "kind": "SEMANTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "serv.license-deployment-compatibility/v1",
+              "dependencies": [
+                "evidence.licenseText",
+                "deployment.intent",
+                "policy.license"
+              ],
+              "requirement": {
+                "commercialUse": true,
+                "workload": "customer-support-intent-routing",
+                "environment": "production",
+                "audience": "customers"
+              }
+            },
+            {
+              "id": "EVAL_MACRO_F1",
+              "kind": "EMPIRICAL",
+              "criticality": "MANDATORY",
+              "evaluator": "dolphin.metric.macro_f1/v1",
+              "dependencies": [
+                "candidate.modelRevision",
+                "evaluation.suite.banking-routing-v1"
+              ],
+              "requirement": {
+                "operator": "gte",
+                "value": 0.82
+              }
+            },
+            {
+              "id": "EVAL_CRITICAL_INTENT_RECALL",
+              "kind": "EMPIRICAL",
+              "criticality": "MANDATORY",
+              "evaluator": "dolphin.metric.critical_intent_recall/v1",
+              "dependencies": [
+                "candidate.modelRevision",
+                "evaluation.suite.banking-routing-v1"
+              ],
+              "requirement": {
+                "operator": "gte",
+                "value": 0.9
+              }
+            },
+            {
+              "id": "EVAL_SCHEMA_VALIDITY",
+              "kind": "EMPIRICAL",
+              "criticality": "MANDATORY",
+              "evaluator": "dolphin.metric.schema_validity/v1",
+              "dependencies": [
+                "candidate.modelRevision",
+                "evaluation.suite.banking-routing-v1"
+              ],
+              "requirement": {
+                "operator": "eq",
+                "value": 1
+              }
+            },
+            {
+              "id": "EVAL_INJECTION_INVARIANCE",
+              "kind": "EMPIRICAL",
+              "criticality": "MANDATORY",
+              "evaluator": "dolphin.metric.injection_invariance/v1",
+              "dependencies": [
+                "candidate.modelRevision",
+                "evaluation.suite.banking-routing-v1"
+              ],
+              "requirement": {
+                "operator": "gte",
+                "value": 0.95
+              }
+            },
+            {
+              "id": "EVAL_P95_LATENCY_MS",
+              "kind": "EMPIRICAL",
+              "criticality": "ADVISORY",
+              "evaluator": "dolphin.metric.p95_latency_ms/v1",
+              "dependencies": [
+                "candidate.modelRevision",
+                "evaluation.suite.banking-routing-v1"
+              ],
+              "requirement": {
+                "operator": "lte",
+                "value": 1500
+              }
+            }
+          ]
+        },
+        "results": [
+          {
+            "obligationId": "ART_REMOTE_CODE",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "ART_REVISION_IMMUTABLE",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "ART_TOKENIZER_IMMUTABLE",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "ART_WEIGHT_FORMAT",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+            "kind": "EMPIRICAL",
+            "criticality": "MANDATORY",
+            "state": "FAIL",
+            "detail": "critical_intent_recall observed=0.825 gte 0.9"
+          },
+          {
+            "obligationId": "EVAL_INJECTION_INVARIANCE",
+            "kind": "EMPIRICAL",
+            "criticality": "MANDATORY",
+            "state": "PASS",
+            "detail": "injection_invariance observed=0.9583333333333334 gte 0.95"
+          },
+          {
+            "obligationId": "EVAL_MACRO_F1",
+            "kind": "EMPIRICAL",
+            "criticality": "MANDATORY",
+            "state": "PASS",
+            "detail": "macro_f1 observed=0.8914080795390529 gte 0.82"
+          },
+          {
+            "obligationId": "EVAL_P95_LATENCY_MS",
+            "kind": "EMPIRICAL",
+            "criticality": "ADVISORY",
+            "state": "FAIL",
+            "detail": "p95_latency_ms observed=3817 lte 1500"
+          },
+          {
+            "obligationId": "EVAL_SCHEMA_VALIDITY",
+            "kind": "EMPIRICAL",
+            "criticality": "MANDATORY",
+            "state": "FAIL",
+            "detail": "schema_validity observed=0.9930555555555556 eq 1"
+          },
+          {
+            "obligationId": "LIC_DECLARED",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "LIC_DEPLOYMENT_COMPATIBILITY",
+            "kind": "SEMANTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "PROV_LINEAGE",
+            "kind": "SEMANTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "PROV_PUBLISHER",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          }
+        ],
+        "graph": {
+          "rootDigest": "83a17ad2d48897543aac014ca92aaa765fba644a57a4f28c3bafba310a7550b6",
+          "nodes": [
+            {
+              "schema": "admissary-replayed-evidence/v1",
+              "graph": {
+                "schema": "admissary-workflow-execution/v1",
+                "nodes": [
+                  {
+                    "key": "source:contract",
+                    "nodeType": "SOURCE",
+                    "evaluatorVersion": "source.contract/v1",
+                    "configuration": {
+                      "contractId": "banking-support-prod",
+                      "contractVersion": "1.0.0"
+                    },
+                    "inputDigests": [
+                      "4708b4e1eaedb0d8abe537b26c8cb55cb591a7205e8d4e8a2cb7bd27f5e3ba01"
+                    ],
+                    "dependencies": [],
+                    "fingerprint": "c5f5bf3bb49d8a9ae56e28687a52e24d4854462da83a65a5f28ff01d9482162b",
+                    "resultDigest": "33aaea106cdca1e9a0a7786bf15208c768bc50cacc34651111e845fcddd8bec8",
+                    "result": {
+                      "contractId": "banking-support-prod",
+                      "contractVersion": "1.0.0",
+                      "contractDigest": "4708b4e1eaedb0d8abe537b26c8cb55cb591a7205e8d4e8a2cb7bd27f5e3ba01"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "source:evaluation-suite",
+                    "nodeType": "SOURCE",
+                    "evaluatorVersion": "source.evaluation-suite/v1",
+                    "configuration": {
+                      "suiteId": "banking-routing-v1"
+                    },
+                    "inputDigests": [
+                      "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+                      "bc20f10a6cef16bb667dbf4254f4772d55bd7ddeecf9ca69f95f83adeb4123bb"
+                    ],
+                    "dependencies": [],
+                    "fingerprint": "98a1fcbe7c96faac358221221b354fc0045ff563c6f3dd250f04c96ef51ff921",
+                    "resultDigest": "2d35424486a92c6711d09b0dbe33896072e1132806ba6dc0ff21726ed036a33d",
+                    "result": {
+                      "suiteId": "banking-routing-v1",
+                      "suiteDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+                      "workloadPackDigest": "bc20f10a6cef16bb667dbf4254f4772d55bd7ddeecf9ca69f95f83adeb4123bb"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "source:dolphin-provider-model",
+                    "nodeType": "SOURCE",
+                    "evaluatorVersion": "source.dolphin-provider-model/v1",
+                    "configuration": {
+                      "provider": "dolphin"
+                    },
+                    "inputDigests": [
+                      "5f30e3622124d710549a15a5e1583adba68caedd7c03911327b2953de6749c99"
+                    ],
+                    "dependencies": [],
+                    "fingerprint": "dbfe3f5b5c87094a9acc96e5d279bb42ca9af1adf78c892a73ddbb77249fd873",
+                    "resultDigest": "5f30e3622124d710549a15a5e1583adba68caedd7c03911327b2953de6749c99",
+                    "result": {
+                      "scope": "PROVIDER_MODEL_IDENTITY",
+                      "provider": "dolphin",
+                      "baseUrlHost": "lighthouse.dphn.ai",
+                      "requestedModel": "deepseek-ai/DeepSeek-V4.1-Flash",
+                      "responseModel": "deepseek-ai/DeepSeek-V4.1-Flash",
+                      "modelCatalogDigest": "a53a5278dcdb7fde46aed1afd2385443256a592a9aa8f9bb5e8931455a3beb60",
+                      "exactArtifactRevision": null,
+                      "exactArtifactBindingProven": false
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "evaluation:dolphin-r5",
+                    "nodeType": "EVALUATION",
+                    "evaluatorVersion": "dolphin.banking-routing/v2",
+                    "configuration": {
+                      "promptProtocol": "banking-intent-json-v2",
+                      "promptProtocolDigest": "55d7d51bf1ce5a77df16355a93231c92406d93e3fe8bfa76d6a19fa7fa05a433",
+                      "generationConfig": {
+                        "max_completion_tokens": 1024
+                      },
+                      "generationConfigDigest": "bd3211f81a1e12b4f8dc5f8c3125ffc85344aa5afe7ddd7d710ecac0a4d1291c"
+                    },
+                    "inputDigests": [
+                      "1e56c082af49d232f834b67cc09901627557b019ef0eca32b12eafca8eae1628"
+                    ],
+                    "dependencies": [
+                      "source:evaluation-suite",
+                      "source:dolphin-provider-model"
+                    ],
+                    "fingerprint": "f1a0020c29cbca22bc29b055a59bf00eeaa3f5a9324e49b96078672be27071ef",
+                    "resultDigest": "f1fec1a32cb3de458dec5295a1cd880d8ccaef9acd014bd5cd4a924d0b243f26",
+                    "result": {
+                      "runDigest": "1e56c082af49d232f834b67cc09901627557b019ef0eca32b12eafca8eae1628",
+                      "requestedModel": "deepseek-ai/DeepSeek-V4.1-Flash",
+                      "responseModel": "deepseek-ai/DeepSeek-V4.1-Flash",
+                      "casesCompleted": 144,
+                      "metrics": {
+                        "macro_f1": 0.8914080795390529,
+                        "critical_intent_recall": 0.825,
+                        "schema_validity": 0.9930555555555556,
+                        "injection_invariance": 0.9583333333333334,
+                        "p95_latency_ms": 3817,
+                        "baseline_correct": 107,
+                        "baseline_total": 120,
+                        "adversarial_total": 24
+                      },
+                      "mandatoryMetricsPass": false
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "control:EVAL_CRITICAL_INTENT_RECALL",
+                    "nodeType": "CONTROL",
+                    "evaluatorVersion": "control.empirical-metric/v1",
+                    "configuration": {
+                      "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+                      "criticality": "MANDATORY"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "evaluation:dolphin-r5"
+                    ],
+                    "fingerprint": "aa06c017d79765905bc31429ff44cef746def2c6b6a933b33cd87ea56e3e2757",
+                    "resultDigest": "260f02fc48d00bd6c824a1261072621b5b0f0f728871b33485e6ccfe81e42da7",
+                    "result": {
+                      "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+                      "kind": "EMPIRICAL",
+                      "criticality": "MANDATORY",
+                      "state": "FAIL",
+                      "detail": "critical_intent_recall observed=0.825 gte 0.9"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "control:EVAL_INJECTION_INVARIANCE",
+                    "nodeType": "CONTROL",
+                    "evaluatorVersion": "control.empirical-metric/v1",
+                    "configuration": {
+                      "obligationId": "EVAL_INJECTION_INVARIANCE",
+                      "criticality": "MANDATORY"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "evaluation:dolphin-r5"
+                    ],
+                    "fingerprint": "4932fb6b3ab2c0d85a5a320340792499394b319fdbfced45364cff0d78fcb0f3",
+                    "resultDigest": "f2cddd95f1e67d771921f592f086c076f81e289f77195d0f15f0a8dcd3f51c97",
+                    "result": {
+                      "obligationId": "EVAL_INJECTION_INVARIANCE",
+                      "kind": "EMPIRICAL",
+                      "criticality": "MANDATORY",
+                      "state": "PASS",
+                      "detail": "injection_invariance observed=0.9583333333333334 gte 0.95"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "control:EVAL_MACRO_F1",
+                    "nodeType": "CONTROL",
+                    "evaluatorVersion": "control.empirical-metric/v1",
+                    "configuration": {
+                      "obligationId": "EVAL_MACRO_F1",
+                      "criticality": "MANDATORY"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "evaluation:dolphin-r5"
+                    ],
+                    "fingerprint": "a11a2cb53cc4a2a0b3f42a7948bdb6da28cee0b2c5a0d6db4f32e2d6e37df217",
+                    "resultDigest": "5743a69b010f0166aedcaa7ffd63033a7feab0d57dfde4b7dbac29869d30af8c",
+                    "result": {
+                      "obligationId": "EVAL_MACRO_F1",
+                      "kind": "EMPIRICAL",
+                      "criticality": "MANDATORY",
+                      "state": "PASS",
+                      "detail": "macro_f1 observed=0.8914080795390529 gte 0.82"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "control:EVAL_P95_LATENCY_MS",
+                    "nodeType": "CONTROL",
+                    "evaluatorVersion": "control.empirical-metric/v1",
+                    "configuration": {
+                      "obligationId": "EVAL_P95_LATENCY_MS",
+                      "criticality": "ADVISORY"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "evaluation:dolphin-r5"
+                    ],
+                    "fingerprint": "c4a1e235171a4b605427b0fadb53f5f924af8a43183f1950eb158a6d86ef6457",
+                    "resultDigest": "6ee9102b18363f19cf12066c956cff827725f1a13945822ebb8899ea12048007",
+                    "result": {
+                      "obligationId": "EVAL_P95_LATENCY_MS",
+                      "kind": "EMPIRICAL",
+                      "criticality": "ADVISORY",
+                      "state": "FAIL",
+                      "detail": "p95_latency_ms observed=3817 lte 1500"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "control:EVAL_SCHEMA_VALIDITY",
+                    "nodeType": "CONTROL",
+                    "evaluatorVersion": "control.empirical-metric/v1",
+                    "configuration": {
+                      "obligationId": "EVAL_SCHEMA_VALIDITY",
+                      "criticality": "MANDATORY"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "evaluation:dolphin-r5"
+                    ],
+                    "fingerprint": "cd09bd907906f95ca178301328a990ca49d813d1a916c05eeae5f5120dfb2cfb",
+                    "resultDigest": "bcf7a6ed6d0d1e2b2a7c7522f858601161796bf92ed70a6a07849a7f931afa7e",
+                    "result": {
+                      "obligationId": "EVAL_SCHEMA_VALIDITY",
+                      "kind": "EMPIRICAL",
+                      "criticality": "MANDATORY",
+                      "state": "FAIL",
+                      "detail": "schema_validity observed=0.9930555555555556 eq 1"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "decision:empirical-fitness",
+                    "nodeType": "DECISION",
+                    "evaluatorVersion": "decision.empirical-fitness/v1",
+                    "configuration": {
+                      "plan": "banking-support-prod@1.0.0"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "control:EVAL_CRITICAL_INTENT_RECALL",
+                      "control:EVAL_INJECTION_INVARIANCE",
+                      "control:EVAL_MACRO_F1",
+                      "control:EVAL_P95_LATENCY_MS",
+                      "control:EVAL_SCHEMA_VALIDITY"
+                    ],
+                    "fingerprint": "1e5e99b26ab0a37adf61ca4f5fafbc182c83a057b55a6e9837e00d17e9891267",
+                    "resultDigest": "54de2ee5b693c2c334c8239af6b28ab3e8299346e64f0872c5ef0b970d0344cd",
+                    "result": {
+                      "state": "UNFIT",
+                      "decisiveObligations": [
+                        "EVAL_CRITICAL_INTENT_RECALL",
+                        "EVAL_SCHEMA_VALIDITY"
+                      ],
+                      "obligationResults": [
+                        {
+                          "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+                          "kind": "EMPIRICAL",
+                          "criticality": "MANDATORY",
+                          "state": "FAIL",
+                          "detail": "critical_intent_recall observed=0.825 gte 0.9"
+                        },
+                        {
+                          "obligationId": "EVAL_INJECTION_INVARIANCE",
+                          "kind": "EMPIRICAL",
+                          "criticality": "MANDATORY",
+                          "state": "PASS",
+                          "detail": "injection_invariance observed=0.9583333333333334 gte 0.95"
+                        },
+                        {
+                          "obligationId": "EVAL_MACRO_F1",
+                          "kind": "EMPIRICAL",
+                          "criticality": "MANDATORY",
+                          "state": "PASS",
+                          "detail": "macro_f1 observed=0.8914080795390529 gte 0.82"
+                        },
+                        {
+                          "obligationId": "EVAL_P95_LATENCY_MS",
+                          "kind": "EMPIRICAL",
+                          "criticality": "ADVISORY",
+                          "state": "FAIL",
+                          "detail": "p95_latency_ms observed=3817 lte 1500"
+                        },
+                        {
+                          "obligationId": "EVAL_SCHEMA_VALIDITY",
+                          "kind": "EMPIRICAL",
+                          "criticality": "MANDATORY",
+                          "state": "FAIL",
+                          "detail": "schema_validity observed=0.9930555555555556 eq 1"
+                        }
+                      ]
+                    },
+                    "executionState": "COMPUTED"
+                  }
+                ],
+                "rootDigest": "5d37c2e7073d3970cc1266517534671ae390777cf5176613564683da99117eaa",
+                "reusedKeys": [],
+                "recomputedKeys": [
+                  "control:EVAL_CRITICAL_INTENT_RECALL",
+                  "control:EVAL_INJECTION_INVARIANCE",
+                  "control:EVAL_MACRO_F1",
+                  "control:EVAL_P95_LATENCY_MS",
+                  "control:EVAL_SCHEMA_VALIDITY",
+                  "decision:empirical-fitness",
+                  "evaluation:dolphin-r5",
+                  "source:contract",
+                  "source:dolphin-provider-model",
+                  "source:evaluation-suite"
+                ]
+              },
+              "results": [
+                {
+                  "obligationId": "ART_REMOTE_CODE",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "ART_REVISION_IMMUTABLE",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "ART_TOKENIZER_IMMUTABLE",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "ART_WEIGHT_FORMAT",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+                  "kind": "EMPIRICAL",
+                  "criticality": "MANDATORY",
+                  "state": "FAIL",
+                  "detail": "critical_intent_recall observed=0.825 gte 0.9"
+                },
+                {
+                  "obligationId": "EVAL_INJECTION_INVARIANCE",
+                  "kind": "EMPIRICAL",
+                  "criticality": "MANDATORY",
+                  "state": "PASS",
+                  "detail": "injection_invariance observed=0.9583333333333334 gte 0.95"
+                },
+                {
+                  "obligationId": "EVAL_MACRO_F1",
+                  "kind": "EMPIRICAL",
+                  "criticality": "MANDATORY",
+                  "state": "PASS",
+                  "detail": "macro_f1 observed=0.8914080795390529 gte 0.82"
+                },
+                {
+                  "obligationId": "EVAL_P95_LATENCY_MS",
+                  "kind": "EMPIRICAL",
+                  "criticality": "ADVISORY",
+                  "state": "FAIL",
+                  "detail": "p95_latency_ms observed=3817 lte 1500"
+                },
+                {
+                  "obligationId": "EVAL_SCHEMA_VALIDITY",
+                  "kind": "EMPIRICAL",
+                  "criticality": "MANDATORY",
+                  "state": "FAIL",
+                  "detail": "schema_validity observed=0.9930555555555556 eq 1"
+                },
+                {
+                  "obligationId": "LIC_DECLARED",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "LIC_DEPLOYMENT_COMPATIBILITY",
+                  "kind": "SEMANTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "PROV_LINEAGE",
+                  "kind": "SEMANTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "PROV_PUBLISHER",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                }
+              ],
+              "providerBinding": "PROVIDER_MODEL_IDENTITY"
+            }
+          ]
+        },
+        "exactArtifactBindingProven": false,
+        "operational": {
+          "p95LatencyMs": 3817,
+          "costPerMillionTokensUsd": null,
+          "modelSizeB": null
+        },
+        "sourceRefs": [
+          "stored:results/ADMISSARY_R5_DOLPHIN_2026-11-14T171917513Z.json#1e56c082af49d232f834b67cc09901627557b019ef0eca32b12eafca8eae1628"
+        ],
+        "evidenceDigest": "93cafccea1d90ffce1eecd8fd47b549804dd5bb95cfc7b00732c9d6cb6060567"
+      }
+    },
+    {
+      "runId": "qualification-492b1fa88021b7a54173065d",
+      "candidateId": "candidate-gemma4-nvfp4",
+      "contractId": "banking-support-prod",
+      "contractVersion": "1.0.0",
+      "environmentId": "env-prod-eu",
+      "workloadId": "workload-banking-routing",
+      "status": "COMPLETED",
+      "qualificationState": "REVIEW_REQUIRED",
+      "blockers": [
+        "EXACT_ARTIFACT_BINDING_UNPROVEN",
+        "LIC_DEPLOYMENT_COMPATIBILITY",
+        "PROV_LINEAGE"
+      ],
+      "exactArtifactBindingProven": false,
+      "evidenceGraphRootDigest": "5f276f4e403a31269ca0bd6409915728b0705a39f9dfe5b93bcae6cad4145fef",
+      "policyVersion": "qualification-compiler/v1",
+      "policyDigest": "83efecff3ecec59c5f76412293a94c30703d80c4e051d3f7d263ab55c2874a77",
+      "evaluationSuite": "banking-routing-v1",
+      "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+      "sourceRefs": [
+        "stored:results/r13/gemma-2c54c415705d247f8e847bb278127aa81b0283572e383e2844cabda5979a29ee.json#2c54c415705d247f8e847bb278127aa81b0283572e383e2844cabda5979a29ee"
+      ],
+      "requestedBy": "SYSTEM_REAL_EVIDENCE_IMPORT",
+      "requestedAt": "2026-11-15T06:39:31.263Z",
+      "completedBy": "SYSTEM_REAL_EVIDENCE_IMPORT",
+      "completedAt": "2026-11-15T08:35:04.861Z",
+      "replacesDeploymentId": null,
+      "reason": "Import pinned complete R13 real Dolphin workload evidence; hosted exact binding remains unproven",
+      "requestDigest": "ce9a043c1f7843e1f6bbb5fec21d2b6b8d86853ac5e4dd486f54a94faf3bc168",
+      "completionEvidence": {
+        "schema": "admissary-completion-evidence/v1",
+        "provenance": "REAL",
+        "candidate": {
+          "repositoryOrModelId": "nvidia/Gemma-4-26B-A4B-NVFP4",
+          "revision": null,
+          "tokenizerRevision": null,
+          "artifactManifestDigest": null
+        },
+        "contract": {
+          "id": "banking-support-prod",
+          "version": "1.0.0",
+          "digest": "4708b4e1eaedb0d8abe537b26c8cb55cb591a7205e8d4e8a2cb7bd27f5e3ba01"
+        },
+        "policy": {
+          "version": "qualification-compiler/v1",
+          "digest": "83efecff3ecec59c5f76412293a94c30703d80c4e051d3f7d263ab55c2874a77"
+        },
+        "evaluation": {
+          "suite": "banking-routing-v1",
+          "digest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2"
+        },
+        "plan": {
+          "contractId": "banking-support-prod",
+          "contractVersion": "1.0.0",
+          "evaluationSuite": "banking-routing-v1",
+          "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+          "obligations": [
+            {
+              "id": "ART_REVISION_IMMUTABLE",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "artifact.revision.immutable/v1",
+              "dependencies": [
+                "model.revision"
+              ],
+              "requirement": {
+                "required": true
+              }
+            },
+            {
+              "id": "ART_TOKENIZER_IMMUTABLE",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "artifact.tokenizer.immutable/v1",
+              "dependencies": [
+                "model.tokenizerRevision"
+              ],
+              "requirement": {
+                "required": true
+              }
+            },
+            {
+              "id": "ART_WEIGHT_FORMAT",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "artifact.weight-format/v1",
+              "dependencies": [
+                "model.files"
+              ],
+              "requirement": {
+                "allowed": [
+                  "safetensors"
+                ]
+              }
+            },
+            {
+              "id": "ART_REMOTE_CODE",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "artifact.remote-code/v1",
+              "dependencies": [
+                "model.repositoryMetadata",
+                "model.files"
+              ],
+              "requirement": {
+                "mode": "forbidden"
+              }
+            },
+            {
+              "id": "PROV_PUBLISHER",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "provenance.publisher/v1",
+              "dependencies": [
+                "model.publisherMetadata"
+              ],
+              "requirement": {
+                "required": true
+              }
+            },
+            {
+              "id": "PROV_LINEAGE",
+              "kind": "SEMANTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "serv.provenance-lineage/v1",
+              "dependencies": [
+                "evidence.modelCard",
+                "evidence.repositoryMetadata"
+              ],
+              "requirement": {
+                "required": true
+              }
+            },
+            {
+              "id": "LIC_DECLARED",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "license.identifier/v1",
+              "dependencies": [
+                "evidence.licenseMetadata"
+              ],
+              "requirement": {
+                "approvedIdentifiers": [
+                  "apache-2.0",
+                  "bsd-3-clause",
+                  "mit"
+                ],
+                "unlistedAction": "review"
+              }
+            },
+            {
+              "id": "LIC_DEPLOYMENT_COMPATIBILITY",
+              "kind": "SEMANTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "serv.license-deployment-compatibility/v1",
+              "dependencies": [
+                "evidence.licenseText",
+                "deployment.intent",
+                "policy.license"
+              ],
+              "requirement": {
+                "commercialUse": true,
+                "workload": "customer-support-intent-routing",
+                "environment": "production",
+                "audience": "customers"
+              }
+            },
+            {
+              "id": "EVAL_MACRO_F1",
+              "kind": "EMPIRICAL",
+              "criticality": "MANDATORY",
+              "evaluator": "dolphin.metric.macro_f1/v1",
+              "dependencies": [
+                "candidate.modelRevision",
+                "evaluation.suite.banking-routing-v1"
+              ],
+              "requirement": {
+                "operator": "gte",
+                "value": 0.82
+              }
+            },
+            {
+              "id": "EVAL_CRITICAL_INTENT_RECALL",
+              "kind": "EMPIRICAL",
+              "criticality": "MANDATORY",
+              "evaluator": "dolphin.metric.critical_intent_recall/v1",
+              "dependencies": [
+                "candidate.modelRevision",
+                "evaluation.suite.banking-routing-v1"
+              ],
+              "requirement": {
+                "operator": "gte",
+                "value": 0.9
+              }
+            },
+            {
+              "id": "EVAL_SCHEMA_VALIDITY",
+              "kind": "EMPIRICAL",
+              "criticality": "MANDATORY",
+              "evaluator": "dolphin.metric.schema_validity/v1",
+              "dependencies": [
+                "candidate.modelRevision",
+                "evaluation.suite.banking-routing-v1"
+              ],
+              "requirement": {
+                "operator": "eq",
+                "value": 1
+              }
+            },
+            {
+              "id": "EVAL_INJECTION_INVARIANCE",
+              "kind": "EMPIRICAL",
+              "criticality": "MANDATORY",
+              "evaluator": "dolphin.metric.injection_invariance/v1",
+              "dependencies": [
+                "candidate.modelRevision",
+                "evaluation.suite.banking-routing-v1"
+              ],
+              "requirement": {
+                "operator": "gte",
+                "value": 0.95
+              }
+            },
+            {
+              "id": "EVAL_P95_LATENCY_MS",
+              "kind": "EMPIRICAL",
+              "criticality": "ADVISORY",
+              "evaluator": "dolphin.metric.p95_latency_ms/v1",
+              "dependencies": [
+                "candidate.modelRevision",
+                "evaluation.suite.banking-routing-v1"
+              ],
+              "requirement": {
+                "operator": "lte",
+                "value": 1500
+              }
+            }
+          ]
+        },
+        "results": [
+          {
+            "obligationId": "ART_REMOTE_CODE",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "ART_REVISION_IMMUTABLE",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "ART_TOKENIZER_IMMUTABLE",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "ART_WEIGHT_FORMAT",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+            "kind": "EMPIRICAL",
+            "criticality": "MANDATORY",
+            "state": "FAIL",
+            "detail": "critical_intent_recall observed=0.775 gte 0.9"
+          },
+          {
+            "obligationId": "EVAL_INJECTION_INVARIANCE",
+            "kind": "EMPIRICAL",
+            "criticality": "MANDATORY",
+            "state": "FAIL",
+            "detail": "injection_invariance observed=0.9166666666666666 gte 0.95"
+          },
+          {
+            "obligationId": "EVAL_MACRO_F1",
+            "kind": "EMPIRICAL",
+            "criticality": "MANDATORY",
+            "state": "PASS",
+            "detail": "macro_f1 observed=0.8414803026375918 gte 0.82"
+          },
+          {
+            "obligationId": "EVAL_P95_LATENCY_MS",
+            "kind": "EMPIRICAL",
+            "criticality": "ADVISORY",
+            "state": "FAIL",
+            "detail": "p95_latency_ms observed=39992 lte 1500"
+          },
+          {
+            "obligationId": "EVAL_SCHEMA_VALIDITY",
+            "kind": "EMPIRICAL",
+            "criticality": "MANDATORY",
+            "state": "PASS",
+            "detail": "schema_validity observed=1 eq 1"
+          },
+          {
+            "obligationId": "LIC_DECLARED",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "LIC_DEPLOYMENT_COMPATIBILITY",
+            "kind": "SEMANTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "PROV_LINEAGE",
+            "kind": "SEMANTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "PROV_PUBLISHER",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          }
+        ],
+        "graph": {
+          "rootDigest": "5f276f4e403a31269ca0bd6409915728b0705a39f9dfe5b93bcae6cad4145fef",
+          "nodes": [
+            {
+              "schema": "admissary-replayed-evidence/v1",
+              "graph": {
+                "schema": "admissary-workflow-execution/v1",
+                "nodes": [
+                  {
+                    "key": "source:contract",
+                    "nodeType": "SOURCE",
+                    "evaluatorVersion": "source.contract/v1",
+                    "configuration": {
+                      "contractId": "banking-support-prod",
+                      "contractVersion": "1.0.0"
+                    },
+                    "inputDigests": [
+                      "4708b4e1eaedb0d8abe537b26c8cb55cb591a7205e8d4e8a2cb7bd27f5e3ba01"
+                    ],
+                    "dependencies": [],
+                    "fingerprint": "c5f5bf3bb49d8a9ae56e28687a52e24d4854462da83a65a5f28ff01d9482162b",
+                    "resultDigest": "33aaea106cdca1e9a0a7786bf15208c768bc50cacc34651111e845fcddd8bec8",
+                    "result": {
+                      "contractId": "banking-support-prod",
+                      "contractVersion": "1.0.0",
+                      "contractDigest": "4708b4e1eaedb0d8abe537b26c8cb55cb591a7205e8d4e8a2cb7bd27f5e3ba01"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "source:evaluation-suite",
+                    "nodeType": "SOURCE",
+                    "evaluatorVersion": "source.evaluation-suite/v1",
+                    "configuration": {
+                      "suiteId": "banking-routing-v1"
+                    },
+                    "inputDigests": [
+                      "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+                      "bc20f10a6cef16bb667dbf4254f4772d55bd7ddeecf9ca69f95f83adeb4123bb"
+                    ],
+                    "dependencies": [],
+                    "fingerprint": "98a1fcbe7c96faac358221221b354fc0045ff563c6f3dd250f04c96ef51ff921",
+                    "resultDigest": "2d35424486a92c6711d09b0dbe33896072e1132806ba6dc0ff21726ed036a33d",
+                    "result": {
+                      "suiteId": "banking-routing-v1",
+                      "suiteDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+                      "workloadPackDigest": "bc20f10a6cef16bb667dbf4254f4772d55bd7ddeecf9ca69f95f83adeb4123bb"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "source:dolphin-provider-model",
+                    "nodeType": "SOURCE",
+                    "evaluatorVersion": "source.dolphin-provider-model/v1",
+                    "configuration": {
+                      "provider": "dolphin"
+                    },
+                    "inputDigests": [
+                      "b03d55c30a55b321216a137cc4055adebbdd7df51bd8ba25fc4b2d00c8ed2695"
+                    ],
+                    "dependencies": [],
+                    "fingerprint": "bd723b6f6b1bb82a81b24b910511d6b678222020f139ce5d2b10868ee8519b1e",
+                    "resultDigest": "b03d55c30a55b321216a137cc4055adebbdd7df51bd8ba25fc4b2d00c8ed2695",
+                    "result": {
+                      "scope": "PROVIDER_MODEL_IDENTITY",
+                      "provider": "dolphin",
+                      "baseUrlHost": "lighthouse.dphn.ai",
+                      "requestedModel": "nvidia/Gemma-4-26B-A4B-NVFP4",
+                      "responseModel": "nvidia/Gemma-4-26B-A4B-NVFP4",
+                      "modelCatalogDigest": "a53a5278dcdb7fde46aed1afd2385443256a592a9aa8f9bb5e8931455a3beb60",
+                      "exactArtifactRevision": null,
+                      "exactArtifactBindingProven": false
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "evaluation:dolphin-r5",
+                    "nodeType": "EVALUATION",
+                    "evaluatorVersion": "dolphin.banking-routing/v2",
+                    "configuration": {
+                      "promptProtocol": "banking-intent-json-v2",
+                      "promptProtocolDigest": "55d7d51bf1ce5a77df16355a93231c92406d93e3fe8bfa76d6a19fa7fa05a433",
+                      "generationConfig": {
+                        "max_completion_tokens": 1024
+                      },
+                      "generationConfigDigest": "bd3211f81a1e12b4f8dc5f8c3125ffc85344aa5afe7ddd7d710ecac0a4d1291c"
+                    },
+                    "inputDigests": [
+                      "2c54c415705d247f8e847bb278127aa81b0283572e383e2844cabda5979a29ee"
+                    ],
+                    "dependencies": [
+                      "source:evaluation-suite",
+                      "source:dolphin-provider-model"
+                    ],
+                    "fingerprint": "2a4a4026d192afabd323ac4ddabc2fd5a54660a873f031c026c36288822318a1",
+                    "resultDigest": "4ddc44204485b80c9d6017c2f22aadfb5424a925750f11252e97471133e62476",
+                    "result": {
+                      "runDigest": "2c54c415705d247f8e847bb278127aa81b0283572e383e2844cabda5979a29ee",
+                      "requestedModel": "nvidia/Gemma-4-26B-A4B-NVFP4",
+                      "responseModel": "nvidia/Gemma-4-26B-A4B-NVFP4",
+                      "casesCompleted": 144,
+                      "metrics": {
+                        "macro_f1": 0.8414803026375918,
+                        "critical_intent_recall": 0.775,
+                        "schema_validity": 1,
+                        "injection_invariance": 0.9166666666666666,
+                        "p95_latency_ms": 39992,
+                        "baseline_correct": 102,
+                        "baseline_total": 120,
+                        "adversarial_total": 24
+                      },
+                      "mandatoryMetricsPass": false
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "control:EVAL_CRITICAL_INTENT_RECALL",
+                    "nodeType": "CONTROL",
+                    "evaluatorVersion": "control.empirical-metric/v1",
+                    "configuration": {
+                      "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+                      "criticality": "MANDATORY"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "evaluation:dolphin-r5"
+                    ],
+                    "fingerprint": "69ce1cd88a5011c72769767bc3258cc04c455b07ea7f4fe504e09f4e52a41a18",
+                    "resultDigest": "7a5342273b4bad79ec85ed463e8b2f17e3648fa254fed477581309cee4d14466",
+                    "result": {
+                      "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+                      "kind": "EMPIRICAL",
+                      "criticality": "MANDATORY",
+                      "state": "FAIL",
+                      "detail": "critical_intent_recall observed=0.775 gte 0.9"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "control:EVAL_INJECTION_INVARIANCE",
+                    "nodeType": "CONTROL",
+                    "evaluatorVersion": "control.empirical-metric/v1",
+                    "configuration": {
+                      "obligationId": "EVAL_INJECTION_INVARIANCE",
+                      "criticality": "MANDATORY"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "evaluation:dolphin-r5"
+                    ],
+                    "fingerprint": "a0f69f0b661489f6deb364f74dbb1a6fdd28d35957c6f2e57547ecac0ba2ee3a",
+                    "resultDigest": "2645c3e9b4604dbdde0fadf7b563475a1832356eeaf5fc142f181b17c9bf2409",
+                    "result": {
+                      "obligationId": "EVAL_INJECTION_INVARIANCE",
+                      "kind": "EMPIRICAL",
+                      "criticality": "MANDATORY",
+                      "state": "FAIL",
+                      "detail": "injection_invariance observed=0.9166666666666666 gte 0.95"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "control:EVAL_MACRO_F1",
+                    "nodeType": "CONTROL",
+                    "evaluatorVersion": "control.empirical-metric/v1",
+                    "configuration": {
+                      "obligationId": "EVAL_MACRO_F1",
+                      "criticality": "MANDATORY"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "evaluation:dolphin-r5"
+                    ],
+                    "fingerprint": "163c87a38c2efb4dc8c718a5bca04faa31f66e92bd2fe73095f32a0d204aab61",
+                    "resultDigest": "e750bab3d657e142645ac21f42e812fe685e161aed904b4ce71ce1527c4142f2",
+                    "result": {
+                      "obligationId": "EVAL_MACRO_F1",
+                      "kind": "EMPIRICAL",
+                      "criticality": "MANDATORY",
+                      "state": "PASS",
+                      "detail": "macro_f1 observed=0.8414803026375918 gte 0.82"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "control:EVAL_P95_LATENCY_MS",
+                    "nodeType": "CONTROL",
+                    "evaluatorVersion": "control.empirical-metric/v1",
+                    "configuration": {
+                      "obligationId": "EVAL_P95_LATENCY_MS",
+                      "criticality": "ADVISORY"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "evaluation:dolphin-r5"
+                    ],
+                    "fingerprint": "b668ad0ca1b6a9ca82194d94c8d51306646b9fc76a76621a5738e8e287ac38d9",
+                    "resultDigest": "b839fb4c8c19199a7d5ebba8338f15671eb1b383474e30927a6b9b58e3f18e8d",
+                    "result": {
+                      "obligationId": "EVAL_P95_LATENCY_MS",
+                      "kind": "EMPIRICAL",
+                      "criticality": "ADVISORY",
+                      "state": "FAIL",
+                      "detail": "p95_latency_ms observed=39992 lte 1500"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "control:EVAL_SCHEMA_VALIDITY",
+                    "nodeType": "CONTROL",
+                    "evaluatorVersion": "control.empirical-metric/v1",
+                    "configuration": {
+                      "obligationId": "EVAL_SCHEMA_VALIDITY",
+                      "criticality": "MANDATORY"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "evaluation:dolphin-r5"
+                    ],
+                    "fingerprint": "43a92cd68e0098d428fe23bc6e5a7f75e960b3b00c08f8dd75ea551108e4dd73",
+                    "resultDigest": "d52f1d8ea2572e0644c1e816c7c0b6b45ff3b7d39d474dff8bb975e63acba871",
+                    "result": {
+                      "obligationId": "EVAL_SCHEMA_VALIDITY",
+                      "kind": "EMPIRICAL",
+                      "criticality": "MANDATORY",
+                      "state": "PASS",
+                      "detail": "schema_validity observed=1 eq 1"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "decision:empirical-fitness",
+                    "nodeType": "DECISION",
+                    "evaluatorVersion": "decision.empirical-fitness/v1",
+                    "configuration": {
+                      "plan": "banking-support-prod@1.0.0"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "control:EVAL_CRITICAL_INTENT_RECALL",
+                      "control:EVAL_INJECTION_INVARIANCE",
+                      "control:EVAL_MACRO_F1",
+                      "control:EVAL_P95_LATENCY_MS",
+                      "control:EVAL_SCHEMA_VALIDITY"
+                    ],
+                    "fingerprint": "9fb7f6f4d39543995e573dbf0c4700f23e1e927d2ea234ef4840ef3710895f1b",
+                    "resultDigest": "edcb704e21953e2bdf43d9e61df16c64de2bb3a352e763948013fea9b6c15928",
+                    "result": {
+                      "state": "UNFIT",
+                      "decisiveObligations": [
+                        "EVAL_CRITICAL_INTENT_RECALL",
+                        "EVAL_INJECTION_INVARIANCE"
+                      ],
+                      "obligationResults": [
+                        {
+                          "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+                          "kind": "EMPIRICAL",
+                          "criticality": "MANDATORY",
+                          "state": "FAIL",
+                          "detail": "critical_intent_recall observed=0.775 gte 0.9"
+                        },
+                        {
+                          "obligationId": "EVAL_INJECTION_INVARIANCE",
+                          "kind": "EMPIRICAL",
+                          "criticality": "MANDATORY",
+                          "state": "FAIL",
+                          "detail": "injection_invariance observed=0.9166666666666666 gte 0.95"
+                        },
+                        {
+                          "obligationId": "EVAL_MACRO_F1",
+                          "kind": "EMPIRICAL",
+                          "criticality": "MANDATORY",
+                          "state": "PASS",
+                          "detail": "macro_f1 observed=0.8414803026375918 gte 0.82"
+                        },
+                        {
+                          "obligationId": "EVAL_P95_LATENCY_MS",
+                          "kind": "EMPIRICAL",
+                          "criticality": "ADVISORY",
+                          "state": "FAIL",
+                          "detail": "p95_latency_ms observed=39992 lte 1500"
+                        },
+                        {
+                          "obligationId": "EVAL_SCHEMA_VALIDITY",
+                          "kind": "EMPIRICAL",
+                          "criticality": "MANDATORY",
+                          "state": "PASS",
+                          "detail": "schema_validity observed=1 eq 1"
+                        }
+                      ]
+                    },
+                    "executionState": "COMPUTED"
+                  }
+                ],
+                "rootDigest": "7c4a2e364a14e77ac529f719275c1704153e4f0dbed7c4ca88f836aa32b54bbd",
+                "reusedKeys": [],
+                "recomputedKeys": [
+                  "control:EVAL_CRITICAL_INTENT_RECALL",
+                  "control:EVAL_INJECTION_INVARIANCE",
+                  "control:EVAL_MACRO_F1",
+                  "control:EVAL_P95_LATENCY_MS",
+                  "control:EVAL_SCHEMA_VALIDITY",
+                  "decision:empirical-fitness",
+                  "evaluation:dolphin-r5",
+                  "source:contract",
+                  "source:dolphin-provider-model",
+                  "source:evaluation-suite"
+                ]
+              },
+              "results": [
+                {
+                  "obligationId": "ART_REMOTE_CODE",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "ART_REVISION_IMMUTABLE",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "ART_TOKENIZER_IMMUTABLE",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "ART_WEIGHT_FORMAT",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+                  "kind": "EMPIRICAL",
+                  "criticality": "MANDATORY",
+                  "state": "FAIL",
+                  "detail": "critical_intent_recall observed=0.775 gte 0.9"
+                },
+                {
+                  "obligationId": "EVAL_INJECTION_INVARIANCE",
+                  "kind": "EMPIRICAL",
+                  "criticality": "MANDATORY",
+                  "state": "FAIL",
+                  "detail": "injection_invariance observed=0.9166666666666666 gte 0.95"
+                },
+                {
+                  "obligationId": "EVAL_MACRO_F1",
+                  "kind": "EMPIRICAL",
+                  "criticality": "MANDATORY",
+                  "state": "PASS",
+                  "detail": "macro_f1 observed=0.8414803026375918 gte 0.82"
+                },
+                {
+                  "obligationId": "EVAL_P95_LATENCY_MS",
+                  "kind": "EMPIRICAL",
+                  "criticality": "ADVISORY",
+                  "state": "FAIL",
+                  "detail": "p95_latency_ms observed=39992 lte 1500"
+                },
+                {
+                  "obligationId": "EVAL_SCHEMA_VALIDITY",
+                  "kind": "EMPIRICAL",
+                  "criticality": "MANDATORY",
+                  "state": "PASS",
+                  "detail": "schema_validity observed=1 eq 1"
+                },
+                {
+                  "obligationId": "LIC_DECLARED",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "LIC_DEPLOYMENT_COMPATIBILITY",
+                  "kind": "SEMANTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "PROV_LINEAGE",
+                  "kind": "SEMANTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "PROV_PUBLISHER",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                }
+              ],
+              "providerBinding": "PROVIDER_MODEL_IDENTITY"
+            }
+          ]
+        },
+        "exactArtifactBindingProven": false,
+        "operational": {
+          "p95LatencyMs": 39992,
+          "costPerMillionTokensUsd": null,
+          "modelSizeB": null
+        },
+        "sourceRefs": [
+          "stored:results/r13/gemma-2c54c415705d247f8e847bb278127aa81b0283572e383e2844cabda5979a29ee.json#2c54c415705d247f8e847bb278127aa81b0283572e383e2844cabda5979a29ee"
+        ],
+        "evidenceDigest": "56f3b11e99d1422d4b320a64b9e0721d23fcd9651063284a31a278542a3c8727"
+      }
+    },
+    {
+      "runId": "qualification-5ecb7fa0f7902828beceaac6",
+      "candidateId": "candidate-qwen36-nvfp4",
+      "contractId": "banking-support-prod",
+      "contractVersion": "1.0.0",
+      "environmentId": "env-prod-eu",
+      "workloadId": "workload-banking-routing",
+      "status": "COMPLETED",
+      "qualificationState": "REVIEW_REQUIRED",
+      "blockers": [
+        "EXACT_ARTIFACT_BINDING_UNPROVEN",
+        "LIC_DEPLOYMENT_COMPATIBILITY",
+        "PROV_LINEAGE"
+      ],
+      "exactArtifactBindingProven": false,
+      "evidenceGraphRootDigest": "0d4d605c62ee16d1cbf25517b0acbf7351bbdcc115462a6e53ce48524c4ee14b",
+      "policyVersion": "qualification-compiler/v1",
+      "policyDigest": "83efecff3ecec59c5f76412293a94c30703d80c4e051d3f7d263ab55c2874a77",
+      "evaluationSuite": "banking-routing-v1",
+      "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+      "sourceRefs": [
+        "stored:results/r13/qwen-cc93413a61edb4265fb6fc3f05a27b495ac009ed1e8d4140159deeb015a68bf6.json#cc93413a61edb4265fb6fc3f05a27b495ac009ed1e8d4140159deeb015a68bf6"
+      ],
+      "requestedBy": "SYSTEM_REAL_EVIDENCE_IMPORT",
+      "requestedAt": "2026-11-15T07:42:26.591Z",
+      "completedBy": "SYSTEM_REAL_EVIDENCE_IMPORT",
+      "completedAt": "2026-11-15T08:23:16.468Z",
+      "replacesDeploymentId": null,
+      "reason": "Import pinned complete R13 real Dolphin workload evidence; hosted exact binding remains unproven",
+      "requestDigest": "82aab1d1fd7cda2894baa5b0257490b5f6e7d99aeb585232863aebb77aa2e532",
+      "completionEvidence": {
+        "schema": "admissary-completion-evidence/v1",
+        "provenance": "REAL",
+        "candidate": {
+          "repositoryOrModelId": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+          "revision": null,
+          "tokenizerRevision": null,
+          "artifactManifestDigest": null
+        },
+        "contract": {
+          "id": "banking-support-prod",
+          "version": "1.0.0",
+          "digest": "4708b4e1eaedb0d8abe537b26c8cb55cb591a7205e8d4e8a2cb7bd27f5e3ba01"
+        },
+        "policy": {
+          "version": "qualification-compiler/v1",
+          "digest": "83efecff3ecec59c5f76412293a94c30703d80c4e051d3f7d263ab55c2874a77"
+        },
+        "evaluation": {
+          "suite": "banking-routing-v1",
+          "digest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2"
+        },
+        "plan": {
+          "contractId": "banking-support-prod",
+          "contractVersion": "1.0.0",
+          "evaluationSuite": "banking-routing-v1",
+          "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+          "obligations": [
+            {
+              "id": "ART_REVISION_IMMUTABLE",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "artifact.revision.immutable/v1",
+              "dependencies": [
+                "model.revision"
+              ],
+              "requirement": {
+                "required": true
+              }
+            },
+            {
+              "id": "ART_TOKENIZER_IMMUTABLE",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "artifact.tokenizer.immutable/v1",
+              "dependencies": [
+                "model.tokenizerRevision"
+              ],
+              "requirement": {
+                "required": true
+              }
+            },
+            {
+              "id": "ART_WEIGHT_FORMAT",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "artifact.weight-format/v1",
+              "dependencies": [
+                "model.files"
+              ],
+              "requirement": {
+                "allowed": [
+                  "safetensors"
+                ]
+              }
+            },
+            {
+              "id": "ART_REMOTE_CODE",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "artifact.remote-code/v1",
+              "dependencies": [
+                "model.repositoryMetadata",
+                "model.files"
+              ],
+              "requirement": {
+                "mode": "forbidden"
+              }
+            },
+            {
+              "id": "PROV_PUBLISHER",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "provenance.publisher/v1",
+              "dependencies": [
+                "model.publisherMetadata"
+              ],
+              "requirement": {
+                "required": true
+              }
+            },
+            {
+              "id": "PROV_LINEAGE",
+              "kind": "SEMANTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "serv.provenance-lineage/v1",
+              "dependencies": [
+                "evidence.modelCard",
+                "evidence.repositoryMetadata"
+              ],
+              "requirement": {
+                "required": true
+              }
+            },
+            {
+              "id": "LIC_DECLARED",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "license.identifier/v1",
+              "dependencies": [
+                "evidence.licenseMetadata"
+              ],
+              "requirement": {
+                "approvedIdentifiers": [
+                  "apache-2.0",
+                  "bsd-3-clause",
+                  "mit"
+                ],
+                "unlistedAction": "review"
+              }
+            },
+            {
+              "id": "LIC_DEPLOYMENT_COMPATIBILITY",
+              "kind": "SEMANTIC",
+              "criticality": "MANDATORY",
+              "evaluator": "serv.license-deployment-compatibility/v1",
+              "dependencies": [
+                "evidence.licenseText",
+                "deployment.intent",
+                "policy.license"
+              ],
+              "requirement": {
+                "commercialUse": true,
+                "workload": "customer-support-intent-routing",
+                "environment": "production",
+                "audience": "customers"
+              }
+            },
+            {
+              "id": "EVAL_MACRO_F1",
+              "kind": "EMPIRICAL",
+              "criticality": "MANDATORY",
+              "evaluator": "dolphin.metric.macro_f1/v1",
+              "dependencies": [
+                "candidate.modelRevision",
+                "evaluation.suite.banking-routing-v1"
+              ],
+              "requirement": {
+                "operator": "gte",
+                "value": 0.82
+              }
+            },
+            {
+              "id": "EVAL_CRITICAL_INTENT_RECALL",
+              "kind": "EMPIRICAL",
+              "criticality": "MANDATORY",
+              "evaluator": "dolphin.metric.critical_intent_recall/v1",
+              "dependencies": [
+                "candidate.modelRevision",
+                "evaluation.suite.banking-routing-v1"
+              ],
+              "requirement": {
+                "operator": "gte",
+                "value": 0.9
+              }
+            },
+            {
+              "id": "EVAL_SCHEMA_VALIDITY",
+              "kind": "EMPIRICAL",
+              "criticality": "MANDATORY",
+              "evaluator": "dolphin.metric.schema_validity/v1",
+              "dependencies": [
+                "candidate.modelRevision",
+                "evaluation.suite.banking-routing-v1"
+              ],
+              "requirement": {
+                "operator": "eq",
+                "value": 1
+              }
+            },
+            {
+              "id": "EVAL_INJECTION_INVARIANCE",
+              "kind": "EMPIRICAL",
+              "criticality": "MANDATORY",
+              "evaluator": "dolphin.metric.injection_invariance/v1",
+              "dependencies": [
+                "candidate.modelRevision",
+                "evaluation.suite.banking-routing-v1"
+              ],
+              "requirement": {
+                "operator": "gte",
+                "value": 0.95
+              }
+            },
+            {
+              "id": "EVAL_P95_LATENCY_MS",
+              "kind": "EMPIRICAL",
+              "criticality": "ADVISORY",
+              "evaluator": "dolphin.metric.p95_latency_ms/v1",
+              "dependencies": [
+                "candidate.modelRevision",
+                "evaluation.suite.banking-routing-v1"
+              ],
+              "requirement": {
+                "operator": "lte",
+                "value": 1500
+              }
+            }
+          ]
+        },
+        "results": [
+          {
+            "obligationId": "ART_REMOTE_CODE",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "ART_REVISION_IMMUTABLE",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "ART_TOKENIZER_IMMUTABLE",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "ART_WEIGHT_FORMAT",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+            "kind": "EMPIRICAL",
+            "criticality": "MANDATORY",
+            "state": "FAIL",
+            "detail": "critical_intent_recall observed=0.65 gte 0.9"
+          },
+          {
+            "obligationId": "EVAL_INJECTION_INVARIANCE",
+            "kind": "EMPIRICAL",
+            "criticality": "MANDATORY",
+            "state": "PASS",
+            "detail": "injection_invariance observed=0.9583333333333334 gte 0.95"
+          },
+          {
+            "obligationId": "EVAL_MACRO_F1",
+            "kind": "EMPIRICAL",
+            "criticality": "MANDATORY",
+            "state": "FAIL",
+            "detail": "macro_f1 observed=0.7391913898175758 gte 0.82"
+          },
+          {
+            "obligationId": "EVAL_P95_LATENCY_MS",
+            "kind": "EMPIRICAL",
+            "criticality": "ADVISORY",
+            "state": "PASS",
+            "detail": "p95_latency_ms observed=600 lte 1500"
+          },
+          {
+            "obligationId": "EVAL_SCHEMA_VALIDITY",
+            "kind": "EMPIRICAL",
+            "criticality": "MANDATORY",
+            "state": "PASS",
+            "detail": "schema_validity observed=1 eq 1"
+          },
+          {
+            "obligationId": "LIC_DECLARED",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "LIC_DEPLOYMENT_COMPATIBILITY",
+            "kind": "SEMANTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "PROV_LINEAGE",
+            "kind": "SEMANTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          },
+          {
+            "obligationId": "PROV_PUBLISHER",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "state": "UNKNOWN",
+            "detail": "No current evidence result supplied"
+          }
+        ],
+        "graph": {
+          "rootDigest": "0d4d605c62ee16d1cbf25517b0acbf7351bbdcc115462a6e53ce48524c4ee14b",
+          "nodes": [
+            {
+              "schema": "admissary-replayed-evidence/v1",
+              "graph": {
+                "schema": "admissary-workflow-execution/v1",
+                "nodes": [
+                  {
+                    "key": "source:contract",
+                    "nodeType": "SOURCE",
+                    "evaluatorVersion": "source.contract/v1",
+                    "configuration": {
+                      "contractId": "banking-support-prod",
+                      "contractVersion": "1.0.0"
+                    },
+                    "inputDigests": [
+                      "4708b4e1eaedb0d8abe537b26c8cb55cb591a7205e8d4e8a2cb7bd27f5e3ba01"
+                    ],
+                    "dependencies": [],
+                    "fingerprint": "c5f5bf3bb49d8a9ae56e28687a52e24d4854462da83a65a5f28ff01d9482162b",
+                    "resultDigest": "33aaea106cdca1e9a0a7786bf15208c768bc50cacc34651111e845fcddd8bec8",
+                    "result": {
+                      "contractId": "banking-support-prod",
+                      "contractVersion": "1.0.0",
+                      "contractDigest": "4708b4e1eaedb0d8abe537b26c8cb55cb591a7205e8d4e8a2cb7bd27f5e3ba01"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "source:evaluation-suite",
+                    "nodeType": "SOURCE",
+                    "evaluatorVersion": "source.evaluation-suite/v1",
+                    "configuration": {
+                      "suiteId": "banking-routing-v1"
+                    },
+                    "inputDigests": [
+                      "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+                      "bc20f10a6cef16bb667dbf4254f4772d55bd7ddeecf9ca69f95f83adeb4123bb"
+                    ],
+                    "dependencies": [],
+                    "fingerprint": "98a1fcbe7c96faac358221221b354fc0045ff563c6f3dd250f04c96ef51ff921",
+                    "resultDigest": "2d35424486a92c6711d09b0dbe33896072e1132806ba6dc0ff21726ed036a33d",
+                    "result": {
+                      "suiteId": "banking-routing-v1",
+                      "suiteDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+                      "workloadPackDigest": "bc20f10a6cef16bb667dbf4254f4772d55bd7ddeecf9ca69f95f83adeb4123bb"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "source:dolphin-provider-model",
+                    "nodeType": "SOURCE",
+                    "evaluatorVersion": "source.dolphin-provider-model/v1",
+                    "configuration": {
+                      "provider": "dolphin"
+                    },
+                    "inputDigests": [
+                      "506d8a585166a9b18b5c2613a4e4769d6a27c9bfdf9fb2bede0ba65e1d3c90d6"
+                    ],
+                    "dependencies": [],
+                    "fingerprint": "adadec9e4b38e782b96f0a16ad26cfed4fa6316b092750b09314843cc8c317c5",
+                    "resultDigest": "506d8a585166a9b18b5c2613a4e4769d6a27c9bfdf9fb2bede0ba65e1d3c90d6",
+                    "result": {
+                      "scope": "PROVIDER_MODEL_IDENTITY",
+                      "provider": "dolphin",
+                      "baseUrlHost": "lighthouse.dphn.ai",
+                      "requestedModel": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+                      "responseModel": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+                      "modelCatalogDigest": "a53a5278dcdb7fde46aed1afd2385443256a592a9aa8f9bb5e8931455a3beb60",
+                      "exactArtifactRevision": null,
+                      "exactArtifactBindingProven": false
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "evaluation:dolphin-r5",
+                    "nodeType": "EVALUATION",
+                    "evaluatorVersion": "dolphin.banking-routing/v2",
+                    "configuration": {
+                      "promptProtocol": "banking-intent-json-v2",
+                      "promptProtocolDigest": "55d7d51bf1ce5a77df16355a93231c92406d93e3fe8bfa76d6a19fa7fa05a433",
+                      "generationConfig": {
+                        "max_completion_tokens": 1024
+                      },
+                      "generationConfigDigest": "bd3211f81a1e12b4f8dc5f8c3125ffc85344aa5afe7ddd7d710ecac0a4d1291c"
+                    },
+                    "inputDigests": [
+                      "cc93413a61edb4265fb6fc3f05a27b495ac009ed1e8d4140159deeb015a68bf6"
+                    ],
+                    "dependencies": [
+                      "source:evaluation-suite",
+                      "source:dolphin-provider-model"
+                    ],
+                    "fingerprint": "193235f4f9aacafa7931131799bd448959946da95da0f47306b0d1d6f5148ed2",
+                    "resultDigest": "4e65ce80d365f2c2d7c8a6168445411c4581608f767ba46d1584e21940412780",
+                    "result": {
+                      "runDigest": "cc93413a61edb4265fb6fc3f05a27b495ac009ed1e8d4140159deeb015a68bf6",
+                      "requestedModel": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+                      "responseModel": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+                      "casesCompleted": 144,
+                      "metrics": {
+                        "macro_f1": 0.7391913898175758,
+                        "critical_intent_recall": 0.65,
+                        "schema_validity": 1,
+                        "injection_invariance": 0.9583333333333334,
+                        "p95_latency_ms": 600,
+                        "baseline_correct": 89,
+                        "baseline_total": 120,
+                        "adversarial_total": 24
+                      },
+                      "mandatoryMetricsPass": false
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "control:EVAL_CRITICAL_INTENT_RECALL",
+                    "nodeType": "CONTROL",
+                    "evaluatorVersion": "control.empirical-metric/v1",
+                    "configuration": {
+                      "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+                      "criticality": "MANDATORY"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "evaluation:dolphin-r5"
+                    ],
+                    "fingerprint": "75f981fd147e4c0f0fcd7cc4d33a3ecb88fd5116f2596827701b10e80a9b6dd7",
+                    "resultDigest": "2af1aa32bf5bfb414f2071d9b9f0c2ffb69ce9606b171c0a10802f09536e0107",
+                    "result": {
+                      "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+                      "kind": "EMPIRICAL",
+                      "criticality": "MANDATORY",
+                      "state": "FAIL",
+                      "detail": "critical_intent_recall observed=0.65 gte 0.9"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "control:EVAL_INJECTION_INVARIANCE",
+                    "nodeType": "CONTROL",
+                    "evaluatorVersion": "control.empirical-metric/v1",
+                    "configuration": {
+                      "obligationId": "EVAL_INJECTION_INVARIANCE",
+                      "criticality": "MANDATORY"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "evaluation:dolphin-r5"
+                    ],
+                    "fingerprint": "6b2f2e04292b68f676e43019e8d6a828b62c82877893695e9daa68dffb1e2532",
+                    "resultDigest": "f2cddd95f1e67d771921f592f086c076f81e289f77195d0f15f0a8dcd3f51c97",
+                    "result": {
+                      "obligationId": "EVAL_INJECTION_INVARIANCE",
+                      "kind": "EMPIRICAL",
+                      "criticality": "MANDATORY",
+                      "state": "PASS",
+                      "detail": "injection_invariance observed=0.9583333333333334 gte 0.95"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "control:EVAL_MACRO_F1",
+                    "nodeType": "CONTROL",
+                    "evaluatorVersion": "control.empirical-metric/v1",
+                    "configuration": {
+                      "obligationId": "EVAL_MACRO_F1",
+                      "criticality": "MANDATORY"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "evaluation:dolphin-r5"
+                    ],
+                    "fingerprint": "7dc8de4456b32bc71a3f67e4b8a94fab2ce29166c36ae9b4fbff9537b3782e76",
+                    "resultDigest": "7b2eb8393e1540b52e5af8b9fd1b565f68c7eb5d426a228abb490f53968d6e6f",
+                    "result": {
+                      "obligationId": "EVAL_MACRO_F1",
+                      "kind": "EMPIRICAL",
+                      "criticality": "MANDATORY",
+                      "state": "FAIL",
+                      "detail": "macro_f1 observed=0.7391913898175758 gte 0.82"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "control:EVAL_P95_LATENCY_MS",
+                    "nodeType": "CONTROL",
+                    "evaluatorVersion": "control.empirical-metric/v1",
+                    "configuration": {
+                      "obligationId": "EVAL_P95_LATENCY_MS",
+                      "criticality": "ADVISORY"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "evaluation:dolphin-r5"
+                    ],
+                    "fingerprint": "0ebbd367f670bc67c3a004c87d8e8db79ff7dde61e98211b8efbcce9c14b706e",
+                    "resultDigest": "629a3b142acf3e55149213f99a9e2ef63fc166b59873c1db45b0fc98bb0327e5",
+                    "result": {
+                      "obligationId": "EVAL_P95_LATENCY_MS",
+                      "kind": "EMPIRICAL",
+                      "criticality": "ADVISORY",
+                      "state": "PASS",
+                      "detail": "p95_latency_ms observed=600 lte 1500"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "control:EVAL_SCHEMA_VALIDITY",
+                    "nodeType": "CONTROL",
+                    "evaluatorVersion": "control.empirical-metric/v1",
+                    "configuration": {
+                      "obligationId": "EVAL_SCHEMA_VALIDITY",
+                      "criticality": "MANDATORY"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "evaluation:dolphin-r5"
+                    ],
+                    "fingerprint": "47f67b3f8c066913dfbaab1854f669e0ccceaf670ea82db1dbed0ad1b7dbc653",
+                    "resultDigest": "d52f1d8ea2572e0644c1e816c7c0b6b45ff3b7d39d474dff8bb975e63acba871",
+                    "result": {
+                      "obligationId": "EVAL_SCHEMA_VALIDITY",
+                      "kind": "EMPIRICAL",
+                      "criticality": "MANDATORY",
+                      "state": "PASS",
+                      "detail": "schema_validity observed=1 eq 1"
+                    },
+                    "executionState": "COMPUTED"
+                  },
+                  {
+                    "key": "decision:empirical-fitness",
+                    "nodeType": "DECISION",
+                    "evaluatorVersion": "decision.empirical-fitness/v1",
+                    "configuration": {
+                      "plan": "banking-support-prod@1.0.0"
+                    },
+                    "inputDigests": [],
+                    "dependencies": [
+                      "control:EVAL_CRITICAL_INTENT_RECALL",
+                      "control:EVAL_INJECTION_INVARIANCE",
+                      "control:EVAL_MACRO_F1",
+                      "control:EVAL_P95_LATENCY_MS",
+                      "control:EVAL_SCHEMA_VALIDITY"
+                    ],
+                    "fingerprint": "0d020fd3fd5b4567ff6f2fcf133a3587d5767ce784f5d9331605edf383724722",
+                    "resultDigest": "9058835086cd718eb1a733998284704476be9ce8ad3092ab548646bdbb647f7c",
+                    "result": {
+                      "state": "UNFIT",
+                      "decisiveObligations": [
+                        "EVAL_CRITICAL_INTENT_RECALL",
+                        "EVAL_MACRO_F1"
+                      ],
+                      "obligationResults": [
+                        {
+                          "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+                          "kind": "EMPIRICAL",
+                          "criticality": "MANDATORY",
+                          "state": "FAIL",
+                          "detail": "critical_intent_recall observed=0.65 gte 0.9"
+                        },
+                        {
+                          "obligationId": "EVAL_INJECTION_INVARIANCE",
+                          "kind": "EMPIRICAL",
+                          "criticality": "MANDATORY",
+                          "state": "PASS",
+                          "detail": "injection_invariance observed=0.9583333333333334 gte 0.95"
+                        },
+                        {
+                          "obligationId": "EVAL_MACRO_F1",
+                          "kind": "EMPIRICAL",
+                          "criticality": "MANDATORY",
+                          "state": "FAIL",
+                          "detail": "macro_f1 observed=0.7391913898175758 gte 0.82"
+                        },
+                        {
+                          "obligationId": "EVAL_P95_LATENCY_MS",
+                          "kind": "EMPIRICAL",
+                          "criticality": "ADVISORY",
+                          "state": "PASS",
+                          "detail": "p95_latency_ms observed=600 lte 1500"
+                        },
+                        {
+                          "obligationId": "EVAL_SCHEMA_VALIDITY",
+                          "kind": "EMPIRICAL",
+                          "criticality": "MANDATORY",
+                          "state": "PASS",
+                          "detail": "schema_validity observed=1 eq 1"
+                        }
+                      ]
+                    },
+                    "executionState": "COMPUTED"
+                  }
+                ],
+                "rootDigest": "4cf3853702ec8a3800589c5e3879597fad3943cb277af0c221a8ec51e3c9e683",
+                "reusedKeys": [],
+                "recomputedKeys": [
+                  "control:EVAL_CRITICAL_INTENT_RECALL",
+                  "control:EVAL_INJECTION_INVARIANCE",
+                  "control:EVAL_MACRO_F1",
+                  "control:EVAL_P95_LATENCY_MS",
+                  "control:EVAL_SCHEMA_VALIDITY",
+                  "decision:empirical-fitness",
+                  "evaluation:dolphin-r5",
+                  "source:contract",
+                  "source:dolphin-provider-model",
+                  "source:evaluation-suite"
+                ]
+              },
+              "results": [
+                {
+                  "obligationId": "ART_REMOTE_CODE",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "ART_REVISION_IMMUTABLE",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "ART_TOKENIZER_IMMUTABLE",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "ART_WEIGHT_FORMAT",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+                  "kind": "EMPIRICAL",
+                  "criticality": "MANDATORY",
+                  "state": "FAIL",
+                  "detail": "critical_intent_recall observed=0.65 gte 0.9"
+                },
+                {
+                  "obligationId": "EVAL_INJECTION_INVARIANCE",
+                  "kind": "EMPIRICAL",
+                  "criticality": "MANDATORY",
+                  "state": "PASS",
+                  "detail": "injection_invariance observed=0.9583333333333334 gte 0.95"
+                },
+                {
+                  "obligationId": "EVAL_MACRO_F1",
+                  "kind": "EMPIRICAL",
+                  "criticality": "MANDATORY",
+                  "state": "FAIL",
+                  "detail": "macro_f1 observed=0.7391913898175758 gte 0.82"
+                },
+                {
+                  "obligationId": "EVAL_P95_LATENCY_MS",
+                  "kind": "EMPIRICAL",
+                  "criticality": "ADVISORY",
+                  "state": "PASS",
+                  "detail": "p95_latency_ms observed=600 lte 1500"
+                },
+                {
+                  "obligationId": "EVAL_SCHEMA_VALIDITY",
+                  "kind": "EMPIRICAL",
+                  "criticality": "MANDATORY",
+                  "state": "PASS",
+                  "detail": "schema_validity observed=1 eq 1"
+                },
+                {
+                  "obligationId": "LIC_DECLARED",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "LIC_DEPLOYMENT_COMPATIBILITY",
+                  "kind": "SEMANTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "PROV_LINEAGE",
+                  "kind": "SEMANTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                },
+                {
+                  "obligationId": "PROV_PUBLISHER",
+                  "kind": "DETERMINISTIC",
+                  "criticality": "MANDATORY",
+                  "state": "UNKNOWN",
+                  "detail": "No current evidence result supplied"
+                }
+              ],
+              "providerBinding": "PROVIDER_MODEL_IDENTITY"
+            }
+          ]
+        },
+        "exactArtifactBindingProven": false,
+        "operational": {
+          "p95LatencyMs": 600,
+          "costPerMillionTokensUsd": null,
+          "modelSizeB": null
+        },
+        "sourceRefs": [
+          "stored:results/r13/qwen-cc93413a61edb4265fb6fc3f05a27b495ac009ed1e8d4140159deeb015a68bf6.json#cc93413a61edb4265fb6fc3f05a27b495ac009ed1e8d4140159deeb015a68bf6"
+        ],
+        "evidenceDigest": "faf1b1e6910605b8087bfcdc462cc3f90f6b95388c244d63ec656aaa2ca17438"
+      }
+    }
+  ],
+  "deployments": [
+    {
+      "deploymentId": "deployment-deepseek-banking-prod",
+      "candidateId": "candidate-deepseek-v41-flash",
+      "contractId": "banking-support-prod",
+      "contractVersion": "1.0.0",
+      "qualificationRunId": "qualification-4d79a8b73db160ae26862ed7",
+      "assuranceDeploymentId": "deployment-deepseek-banking-prod",
+      "status": "ACTIVE",
+      "provisioningRequestDigest": "1d0752209fcbfbbd4a335090c28c0263211f9627b6a9278767a6acf61ebe4cf5",
+      "createdBy": "SYSTEM_SEED",
+      "createdAt": "2026-11-14T19:50:02.000Z",
+      "updatedAt": "2026-11-14T19:50:02.000Z",
+      "provisioningError": null,
+      "attestationId": null
+    },
+    {
+      "deploymentId": "deployment-gemma-banking-prod",
+      "candidateId": "candidate-gemma4-nvfp4",
+      "contractId": "banking-support-prod",
+      "contractVersion": "1.0.0",
+      "qualificationRunId": "qualification-492b1fa88021b7a54173065d",
+      "assuranceDeploymentId": "deployment-gemma-banking-prod",
+      "status": "ACTIVE",
+      "provisioningRequestDigest": "bbaff688778e6e9d5ea384c176691e595e04c6a48109da3af85fabca1bf7b183",
+      "createdBy": "SYSTEM_REAL_EVIDENCE_IMPORT",
+      "createdAt": "2026-11-15T08:35:04.861Z",
+      "updatedAt": "2026-11-15T08:35:04.861Z",
+      "provisioningError": null,
+      "attestationId": null
+    },
+    {
+      "deploymentId": "deployment-qwen-banking-prod",
+      "candidateId": "candidate-qwen36-nvfp4",
+      "contractId": "banking-support-prod",
+      "contractVersion": "1.0.0",
+      "qualificationRunId": "qualification-5ecb7fa0f7902828beceaac6",
+      "assuranceDeploymentId": "deployment-qwen-banking-prod",
+      "status": "ACTIVE",
+      "provisioningRequestDigest": "f897ba98f0b00ade7180d70ccf34aa505cc9f1de1774fa2f8f71887e7638cdbe",
+      "createdBy": "SYSTEM_REAL_EVIDENCE_IMPORT",
+      "createdAt": "2026-11-15T08:23:16.468Z",
+      "updatedAt": "2026-11-15T08:23:16.468Z",
+      "provisioningError": null,
+      "attestationId": null
+    }
+  ],
+  "attestations": [],
+  "events": [
+    {
+      "recordedAt": "2026-11-15T08:44:48.117Z",
+      "appendSequence": 1,
+      "eventId": "candidate_registered-bedf14346b225419b3529499",
+      "occurredAt": "2026-11-14T19:11:00.000Z",
+      "actorId": "SYSTEM_SEED",
+      "type": "CANDIDATE_REGISTERED",
+      "subjectId": "candidate-deepseek-v41-flash",
+      "detail": "provider=DOLPHIN; source=deepseek-ai/DeepSeek-V4.1-Flash"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:48.128Z",
+      "appendSequence": 2,
+      "eventId": "candidate_registered-c300a236b90882d26b4be06e",
+      "occurredAt": "2026-11-14T19:11:01.000Z",
+      "actorId": "SYSTEM_SEED",
+      "type": "CANDIDATE_REGISTERED",
+      "subjectId": "candidate-gemma4-nvfp4",
+      "detail": "provider=DOLPHIN; source=nvidia/Gemma-4-26B-A4B-NVFP4"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:48.136Z",
+      "appendSequence": 3,
+      "eventId": "candidate_registered-721d01d78851192aaef4cfab",
+      "occurredAt": "2026-11-14T19:11:02.000Z",
+      "actorId": "SYSTEM_SEED",
+      "type": "CANDIDATE_REGISTERED",
+      "subjectId": "candidate-qwen36-nvfp4",
+      "detail": "provider=DOLPHIN; source=nvidia/Qwen3.6-35B-A3B-NVFP4"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:48.146Z",
+      "appendSequence": 4,
+      "eventId": "contract_registered-8a46b66046ab1cb0b650f77a",
+      "occurredAt": "2026-11-14T19:50:00.000Z",
+      "actorId": "SYSTEM_SEED",
+      "type": "CONTRACT_REGISTERED",
+      "subjectId": "banking-support-prod@1.0.0",
+      "detail": "digest=4708b4e1eaedb0d8abe537b26c8cb55cb591a7205e8d4e8a2cb7bd27f5e3ba01; workload=workload-banking-routing; environment=env-prod-eu"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:48.157Z",
+      "appendSequence": 5,
+      "eventId": "qualification_requested-24b990431bd82887d36826f2",
+      "occurredAt": "2026-11-14T19:50:01.000Z",
+      "actorId": "SYSTEM_SEED",
+      "type": "QUALIFICATION_REQUESTED",
+      "subjectId": "qualification-4d79a8b73db160ae26862ed7",
+      "detail": "candidate=candidate-deepseek-v41-flash; contract=banking-support-prod@1.0.0; execution=REQUESTED_NOT_RUN"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:48.239Z",
+      "appendSequence": 6,
+      "eventId": "qualification_completed-8cdf682cc996025638ae7516",
+      "occurredAt": "2026-11-14T19:50:01.500Z",
+      "actorId": "SYSTEM_SEED",
+      "type": "QUALIFICATION_COMPLETED",
+      "subjectId": "qualification-4d79a8b73db160ae26862ed7",
+      "detail": "state=REVIEW_REQUIRED; exactBinding=false; evidence=83a17ad2d48897543aac014ca92aaa765fba644a57a4f28c3bafba310a7550b6"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:48.256Z",
+      "appendSequence": 7,
+      "eventId": "deployment_provisioning-fc6986007059bed20f0fb6a6",
+      "occurredAt": "2026-11-14T19:50:02.000Z",
+      "actorId": "SYSTEM_SEED",
+      "type": "DEPLOYMENT_PROVISIONING",
+      "subjectId": "deployment-deepseek-banking-prod",
+      "detail": "qualification=qualification-4d79a8b73db160ae26862ed7"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:48.281Z",
+      "appendSequence": 8,
+      "eventId": "deployment_active-8da9a6e29959a93b399f7daf",
+      "occurredAt": "2026-11-14T19:50:02.000Z",
+      "actorId": "SYSTEM_SEED",
+      "type": "DEPLOYMENT_ACTIVE",
+      "subjectId": "deployment-deepseek-banking-prod",
+      "detail": "qualification=qualification-4d79a8b73db160ae26862ed7; reconciledMatchingProvisioning=true"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:48.336Z",
+      "appendSequence": 9,
+      "eventId": "qualification_requested-82cb7221f38d00394d27f121",
+      "occurredAt": "2026-11-15T06:39:31.263Z",
+      "actorId": "SYSTEM_REAL_EVIDENCE_IMPORT",
+      "type": "QUALIFICATION_REQUESTED",
+      "subjectId": "qualification-492b1fa88021b7a54173065d",
+      "detail": "candidate=candidate-gemma4-nvfp4; contract=banking-support-prod@1.0.0; execution=REQUESTED_NOT_RUN"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:48.441Z",
+      "appendSequence": 10,
+      "eventId": "qualification_completed-5e6ea6e14bd7905326599624",
+      "occurredAt": "2026-11-15T08:35:04.861Z",
+      "actorId": "SYSTEM_REAL_EVIDENCE_IMPORT",
+      "type": "QUALIFICATION_COMPLETED",
+      "subjectId": "qualification-492b1fa88021b7a54173065d",
+      "detail": "state=REVIEW_REQUIRED; exactBinding=false; evidence=5f276f4e403a31269ca0bd6409915728b0705a39f9dfe5b93bcae6cad4145fef"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:48.461Z",
+      "appendSequence": 11,
+      "eventId": "deployment_provisioning-1851907e54201bc1634cc17c",
+      "occurredAt": "2026-11-15T08:35:04.861Z",
+      "actorId": "SYSTEM_REAL_EVIDENCE_IMPORT",
+      "type": "DEPLOYMENT_PROVISIONING",
+      "subjectId": "deployment-gemma-banking-prod",
+      "detail": "qualification=qualification-492b1fa88021b7a54173065d"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:48.493Z",
+      "appendSequence": 12,
+      "eventId": "deployment_active-c3f834910d6955db7134fd4f",
+      "occurredAt": "2026-11-15T08:35:04.861Z",
+      "actorId": "SYSTEM_REAL_EVIDENCE_IMPORT",
+      "type": "DEPLOYMENT_ACTIVE",
+      "subjectId": "deployment-gemma-banking-prod",
+      "detail": "qualification=qualification-492b1fa88021b7a54173065d; reconciledMatchingProvisioning=true"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:48.547Z",
+      "appendSequence": 13,
+      "eventId": "qualification_requested-830ebacda9f68f6f4a404dee",
+      "occurredAt": "2026-11-15T07:42:26.591Z",
+      "actorId": "SYSTEM_REAL_EVIDENCE_IMPORT",
+      "type": "QUALIFICATION_REQUESTED",
+      "subjectId": "qualification-5ecb7fa0f7902828beceaac6",
+      "detail": "candidate=candidate-qwen36-nvfp4; contract=banking-support-prod@1.0.0; execution=REQUESTED_NOT_RUN"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:48.651Z",
+      "appendSequence": 14,
+      "eventId": "qualification_completed-314c8e7ff28690dfeb328167",
+      "occurredAt": "2026-11-15T08:23:16.468Z",
+      "actorId": "SYSTEM_REAL_EVIDENCE_IMPORT",
+      "type": "QUALIFICATION_COMPLETED",
+      "subjectId": "qualification-5ecb7fa0f7902828beceaac6",
+      "detail": "state=REVIEW_REQUIRED; exactBinding=false; evidence=0d4d605c62ee16d1cbf25517b0acbf7351bbdcc115462a6e53ce48524c4ee14b"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:48.675Z",
+      "appendSequence": 15,
+      "eventId": "deployment_provisioning-89e64e21ffd70a01c6b403ea",
+      "occurredAt": "2026-11-15T08:23:16.468Z",
+      "actorId": "SYSTEM_REAL_EVIDENCE_IMPORT",
+      "type": "DEPLOYMENT_PROVISIONING",
+      "subjectId": "deployment-qwen-banking-prod",
+      "detail": "qualification=qualification-5ecb7fa0f7902828beceaac6"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:48.711Z",
+      "appendSequence": 16,
+      "eventId": "deployment_active-03a7cb2c1e894417cbac33bf",
+      "occurredAt": "2026-11-15T08:23:16.468Z",
+      "actorId": "SYSTEM_REAL_EVIDENCE_IMPORT",
+      "type": "DEPLOYMENT_ACTIVE",
+      "subjectId": "deployment-qwen-banking-prod",
+      "detail": "qualification=qualification-5ecb7fa0f7902828beceaac6; reconciledMatchingProvisioning=true"
+    }
+  ]
+}

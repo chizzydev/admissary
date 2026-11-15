@@ -1,0 +1,12 @@
+{
+  "schema": "admissary-r13-provider-request/v1",
+  "kind": "CATALOG",
+  "ordinal": 1,
+  "model": null,
+  "caseId": null,
+  "startedAt": "2026-11-15T04:16:27.358Z",
+  "method": "GET",
+  "url": "https://lighthouse.dphn.ai/v1/models",
+  "body": null,
+  "status": "IN_FLIGHT"
+}

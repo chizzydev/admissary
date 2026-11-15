@@ -1,0 +1,76 @@
+{
+  "schema": "admissary-r8-verifier-proof/v1",
+  "createdAt": "2026-11-14T17:38:24.316Z",
+  "valid": {
+    "schema": "admissary-verification-result/v1",
+    "allowed": true,
+    "manifestDigest": "52ff50d5470332cc364ea4dd88e7ac077fec3948ca4b338e74ab9174ab923416",
+    "contextDigest": "802d45d63bf62a684be008aceee0f1ff11269f6f342f404e2d3b1cf00b1ae448",
+    "reasons": []
+  },
+  "tampered": {
+    "schema": "admissary-verification-result/v1",
+    "allowed": false,
+    "manifestDigest": "52ff50d5470332cc364ea4dd88e7ac077fec3948ca4b338e74ab9174ab923416",
+    "contextDigest": "802d45d63bf62a684be008aceee0f1ff11269f6f342f404e2d3b1cf00b1ae448",
+    "reasons": [
+      {
+        "code": "MANIFEST_INTEGRITY_ERROR",
+        "detail": "Manifest digest does not match canonical payload"
+      }
+    ]
+  },
+  "selfConsistentRevisionMismatch": {
+    "schema": "admissary-verification-result/v1",
+    "allowed": false,
+    "manifestDigest": "9f91b0e32028f1970747599029cac60ed2af04fd00a86a03ee764ff4d22d05ec",
+    "contextDigest": "802d45d63bf62a684be008aceee0f1ff11269f6f342f404e2d3b1cf00b1ae448",
+    "reasons": [
+      {
+        "code": "CANDIDATE_REVISION_MISMATCH",
+        "detail": "manifest=bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb; current=0123456789abcdef0123456789abcdef01234567"
+      }
+    ]
+  },
+  "stale": {
+    "schema": "admissary-verification-result/v1",
+    "allowed": false,
+    "manifestDigest": "21972f5fc10d10963e30d69c85c38b73f2706a6f0341e884822c4095cb8ba9c3",
+    "contextDigest": "802d45d63bf62a684be008aceee0f1ff11269f6f342f404e2d3b1cf00b1ae448",
+    "reasons": [
+      {
+        "code": "VALIDITY_NOT_CURRENT",
+        "detail": "validity=STALE"
+      }
+    ]
+  },
+  "unapproved": {
+    "schema": "admissary-verification-result/v1",
+    "allowed": false,
+    "manifestDigest": "2bb0f12bae5b1d74adfe54a4a5fc1e33bc5c84fab80d022718362dd87801fca6",
+    "contextDigest": "802d45d63bf62a684be008aceee0f1ff11269f6f342f404e2d3b1cf00b1ae448",
+    "reasons": [
+      {
+        "code": "AUTHORIZATION_NOT_APPROVED",
+        "detail": "authorization=PENDING"
+      }
+    ]
+  },
+  "contractMismatch": {
+    "schema": "admissary-verification-result/v1",
+    "allowed": false,
+    "manifestDigest": "52ff50d5470332cc364ea4dd88e7ac077fec3948ca4b338e74ab9174ab923416",
+    "contextDigest": "930fcdc7d656f338a8f2e8dc9276b8c3c29d57ea8d8fe4ed760670d3ca6546c3",
+    "reasons": [
+      {
+        "code": "CONTRACT_DIGEST_MISMATCH",
+        "detail": "manifest=sha256:fixture-contract; current=sha256:changed-contract"
+      }
+    ]
+  },
+  "fixture": {
+    "manifestPath": "results\\ADMISSARY_R8_VALID_MANIFEST_2026-11-14T173824312Z.json",
+    "contextPath": "results\\ADMISSARY_R8_DEPLOYMENT_CONTEXT_2026-11-14T173824312Z.json"
+  },
+  "artifactDigest": "70c9034c716f2ed8ee44bddb964909acd45795c8fd09e2061f53016af69d4b5c"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "admissary-r13-collection-session/v1",
+  "startedAt": "2026-11-15T07:42:26.575Z",
+  "qwenFirst": true,
+  "targetOrder": [
+    "nvidia/Qwen3.6-35B-A3B-NVFP4",
+    "nvidia/Gemma-4-26B-A4B-NVFP4"
+  ],
+  "initialCases": {
+    "qwen": 0,
+    "gemma": 99
+  },
+  "completedAt": "2026-11-15T07:43:16.443Z",
+  "paidRequestAttempts": 100,
+  "catalogRequestAttempts": 2,
+  "creditExhausted": true
+}

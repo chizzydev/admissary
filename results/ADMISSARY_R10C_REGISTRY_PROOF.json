@@ -1,0 +1,94 @@
+{
+  "schema": "admissary-r10c-registry-proof/v1",
+  "createdAt": "2026-11-15T08:44:36.210Z",
+  "registryDigest": "f19e7618065cee560f019cc2ba05989ea8f3b13f4add575c82ab8a4f09f26e15",
+  "counts": {
+    "organizations": 1,
+    "environments": 2,
+    "workloads": 2,
+    "candidates": 3,
+    "artifactRevisions": 3,
+    "deployments": 4,
+    "events": 15
+  },
+  "bankingPack": {
+    "id": "banking-routing-v1",
+    "digest": "bc20f10a6cef16bb667dbf4254f4772d55bd7ddeecf9ca69f95f83adeb4123bb",
+    "legacySuiteDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+    "cases": 144
+  },
+  "examplePack": {
+    "id": "release-risk-triage-v1",
+    "digest": "ff7eb6cec56a5b2413bcfaec2a8dc035ccf57d0502b4fd769926010375537932",
+    "cases": 8
+  },
+  "deployments": [
+    {
+      "deploymentId": "deployment-deepseek-banking-prod",
+      "environment": "Production / EU",
+      "workload": "BANKING77 Production Intent Routing",
+      "candidate": "DeepSeek V4.1 Flash",
+      "artifactIdentity": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "qualificationState": "REVIEW_REQUIRED",
+      "authorizationState": "NOT_REQUESTED",
+      "validityState": "CURRENT",
+      "blockers": [
+        "QUALIFICATION_REVIEW_REQUIRED",
+        "EXACT_ARTIFACT_BINDING_UNPROVEN"
+      ],
+      "nextReassessmentAt": null,
+      "exactArtifactBindingProven": false
+    },
+    {
+      "deploymentId": "deployment-deepseek-release-risk-staging",
+      "environment": "Staging",
+      "workload": "Release Risk Triage",
+      "candidate": "DeepSeek V4.1 Flash",
+      "artifactIdentity": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "qualificationState": "INCOMPLETE",
+      "authorizationState": "NOT_REQUESTED",
+      "validityState": "CURRENT",
+      "blockers": [
+        "NOT_EVALUATED",
+        "NO_DEPLOYMENT_CONTRACT_RESULT"
+      ],
+      "nextReassessmentAt": null,
+      "exactArtifactBindingProven": false
+    },
+    {
+      "deploymentId": "deployment-gemma-banking-staging",
+      "environment": "Staging",
+      "workload": "BANKING77 Production Intent Routing",
+      "candidate": "Gemma 4 26B A4B NVFP4",
+      "artifactIdentity": "nvidia/Gemma-4-26B-A4B-NVFP4",
+      "qualificationState": "REVIEW_REQUIRED",
+      "authorizationState": "NOT_REQUESTED",
+      "validityState": "CURRENT",
+      "blockers": [
+        "LIC_DEPLOYMENT_COMPATIBILITY",
+        "PROV_LINEAGE",
+        "EXACT_ARTIFACT_BINDING_UNPROVEN"
+      ],
+      "nextReassessmentAt": null,
+      "exactArtifactBindingProven": false
+    },
+    {
+      "deploymentId": "deployment-qwen-banking-staging",
+      "environment": "Staging",
+      "workload": "BANKING77 Production Intent Routing",
+      "candidate": "Qwen 3.6 35B A3B NVFP4",
+      "artifactIdentity": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+      "qualificationState": "REVIEW_REQUIRED",
+      "authorizationState": "NOT_REQUESTED",
+      "validityState": "CURRENT",
+      "blockers": [
+        "LIC_DEPLOYMENT_COMPATIBILITY",
+        "PROV_LINEAGE",
+        "EXACT_ARTIFACT_BINDING_UNPROVEN"
+      ],
+      "nextReassessmentAt": null,
+      "exactArtifactBindingProven": false
+    }
+  ],
+  "proofDigest": "9b005f5eb9db220e673ffec9181da14b8aaa1188fdc070772d8d7b7c350eff48"
+}

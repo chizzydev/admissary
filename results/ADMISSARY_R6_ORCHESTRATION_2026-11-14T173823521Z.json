@@ -1,0 +1,305 @@
+{
+  "schema": "admissary-r6-orchestration/v1",
+  "createdAt": "2026-11-14T17:38:23.523Z",
+  "contract": {
+    "id": "banking-support-prod",
+    "version": "1.0.0",
+    "digest": "4708b4e1eaedb0d8abe537b26c8cb55cb591a7205e8d4e8a2cb7bd27f5e3ba01"
+  },
+  "r5Evidence": {
+    "file": "ADMISSARY_R5_DOLPHIN_2026-11-14T171917513Z.json",
+    "runDigest": "1e56c082af49d232f834b67cc09901627557b019ef0eca32b12eafca8eae1628",
+    "suiteDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+    "provider": "dolphin",
+    "baseUrlHost": "lighthouse.dphn.ai",
+    "requestedModel": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "responseModel": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "cases": 144
+  },
+  "empiricalFitness": {
+    "state": "UNFIT",
+    "decisiveObligations": [
+      "EVAL_CRITICAL_INTENT_RECALL",
+      "EVAL_SCHEMA_VALIDITY"
+    ],
+    "obligationResults": [
+      {
+        "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+        "kind": "EMPIRICAL",
+        "criticality": "MANDATORY",
+        "state": "FAIL",
+        "detail": "critical_intent_recall observed=0.825 gte 0.9"
+      },
+      {
+        "obligationId": "EVAL_INJECTION_INVARIANCE",
+        "kind": "EMPIRICAL",
+        "criticality": "MANDATORY",
+        "state": "PASS",
+        "detail": "injection_invariance observed=0.9583333333333334 gte 0.95"
+      },
+      {
+        "obligationId": "EVAL_MACRO_F1",
+        "kind": "EMPIRICAL",
+        "criticality": "MANDATORY",
+        "state": "PASS",
+        "detail": "macro_f1 observed=0.8914080795390529 gte 0.82"
+      },
+      {
+        "obligationId": "EVAL_P95_LATENCY_MS",
+        "kind": "EMPIRICAL",
+        "criticality": "ADVISORY",
+        "state": "FAIL",
+        "detail": "p95_latency_ms observed=3817 lte 1500"
+      },
+      {
+        "obligationId": "EVAL_SCHEMA_VALIDITY",
+        "kind": "EMPIRICAL",
+        "criticality": "MANDATORY",
+        "state": "FAIL",
+        "detail": "schema_validity observed=0.9930555555555556 eq 1"
+      }
+    ]
+  },
+  "executionBinding": {
+    "scope": "PROVIDER_MODEL_IDENTITY",
+    "provider": "dolphin",
+    "baseUrlHost": "lighthouse.dphn.ai",
+    "requestedModel": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "responseModel": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "modelCatalogDigest": "a53a5278dcdb7fde46aed1afd2385443256a592a9aa8f9bb5e8931455a3beb60",
+    "exactArtifactRevision": null,
+    "exactArtifactBindingProven": false
+  },
+  "fullQualificationCoverage": {
+    "state": "REVIEW_REQUIRED",
+    "decisiveObligations": [
+      "LIC_DEPLOYMENT_COMPATIBILITY",
+      "PROV_LINEAGE"
+    ],
+    "coverage": {
+      "expectedObligations": [
+        "ART_REMOTE_CODE",
+        "ART_REVISION_IMMUTABLE",
+        "ART_TOKENIZER_IMMUTABLE",
+        "ART_WEIGHT_FORMAT",
+        "EVAL_CRITICAL_INTENT_RECALL",
+        "EVAL_INJECTION_INVARIANCE",
+        "EVAL_MACRO_F1",
+        "EVAL_P95_LATENCY_MS",
+        "EVAL_SCHEMA_VALIDITY",
+        "LIC_DECLARED",
+        "LIC_DEPLOYMENT_COMPATIBILITY",
+        "PROV_LINEAGE",
+        "PROV_PUBLISHER"
+      ],
+      "suppliedObligations": [
+        "EVAL_CRITICAL_INTENT_RECALL",
+        "EVAL_INJECTION_INVARIANCE",
+        "EVAL_MACRO_F1",
+        "EVAL_P95_LATENCY_MS",
+        "EVAL_SCHEMA_VALIDITY"
+      ],
+      "missingObligations": [
+        "ART_REMOTE_CODE",
+        "ART_REVISION_IMMUTABLE",
+        "ART_TOKENIZER_IMMUTABLE",
+        "ART_WEIGHT_FORMAT",
+        "LIC_DECLARED",
+        "LIC_DEPLOYMENT_COMPATIBILITY",
+        "PROV_LINEAGE",
+        "PROV_PUBLISHER"
+      ],
+      "synthesizedUnknownObligations": [
+        "ART_REMOTE_CODE",
+        "ART_REVISION_IMMUTABLE",
+        "ART_TOKENIZER_IMMUTABLE",
+        "ART_WEIGHT_FORMAT",
+        "LIC_DECLARED",
+        "LIC_DEPLOYMENT_COMPATIBILITY",
+        "PROV_LINEAGE",
+        "PROV_PUBLISHER"
+      ]
+    },
+    "obligationResults": [
+      {
+        "obligationId": "ART_REMOTE_CODE",
+        "kind": "DETERMINISTIC",
+        "criticality": "MANDATORY",
+        "state": "UNKNOWN",
+        "detail": "No current evidence result supplied"
+      },
+      {
+        "obligationId": "ART_REVISION_IMMUTABLE",
+        "kind": "DETERMINISTIC",
+        "criticality": "MANDATORY",
+        "state": "UNKNOWN",
+        "detail": "No current evidence result supplied"
+      },
+      {
+        "obligationId": "ART_TOKENIZER_IMMUTABLE",
+        "kind": "DETERMINISTIC",
+        "criticality": "MANDATORY",
+        "state": "UNKNOWN",
+        "detail": "No current evidence result supplied"
+      },
+      {
+        "obligationId": "ART_WEIGHT_FORMAT",
+        "kind": "DETERMINISTIC",
+        "criticality": "MANDATORY",
+        "state": "UNKNOWN",
+        "detail": "No current evidence result supplied"
+      },
+      {
+        "obligationId": "EVAL_CRITICAL_INTENT_RECALL",
+        "kind": "EMPIRICAL",
+        "criticality": "MANDATORY",
+        "state": "FAIL",
+        "detail": "critical_intent_recall observed=0.825 gte 0.9"
+      },
+      {
+        "obligationId": "EVAL_INJECTION_INVARIANCE",
+        "kind": "EMPIRICAL",
+        "criticality": "MANDATORY",
+        "state": "PASS",
+        "detail": "injection_invariance observed=0.9583333333333334 gte 0.95"
+      },
+      {
+        "obligationId": "EVAL_MACRO_F1",
+        "kind": "EMPIRICAL",
+        "criticality": "MANDATORY",
+        "state": "PASS",
+        "detail": "macro_f1 observed=0.8914080795390529 gte 0.82"
+      },
+      {
+        "obligationId": "EVAL_P95_LATENCY_MS",
+        "kind": "EMPIRICAL",
+        "criticality": "ADVISORY",
+        "state": "FAIL",
+        "detail": "p95_latency_ms observed=3817 lte 1500"
+      },
+      {
+        "obligationId": "EVAL_SCHEMA_VALIDITY",
+        "kind": "EMPIRICAL",
+        "criticality": "MANDATORY",
+        "state": "FAIL",
+        "detail": "schema_validity observed=0.9930555555555556 eq 1"
+      },
+      {
+        "obligationId": "LIC_DECLARED",
+        "kind": "DETERMINISTIC",
+        "criticality": "MANDATORY",
+        "state": "UNKNOWN",
+        "detail": "No current evidence result supplied"
+      },
+      {
+        "obligationId": "LIC_DEPLOYMENT_COMPATIBILITY",
+        "kind": "SEMANTIC",
+        "criticality": "MANDATORY",
+        "state": "UNKNOWN",
+        "detail": "No current evidence result supplied"
+      },
+      {
+        "obligationId": "PROV_LINEAGE",
+        "kind": "SEMANTIC",
+        "criticality": "MANDATORY",
+        "state": "UNKNOWN",
+        "detail": "No current evidence result supplied"
+      },
+      {
+        "obligationId": "PROV_PUBLISHER",
+        "kind": "DETERMINISTIC",
+        "criticality": "MANDATORY",
+        "state": "UNKNOWN",
+        "detail": "No current evidence result supplied"
+      }
+    ]
+  },
+  "manifestEligibility": {
+    "eligible": false,
+    "reasons": [
+      "QUALIFICATION_REVIEW_REQUIRED",
+      "EXACT_ARTIFACT_BINDING_UNPROVEN"
+    ]
+  },
+  "workflow": {
+    "first": {
+      "rootDigest": "a49d15cd2e86ff0d235a86bada97949d64ee23d8b0d61b984e3c2fb62975c1f3",
+      "recomputedKeys": [
+        "control:EVAL_CRITICAL_INTENT_RECALL",
+        "control:EVAL_INJECTION_INVARIANCE",
+        "control:EVAL_MACRO_F1",
+        "control:EVAL_P95_LATENCY_MS",
+        "control:EVAL_SCHEMA_VALIDITY",
+        "decision:empirical-fitness",
+        "evaluation:dolphin-r5",
+        "source:contract",
+        "source:dolphin-provider-model",
+        "source:evaluation-suite"
+      ]
+    },
+    "unchangedRepeat": {
+      "rootDigest": "a49d15cd2e86ff0d235a86bada97949d64ee23d8b0d61b984e3c2fb62975c1f3",
+      "reusedKeys": [
+        "control:EVAL_CRITICAL_INTENT_RECALL",
+        "control:EVAL_INJECTION_INVARIANCE",
+        "control:EVAL_MACRO_F1",
+        "control:EVAL_P95_LATENCY_MS",
+        "control:EVAL_SCHEMA_VALIDITY",
+        "decision:empirical-fitness",
+        "evaluation:dolphin-r5",
+        "source:contract",
+        "source:dolphin-provider-model",
+        "source:evaluation-suite"
+      ],
+      "recomputedKeys": []
+    }
+  },
+  "incrementalRequalification": {
+    "policyOnly": {
+      "reusedKeys": [
+        "control:workload",
+        "evaluation:workload",
+        "evidence:artifact",
+        "source:artifact",
+        "source:suite"
+      ],
+      "recomputedKeys": [
+        "control:license-policy",
+        "decision:qualification",
+        "source:policy"
+      ],
+      "stalePreviousKeys": [
+        "control:license-policy",
+        "decision:qualification",
+        "source:policy"
+      ],
+      "addedKeys": [],
+      "removedKeys": []
+    },
+    "artifactRevision": {
+      "reusedKeys": [
+        "source:policy",
+        "source:suite"
+      ],
+      "recomputedKeys": [
+        "control:license-policy",
+        "control:workload",
+        "decision:qualification",
+        "evaluation:workload",
+        "evidence:artifact",
+        "source:artifact"
+      ],
+      "stalePreviousKeys": [
+        "control:license-policy",
+        "control:workload",
+        "decision:qualification",
+        "evaluation:workload",
+        "evidence:artifact",
+        "source:artifact"
+      ],
+      "addedKeys": [],
+      "removedKeys": []
+    }
+  },
+  "artifactDigest": "5430e86a7e83fb55b45f344145c2968acff11775bf482735e72bc197cd61df48"
+}

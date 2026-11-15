@@ -1,0 +1,140 @@
+{
+  "schema": "admissary-r7-persistence-proof/v1",
+  "createdAt": "2026-11-14T17:38:23.944Z",
+  "r6Source": {
+    "file": "ADMISSARY_R6_ORCHESTRATION_2026-11-14T172905231Z.json",
+    "artifactDigest": "d5e85dfbd04214b7b22d0c8eb2eef3b01857aba535c80b7b5322231075821a54",
+    "graphRootDigest": "a49d15cd2e86ff0d235a86bada97949d64ee23d8b0d61b984e3c2fb62975c1f3"
+  },
+  "realRun": {
+    "runId": "r6-deepseek-live",
+    "qualificationState": "REVIEW_REQUIRED",
+    "exactArtifactBindingProven": false,
+    "approvalDenied": true,
+    "deploymentDecision": {
+      "allowed": false,
+      "reasons": [
+        "QUALIFICATION_REVIEW_REQUIRED",
+        "AUTHORIZATION_NOT_REQUESTED",
+        "EXACT_ARTIFACT_BINDING_UNPROVEN"
+      ],
+      "qualificationState": "REVIEW_REQUIRED",
+      "authorizationState": "NOT_REQUESTED",
+      "validityState": "CURRENT",
+      "exactArtifactBindingProven": false
+    }
+  },
+  "acceptanceFixture": {
+    "runId": "authorization-acceptance-fixture",
+    "viewerApprovalDenied": true,
+    "approvedDecision": {
+      "allowed": true,
+      "reasons": [],
+      "qualificationState": "QUALIFIED",
+      "authorizationState": "APPROVED",
+      "validityState": "CURRENT",
+      "exactArtifactBindingProven": true
+    },
+    "staleDecision": {
+      "allowed": false,
+      "reasons": [
+        "VALIDITY_STALE"
+      ],
+      "qualificationState": "QUALIFIED",
+      "authorizationState": "APPROVED",
+      "validityState": "STALE",
+      "exactArtifactBindingProven": true
+    },
+    "revokedDecision": {
+      "allowed": false,
+      "reasons": [
+        "AUTHORIZATION_REVOKED",
+        "VALIDITY_STALE"
+      ],
+      "qualificationState": "QUALIFIED",
+      "authorizationState": "REVOKED",
+      "validityState": "STALE",
+      "exactArtifactBindingProven": true
+    },
+    "timeline": [
+      {
+        "occurredAt": "2026-11-14T18:31:00.000Z",
+        "type": "AUDIT",
+        "runId": "authorization-acceptance-fixture",
+        "actorId": "system",
+        "detail": "QUALIFICATION_FINALIZED: qualification=QUALIFIED; source=fixture:authorization-acceptance"
+      },
+      {
+        "occurredAt": "2026-11-14T18:31:00.000Z",
+        "type": "QUALIFICATION",
+        "runId": "authorization-acceptance-fixture",
+        "actorId": "system",
+        "state": "QUALIFIED",
+        "detail": "graph=fixture-graph-root; source=fixture:authorization-acceptance"
+      },
+      {
+        "occurredAt": "2026-11-14T18:31:00.000Z",
+        "type": "VALIDITY",
+        "runId": "authorization-acceptance-fixture",
+        "actorId": "system",
+        "state": "CURRENT",
+        "detail": "Qualification finalized"
+      },
+      {
+        "occurredAt": "2026-11-14T18:33:00.000Z",
+        "type": "AUDIT",
+        "runId": "authorization-acceptance-fixture",
+        "actorId": "demo-approver",
+        "detail": "AUTHORIZATION_APPROVED: authorization acceptance fixture"
+      },
+      {
+        "occurredAt": "2026-11-14T18:33:00.000Z",
+        "type": "AUTHORIZATION",
+        "runId": "authorization-acceptance-fixture",
+        "actorId": "demo-approver",
+        "state": "APPROVED",
+        "detail": "authorization acceptance fixture"
+      },
+      {
+        "occurredAt": "2026-11-14T18:34:00.000Z",
+        "type": "AUDIT",
+        "runId": "authorization-acceptance-fixture",
+        "actorId": "system",
+        "detail": "VALIDITY_STALE: artifact revision changed"
+      },
+      {
+        "occurredAt": "2026-11-14T18:34:00.000Z",
+        "type": "VALIDITY",
+        "runId": "authorization-acceptance-fixture",
+        "actorId": "system",
+        "state": "STALE",
+        "detail": "artifact revision changed"
+      },
+      {
+        "occurredAt": "2026-11-14T18:35:00.000Z",
+        "type": "AUDIT",
+        "runId": "authorization-acceptance-fixture",
+        "actorId": "demo-approver",
+        "detail": "AUTHORIZATION_REVOKED: fixture revocation retained for history"
+      },
+      {
+        "occurredAt": "2026-11-14T18:35:00.000Z",
+        "type": "AUTHORIZATION",
+        "runId": "authorization-acceptance-fixture",
+        "actorId": "demo-approver",
+        "state": "REVOKED",
+        "detail": "fixture revocation retained for history"
+      }
+    ]
+  },
+  "persistence": {
+    "revision": 5,
+    "qualificationRuns": 2,
+    "authorizationEvents": 2,
+    "validityEvents": 3,
+    "auditEvents": 5,
+    "stateDigest": "856c3ac84b63f0ae00d3f50224329d12368fa790a50712dacc1cdcb70f78c462",
+    "stateFile": "results\\ADMISSARY_R7_STATE.json"
+  },
+  "artifactDigest": "214951ba3c0bcbbe00378f56d5e864e961a24bece5b65e4a39c049e59ab7a781"
+}

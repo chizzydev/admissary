@@ -1,0 +1,35 @@
+{
+  "schema": "qualification-manifest/v1",
+  "candidate": {
+    "repository": "fixture/qualified-model",
+    "revision": "0123456789abcdef0123456789abcdef01234567",
+    "tokenizerRevision": "89abcdef0123456789abcdef0123456789abcdef",
+    "artifactManifestDigest": "f1589211c168272d0cdccabc9156994811224f929bad042845a1d1580ed4d1bf"
+  },
+  "contract": {
+    "id": "banking-support-prod",
+    "version": "1.0.0",
+    "digest": "3fe08a35055e4d5fff40fb9b0325b772a44d358ec5adaa8308b7bc9dd5381ba4"
+  },
+  "policyPack": {
+    "version": "1.0.0",
+    "digest": "d7a32ab506dafa271ff2e59d5073f68c2258c17e7f1ed8a634dd0b9901191596"
+  },
+  "evaluation": {
+    "suite": "banking-routing-v1",
+    "digest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2"
+  },
+  "evidenceGraph": {
+    "rootDigest": "08c3d3b604cc7893e097351276547bc668e67d32934788ec62fd1f9b483e5124"
+  },
+  "qualification": {
+    "state": "QUALIFIED"
+  },
+  "authorization": {
+    "state": "APPROVED"
+  },
+  "validity": {
+    "state": "CURRENT"
+  },
+  "manifestDigest": "1d51410dbe31e35ffd6e55d4ace6cc4db15ea4939a2b6a76ba345bd72025b881"
+}

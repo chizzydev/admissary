@@ -1,0 +1,25 @@
+{
+  "schema": "admissary-deployment-context/v1",
+  "candidate": {
+    "repository": "admissary-fixture/current-authority",
+    "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "tokenizerRevision": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "artifactManifestDigest": "64a0218c8362b81ca429cd235858000128a9132def5fa44cebc7fde5a504f85f"
+  },
+  "contract": {
+    "id": "ci-fixture-contract",
+    "version": "1",
+    "digest": "8bc77749bbec51aaaba1f0864ce978fac82b571304d2727c5bb977e102aa15b6"
+  },
+  "policyPack": {
+    "version": "fixture-policy/v1",
+    "digest": "45854a7d0c3f14c34e4ed6cf2f1f8d2c0e75ff9f6031fde074da2b3532aae4ad"
+  },
+  "evaluation": {
+    "suite": "fixture-suite",
+    "digest": "873d2f182ded3a4b688c39f22c19663cdd42abdc969b4d16595d2a758abb390a"
+  },
+  "evidenceGraph": {
+    "rootDigest": "dc644a867461bbbdb4baea51ba66599ec1cf274cdc58f4cd6a4f2ac293529029"
+  }
+}

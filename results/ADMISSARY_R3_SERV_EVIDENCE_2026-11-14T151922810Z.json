@@ -1,0 +1,82 @@
+{
+  "schema": "admissary-r3-live-serv/v1",
+  "capturedAt": "2026-11-14T15:19:22.812Z",
+  "model": "gpt-5.6-luna",
+  "cases": [
+    {
+      "id": "SUPPORTED",
+      "expected": "SUPPORTED",
+      "result": "SUPPORTED",
+      "evidenceState": "PASS",
+      "model": "gpt-5.6-luna",
+      "responseId": "chatcmpl-Ek9p6aeqbEknfmyjmuLT80qrC7Bsq",
+      "usage": {
+        "prompt_tokens": 599,
+        "completion_tokens": 97,
+        "total_tokens": 696
+      },
+      "requestDigest": "8044698718f30d6ac5c12ef87f53164706c4c3db35856eaea7db1242343e2e0d",
+      "responseDigest": "3e49ceb0e0c348c1c75eac4accd5a2b71b2c12b68eb06d9e3bb121bd0f310ace",
+      "evidenceIds": [
+        "E-SUPPORTED"
+      ],
+      "evidenceQuotes": [
+        {
+          "evidence_id": "E-SUPPORTED",
+          "quote": "Commercial use is permitted, including deployment in customer-facing applications."
+        }
+      ],
+      "explanation": "The evidence explicitly permits commercial use in customer-facing applications.",
+      "uncertainties": []
+    },
+    {
+      "id": "CONTRADICTED",
+      "expected": "CONTRADICTED",
+      "result": "CONTRADICTED",
+      "evidenceState": "FAIL",
+      "model": "gpt-5.6-luna",
+      "responseId": "chatcmpl-Ek9p8Dy6zHwLGF1IvsEQxLvcF5u28",
+      "usage": {
+        "prompt_tokens": 599,
+        "completion_tokens": 106,
+        "total_tokens": 705
+      },
+      "requestDigest": "a5c5c4e708f65407a201d83c8f28a494582c9f26ded64311eb72abc4f2ddbd62",
+      "responseDigest": "4a6e8a94fbc05ca46dd7f94a416f8dcd44e49b182e0443c64d238a2abc81c30e",
+      "evidenceIds": [
+        "E-CONTRADICTED"
+      ],
+      "evidenceQuotes": [
+        {
+          "evidence_id": "E-CONTRADICTED",
+          "quote": "Commercial use is prohibited."
+        }
+      ],
+      "explanation": "The evidence explicitly states that commercial use is prohibited, contradicting that commercial use is permitted.",
+      "uncertainties": []
+    },
+    {
+      "id": "UNRESOLVED",
+      "expected": "UNRESOLVED",
+      "result": "UNRESOLVED",
+      "evidenceState": "UNKNOWN",
+      "model": "gpt-5.6-luna",
+      "responseId": "chatcmpl-Ek9pA7TsaahXWXSk0l8tRyfrSBXOl",
+      "usage": {
+        "prompt_tokens": 602,
+        "completion_tokens": 114,
+        "total_tokens": 716
+      },
+      "requestDigest": "a9c59126bd027677d9fd35176d06c95ea079c3c31a6e9f2002dc79a93b4c04af",
+      "responseDigest": "0c7f01fc2c36707abac42269f2336020a543a9dfe8758180a5c8a12232726642",
+      "evidenceIds": [
+        "E-UNRESOLVED"
+      ],
+      "evidenceQuotes": [],
+      "explanation": "The supplied evidence does not establish that commercial use is permitted.",
+      "uncertainties": [
+        "No licensing or commercial-use terms are provided."
+      ]
+    }
+  ]
+}

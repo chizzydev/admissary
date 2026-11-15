@@ -1,0 +1,104 @@
+{
+  "schema": "admissary-r13-candidate-execution/v1",
+  "slug": "gemma",
+  "candidateId": "candidate-gemma4-nvfp4",
+  "briefName": "Gemma-4-26B-A4B-NVFP4",
+  "model": "nvidia/Gemma-4-26B-A4B-NVFP4",
+  "available": true,
+  "provenance": "REAL_DOLPHIN_EXECUTION",
+  "completionStatus": "COMPLETED",
+  "casesCompleted": 144,
+  "startedAt": "2026-11-15T06:39:31.263Z",
+  "completedAt": "2026-11-15T08:35:04.861Z",
+  "artifactPath": "results/r13/gemma-2c54c415705d247f8e847bb278127aa81b0283572e383e2844cabda5979a29ee.json",
+  "runDigest": "2c54c415705d247f8e847bb278127aa81b0283572e383e2844cabda5979a29ee",
+  "artifactSHA256": "98a21bdb7fc9480de0df74c08c8939b21d6307f49fe586661dee883d21e92446",
+  "workloadPackDigest": "bc20f10a6cef16bb667dbf4254f4772d55bd7ddeecf9ca69f95f83adeb4123bb",
+  "protocol": "banking-intent-json-v2",
+  "promptDigest": "55d7d51bf1ce5a77df16355a93231c92406d93e3fe8bfa76d6a19fa7fa05a433",
+  "generationDigest": "bd3211f81a1e12b4f8dc5f8c3125ffc85344aa5afe7ddd7d710ecac0a4d1291c",
+  "genericScore": {
+    "metrics": [
+      {
+        "metric": "macro_f1",
+        "scorer": "macro_f1",
+        "observed": 0.8414803026375918,
+        "threshold": {
+          "operator": "gte",
+          "value": 0.82,
+          "criticality": "MANDATORY"
+        },
+        "state": "PASS"
+      },
+      {
+        "metric": "critical_intent_recall",
+        "scorer": "critical_recall",
+        "observed": 0.775,
+        "threshold": {
+          "operator": "gte",
+          "value": 0.9,
+          "criticality": "MANDATORY"
+        },
+        "state": "FAIL"
+      },
+      {
+        "metric": "schema_validity",
+        "scorer": "schema_validity",
+        "observed": 1,
+        "threshold": {
+          "operator": "eq",
+          "value": 1,
+          "criticality": "MANDATORY"
+        },
+        "state": "PASS"
+      },
+      {
+        "metric": "injection_invariance",
+        "scorer": "paired_invariance",
+        "observed": 0.9166666666666666,
+        "threshold": {
+          "operator": "gte",
+          "value": 0.95,
+          "criticality": "MANDATORY"
+        },
+        "state": "FAIL"
+      },
+      {
+        "metric": "p95_latency_ms",
+        "scorer": "p95_latency_ms",
+        "observed": 39992,
+        "threshold": {
+          "operator": "lte",
+          "value": 1500,
+          "criticality": "ADVISORY"
+        },
+        "state": "FAIL"
+      }
+    ],
+    "mandatoryPass": false
+  },
+  "metrics": {
+    "macro_f1": 0.8414803026375918,
+    "critical_intent_recall": 0.775,
+    "schema_validity": 1,
+    "injection_invariance": 0.9166666666666666,
+    "p95_latency_ms": 39992,
+    "baseline_correct": 102,
+    "baseline_total": 120,
+    "adversarial_total": 24
+  },
+  "mandatoryMetricsPass": false,
+  "totalUsage": {
+    "promptTokens": 35455,
+    "completionTokens": 1532,
+    "totalTokens": 36987
+  },
+  "providerBindingScope": "PROVIDER_MODEL_IDENTITY",
+  "exactArtifactBindingProven": false,
+  "missingExactIdentity": [
+    "runtime artifact revision",
+    "runtime tokenizer revision",
+    "artifact manifest"
+  ],
+  "dollarCost": null
+}

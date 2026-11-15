@@ -1,0 +1,65 @@
+name: "Admissary deployment admission"
+description: "Check current Product/Assurance authority and scoped signed proof; revocation, expiry, reassessment and stale evidence deny. Historical verification is separate."
+inputs:
+  product-state:
+    description: "Authoritative local Product state JSON, relative to caller workspace."
+    required: true
+  assurance-state:
+    description: "Authoritative local Assurance state JSON, relative to caller workspace."
+    required: true
+  trust-store:
+    description: "Trusted public verification keys JSON, relative to caller workspace."
+    required: true
+  deployment-id:
+    description: "Exact deployment whose current authority must allow."
+    required: true
+  context:
+    description: "Current runtime identity context JSON, relative to caller workspace."
+    required: true
+  report:
+    description: "Current-authority decision report path, relative to caller workspace."
+    required: false
+    default: "admissary-current-admission-report.json"
+outputs:
+  decision:
+    description: "ALLOW or DENY"
+    value: ${{ steps.admission.outputs.decision }}
+  reason_codes:
+    description: "Comma-separated deterministic denial reason codes, or NONE"
+    value: ${{ steps.admission.outputs.reason_codes }}
+  manifest_digest:
+    description: "Verified qualification manifest digest"
+    value: ${{ steps.admission.outputs.manifest_digest }}
+  context_digest:
+    description: "Current deployment context digest"
+    value: ${{ steps.admission.outputs.context_digest }}
+runs:
+  using: "composite"
+  steps:
+    - name: Build Admissary verifier
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      run: |
+        npm install --ignore-scripts --no-audit --no-fund
+        npm run build
+
+    - name: Verify deployment admission
+      id: admission
+      shell: bash
+      env:
+        ADMISSARY_ACTION_PATH: ${{ github.action_path }}
+        ADMISSARY_WORKSPACE: ${{ github.workspace }}
+        ADMISSARY_PRODUCT_STATE: ${{ inputs.product-state }}
+        ADMISSARY_ASSURANCE_STATE: ${{ inputs.assurance-state }}
+        ADMISSARY_TRUST_STORE: ${{ inputs.trust-store }}
+        ADMISSARY_DEPLOYMENT_ID: ${{ inputs.deployment-id }}
+        ADMISSARY_CONTEXT: ${{ inputs.context }}
+        ADMISSARY_REPORT: ${{ inputs.report }}
+      run: |
+        node "$ADMISSARY_ACTION_PATH/scripts/admissary-ci-check.mjs" \
+          --product-state "$ADMISSARY_WORKSPACE/$ADMISSARY_PRODUCT_STATE" \
+          --assurance-state "$ADMISSARY_WORKSPACE/$ADMISSARY_ASSURANCE_STATE" \
+          --trust-store "$ADMISSARY_WORKSPACE/$ADMISSARY_TRUST_STORE" \
+          --deployment-id "$ADMISSARY_DEPLOYMENT_ID" \
+          --context "$ADMISSARY_WORKSPACE/$ADMISSARY_CONTEXT" \
+          --report "$ADMISSARY_WORKSPACE/$ADMISSARY_REPORT"

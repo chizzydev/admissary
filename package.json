@@ -1,0 +1,41 @@
+{
+  "name": "admissary-core-r1",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "smoke": "npm run build && node examples/smoke.mjs",
+    "verify": "node scripts/admissary-verify.mjs",
+    "web": "node scripts/admissary-web.mjs",
+    "judge-data": "node scripts/build-r9-judge-view.mjs",
+    "seal-demo": "node scripts/seal-r10-demo.mjs",
+    "production-gate": "node scripts/r10-production-gate.mjs",
+    "recovery-gate": "node scripts/r10-recovery-gate.mjs",
+    "workload:banking": "node scripts/migrate-banking77-workload-pack.mjs",
+    "workload:example": "node scripts/build-r10c-example-workload.mjs",
+    "registry:gate": "node scripts/r10c-registry-gate.mjs",
+    "ci:check": "node scripts/admissary-ci-check.mjs",
+    "r10c2:gate": "node scripts/r10c2-attestation-ci-gate.mjs",
+    "r10c3:gate": "node scripts/r10c3-continuous-assurance-gate.mjs",
+    "r10c4:gate": "node scripts/r10c4-decision-workspace-gate.mjs",
+    "r10c5:seed": "node scripts/r10c5-seed-product-state.mjs",
+    "r10c5:gate": "node scripts/r10c5-product-api-gate.mjs",
+    "r10d:gate": "node scripts/r10d-canonical-cases-gate.mjs",
+    "r11:gate": "node scripts/r11-adversarial-acceptance-gate.mjs",
+    "r11r1:gate": "node scripts/r11r1-post-audit-remediation-gate.mjs",
+    "r11r2:gate": "node scripts/r11r2-freeze-closure-gate.mjs",
+    "proof:historical": "node scripts/verify-historical-proof.mjs",
+    "r13:gate": "node scripts/r13-final-live-candidate-evidence-gate.mjs"
+  },
+  "engines": {
+    "node": ">=22 <25"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3"
+  },
+  "dependencies": {
+    "pg": "8.23.1"
+  }
+}

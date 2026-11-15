@@ -1,0 +1,51 @@
+{
+  "schema": "admissary-r10c3-continuous-assurance-proof/v1",
+  "createdAt": "2026-11-14T20:00:13.409Z",
+  "assuranceStateDigest": "6d73515d04cd427e1cf48d69742be98009ce8ff5173a5d5b50583702ba3de466",
+  "caseB": {
+    "initialAllowed": true,
+    "monitoringErrorWithinGraceAllowed": true,
+    "monitoringAfterError": "DEGRADED",
+    "driftAllowed": false,
+    "driftReasons": [
+      "LIFECYCLE_REASSESSMENT_REQUIRED",
+      "APPROVAL_SCOPE_MISMATCH"
+    ],
+    "preservedHistoricalApprovalState": "APPROVED",
+    "invalidatedNodes": [
+      "control:license-policy",
+      "control:workload",
+      "decision:qualification",
+      "evaluation:workload",
+      "evidence:artifact",
+      "source:artifact"
+    ],
+    "reassessmentRequestId": "reassessment-ea679b835e161981f911ed97",
+    "afterReassessmentBeforeNewApprovalAllowed": false,
+    "afterNewApprovalAllowed": true,
+    "afterExpiryAllowed": false
+  },
+  "revocation": {
+    "allowed": false,
+    "reasons": [
+      "LIFECYCLE_REVOKED",
+      "APPROVAL_REVOKED"
+    ]
+  },
+  "liveHuggingFace": {
+    "repository": "Qwen/Qwen3-0.6B",
+    "historicalArtifactSchema": "admissary-r2-live-evidence/v1",
+    "historicalRevision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "historicalBundleDigest": "b206ddf0141f14d7be9705f153bef940bd4a8b4f29701e327a924156bac0f28e",
+    "historicalRemoteCodeState": "NOT_INDICATED",
+    "currentRevision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "currentBundleDigest": "b206ddf0141f14d7be9705f153bef940bd4a8b4f29701e327a924156bac0f28e",
+    "currentRemoteCodeState": "NOT_INDICATED",
+    "exactRevisionConfirmed": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "historicalToCurrentOutcome": "UNCHANGED",
+    "historicalComparisonBasis": "RESOLVED_REVISION",
+    "currentMainVsExactOutcome": "UNCHANGED",
+    "controlledMaterialChangeOutcome": "MATERIAL_CHANGE"
+  },
+  "proofDigest": "c818159db1507de0ade3d1d372c16f81ab5ae025ac807ea8b735bd8ae2fe39a6"
+}

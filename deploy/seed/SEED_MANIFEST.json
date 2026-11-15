@@ -1,0 +1,29 @@
+{
+  "schema": "admissary-production-seed/v1",
+  "createdAt": "2026-11-15T08:44:33.547Z",
+  "judgeSnapshot": {
+    "snapshotDigest": "9185c39c60f1bd1867f682c7b2f6fa1795175d8e6385a6a65da4c8483c53bab0",
+    "model": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "empiricalFitness": "UNFIT",
+    "overallQualification": "REVIEW_REQUIRED",
+    "deployAllowed": false
+  },
+  "files": [
+    {
+      "name": "demo-snapshot.json",
+      "sha256": "890d6264b69bd366ea409808ca1569ec1fdcd22a44a7dd1b10f91eddd4c2c839",
+      "provenance": "REAL_R2_R9_DERIVED_JUDGE_SNAPSHOT"
+    },
+    {
+      "name": "verifier-manifest.json",
+      "sha256": "5ac775d34f41e2e39f84919ee26b4b2bc875cd924ad8d7cb111344be70fd7c0e",
+      "provenance": "EXPLICIT_R8_ACCEPTANCE_FIXTURE"
+    },
+    {
+      "name": "deployment-context.json",
+      "sha256": "7fd299bd2b6fc66be73ae9b7c8cfc6c037da1130eb1dcf8949767cc3d7dba0cc",
+      "provenance": "EXPLICIT_R8_ACCEPTANCE_FIXTURE"
+    }
+  ],
+  "seedDigest": "6f2bffbf066f6b91bb9bef7476ab6a0263470b3ed676681e596b45c5c63228db"
+}

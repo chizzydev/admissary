@@ -1,0 +1,413 @@
+{
+  "schema": "admissary-product-deployment-audit/v1",
+  "deployment": {
+    "deploymentId": "deployment-r10d-current",
+    "candidateId": "candidate-r10d-current",
+    "contractId": "r10d-audit-contract",
+    "contractVersion": "1.0.0",
+    "qualificationRunId": "qualification-4739098b3c98a158c4bb031c",
+    "assuranceDeploymentId": "deployment-r10d-current",
+    "status": "ACTIVE",
+    "provisioningRequestDigest": "5076a4b68737a546b5fb03aa199edce329b066246161872839e06db216f05e89",
+    "createdBy": "OPERATOR",
+    "createdAt": "2026-11-14T20:43:00.000Z",
+    "updatedAt": "2026-11-14T20:45:00.000Z",
+    "provisioningError": null,
+    "attestationId": "attestation-5f11f815d741fbb813ffefba"
+  },
+  "candidate": {
+    "candidateId": "candidate-r10d-current",
+    "displayName": "R10D CURRENT exact acceptance candidate",
+    "provider": "ACCEPTANCE_FIXTURE",
+    "repositoryOrModelId": "admissary-fixture/current",
+    "revision": "2222222222222222222222222222222222222222",
+    "tokenizerRevision": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "artifactManifestDigest": "c53792fd93890a024df00b3d60e6e875831599d090927e92f36c95a0a34815ed",
+    "registeredBy": "OPERATOR",
+    "registeredAt": "2026-11-14T20:40:00.000Z"
+  },
+  "contract": {
+    "contractId": "r10d-audit-contract",
+    "version": "1.0.0",
+    "digest": "1c6de99bfe798dad9551dca7db5a80367403705ddbe19f3b25c4115e21f0ee72",
+    "workloadId": "banking-routing-v1",
+    "environmentId": "r10d-audit-production",
+    "registeredBy": "OPERATOR",
+    "registeredAt": "2026-11-14T20:29:00.000Z",
+    "updatedAt": "2026-11-14T20:29:00.000Z"
+  },
+  "qualification": {
+    "runId": "qualification-4739098b3c98a158c4bb031c",
+    "candidateId": "candidate-r10d-current",
+    "contractId": "r10d-audit-contract",
+    "contractVersion": "1.0.0",
+    "environmentId": "r10d-audit-production",
+    "workloadId": "banking-routing-v1",
+    "status": "COMPLETED",
+    "qualificationState": "QUALIFIED",
+    "blockers": [],
+    "exactArtifactBindingProven": true,
+    "evidenceGraphRootDigest": "dc644a867461bbbdb4baea51ba66599ec1cf274cdc58f4cd6a4f2ac293529029",
+    "policyVersion": "1.0.0",
+    "policyDigest": "d7a32ab506dafa271ff2e59d5073f68c2258c17e7f1ed8a634dd0b9901191596",
+    "evaluationSuite": "banking-routing-v1",
+    "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+    "sourceRefs": [
+      "fixture:explicit-acceptance-evidence"
+    ],
+    "requestedBy": "OPERATOR",
+    "requestedAt": "2026-11-14T20:41:00.000Z",
+    "completedBy": "ADMIN",
+    "completedAt": "2026-11-14T20:42:00.000Z",
+    "replacesDeploymentId": null,
+    "reason": "Case D current release qualification fixture",
+    "requestDigest": "9f86c1a1eb8fc954c17622258f486456d4a8583df2142970bcec8d43b579c729",
+    "completionEvidence": {
+      "schema": "admissary-completion-evidence/v1",
+      "provenance": "FIXTURE",
+      "candidate": {
+        "repositoryOrModelId": "admissary-fixture/current",
+        "revision": "2222222222222222222222222222222222222222",
+        "tokenizerRevision": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "artifactManifestDigest": "c53792fd93890a024df00b3d60e6e875831599d090927e92f36c95a0a34815ed"
+      },
+      "contract": {
+        "id": "r10d-audit-contract",
+        "version": "1.0.0",
+        "digest": "1c6de99bfe798dad9551dca7db5a80367403705ddbe19f3b25c4115e21f0ee72"
+      },
+      "policy": {
+        "version": "1.0.0",
+        "digest": "d7a32ab506dafa271ff2e59d5073f68c2258c17e7f1ed8a634dd0b9901191596"
+      },
+      "evaluation": {
+        "suite": "banking-routing-v1",
+        "digest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2"
+      },
+      "plan": {
+        "contractId": "r10d-audit-contract",
+        "contractVersion": "1.0.0",
+        "evaluationSuite": "banking-routing-v1",
+        "obligations": [
+          {
+            "id": "FIXTURE_DETERMINISTIC",
+            "kind": "DETERMINISTIC",
+            "criticality": "MANDATORY",
+            "evaluator": "acceptance-only/v1",
+            "dependencies": [],
+            "requirement": {
+              "fixture": true
+            }
+          },
+          {
+            "id": "FIXTURE_SEMANTIC",
+            "kind": "SEMANTIC",
+            "criticality": "MANDATORY",
+            "evaluator": "acceptance-only/v1",
+            "dependencies": [],
+            "requirement": {
+              "fixture": true
+            }
+          },
+          {
+            "id": "FIXTURE_EMPIRICAL",
+            "kind": "EMPIRICAL",
+            "criticality": "MANDATORY",
+            "evaluator": "acceptance-only/v1",
+            "dependencies": [],
+            "requirement": {
+              "fixture": true
+            }
+          }
+        ]
+      },
+      "results": [
+        {
+          "obligationId": "FIXTURE_DETERMINISTIC",
+          "kind": "DETERMINISTIC",
+          "criticality": "MANDATORY",
+          "state": "PASS"
+        },
+        {
+          "obligationId": "FIXTURE_SEMANTIC",
+          "kind": "SEMANTIC",
+          "criticality": "MANDATORY",
+          "state": "PASS"
+        },
+        {
+          "obligationId": "FIXTURE_EMPIRICAL",
+          "kind": "EMPIRICAL",
+          "criticality": "MANDATORY",
+          "state": "PASS"
+        }
+      ],
+      "graph": {
+        "rootDigest": "dc644a867461bbbdb4baea51ba66599ec1cf274cdc58f4cd6a4f2ac293529029",
+        "nodes": [
+          {
+            "fixture": true,
+            "evaluator": "acceptance-only/v1",
+            "result": {
+              "obligationId": "FIXTURE_DETERMINISTIC",
+              "kind": "DETERMINISTIC",
+              "criticality": "MANDATORY",
+              "state": "PASS"
+            }
+          },
+          {
+            "fixture": true,
+            "evaluator": "acceptance-only/v1",
+            "result": {
+              "obligationId": "FIXTURE_SEMANTIC",
+              "kind": "SEMANTIC",
+              "criticality": "MANDATORY",
+              "state": "PASS"
+            }
+          },
+          {
+            "fixture": true,
+            "evaluator": "acceptance-only/v1",
+            "result": {
+              "obligationId": "FIXTURE_EMPIRICAL",
+              "kind": "EMPIRICAL",
+              "criticality": "MANDATORY",
+              "state": "PASS"
+            }
+          }
+        ]
+      },
+      "operational": {
+        "p95LatencyMs": 10,
+        "costPerMillionTokensUsd": 2,
+        "modelSizeB": 1
+      },
+      "exactArtifactBindingProven": true,
+      "sourceRefs": [
+        "fixture:explicit-acceptance-evidence"
+      ],
+      "evidenceDigest": "5d27558fe8f3118ee7037516c7b5612885eb82f92ab5c840b84564db90eaafa6"
+    }
+  },
+  "decision": {
+    "allowed": false,
+    "reasons": [
+      "LIFECYCLE_REVOKED",
+      "APPROVAL_REVOKED"
+    ],
+    "lifecycleState": "REVOKED",
+    "monitoringStatus": "HEALTHY",
+    "approvalState": "REVOKED",
+    "approvalId": "approval-3092cab5432082ff9613cd6a",
+    "approvalExpiresAt": null,
+    "identityDigest": "44c0ab7e12ec780665eb4b98f7eb19dd9ac799dae2afbd2b2a4d31e0c1e8e26c"
+  },
+  "approval": {
+    "approvalId": "approval-3092cab5432082ff9613cd6a",
+    "scope": {
+      "deploymentId": "deployment-r10d-current",
+      "qualificationRunId": "qualification-4739098b3c98a158c4bb031c",
+      "environmentId": "r10d-audit-production",
+      "workloadId": "banking-routing-v1",
+      "candidateIdentityDigest": "f57f45e958bf0dc3d23e500ad25488cb5677bacacc79ab9f2755cc56b91d03a8",
+      "contractDigest": "1c6de99bfe798dad9551dca7db5a80367403705ddbe19f3b25c4115e21f0ee72",
+      "policyDigest": "d7a32ab506dafa271ff2e59d5073f68c2258c17e7f1ed8a634dd0b9901191596",
+      "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+      "evidenceGraphRootDigest": "dc644a867461bbbdb4baea51ba66599ec1cf274cdc58f4cd6a4f2ac293529029",
+      "fullIdentityDigest": "44c0ab7e12ec780665eb4b98f7eb19dd9ac799dae2afbd2b2a4d31e0c1e8e26c"
+    },
+    "state": "REVOKED",
+    "actorId": "APPROVER",
+    "issuedAt": "2026-11-14T20:44:00.000Z",
+    "expiresAt": null,
+    "stateChangedAt": "2026-11-14T20:50:00.000Z",
+    "reason": "Incident response: current release revoked; investigate and roll back"
+  },
+  "attestation": {
+    "attestationId": "attestation-5f11f815d741fbb813ffefba",
+    "deploymentId": "deployment-r10d-current",
+    "attestation": {
+      "schema": "admissary-signed-attestation/v1",
+      "algorithm": "Ed25519",
+      "keyId": "r10d-candidate-r10d-current-key",
+      "statement": {
+        "_type": "https://in-toto.io/Statement/v1",
+        "subject": [
+          {
+            "name": "admissary-fixture/current@2222222222222222222222222222222222222222",
+            "digest": {
+              "sha256": "f57f45e958bf0dc3d23e500ad25488cb5677bacacc79ab9f2755cc56b91d03a8"
+            }
+          }
+        ],
+        "predicateType": "https://admissary.dev/attestation/qualification/v2",
+        "predicate": {
+          "operationalScope": {
+            "deploymentId": "deployment-r10d-current",
+            "qualificationRunId": "qualification-4739098b3c98a158c4bb031c",
+            "environmentId": "r10d-audit-production",
+            "workloadId": "banking-routing-v1"
+          },
+          "manifest": {
+            "schema": "qualification-manifest/v1",
+            "candidate": {
+              "repository": "admissary-fixture/current",
+              "revision": "2222222222222222222222222222222222222222",
+              "tokenizerRevision": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "artifactManifestDigest": "c53792fd93890a024df00b3d60e6e875831599d090927e92f36c95a0a34815ed"
+            },
+            "contract": {
+              "id": "r10d-audit-contract",
+              "version": "1.0.0",
+              "digest": "1c6de99bfe798dad9551dca7db5a80367403705ddbe19f3b25c4115e21f0ee72"
+            },
+            "policyPack": {
+              "version": "1.0.0",
+              "digest": "d7a32ab506dafa271ff2e59d5073f68c2258c17e7f1ed8a634dd0b9901191596"
+            },
+            "evaluation": {
+              "suite": "banking-routing-v1",
+              "digest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2"
+            },
+            "evidenceGraph": {
+              "rootDigest": "dc644a867461bbbdb4baea51ba66599ec1cf274cdc58f4cd6a4f2ac293529029"
+            },
+            "qualification": {
+              "state": "QUALIFIED"
+            },
+            "authorization": {
+              "state": "APPROVED"
+            },
+            "validity": {
+              "state": "CURRENT"
+            },
+            "manifestDigest": "9484efff3afafa387e1fd98594045794b8cff3d1e22e692cb7d0212fd855dcb6"
+          },
+          "manifestDigest": "9484efff3afafa387e1fd98594045794b8cff3d1e22e692cb7d0212fd855dcb6",
+          "deploymentContextDigest": "0d04246a6dc2a72a6445694612c9a545009e788969ad2d5b83c961efb3fc0dd4",
+          "exactArtifactBindingProven": true,
+          "issuedAt": "2026-11-14T20:40:00.000Z",
+          "issuer": {
+            "keyId": "r10d-candidate-r10d-current-key"
+          }
+        }
+      },
+      "statementDigest": "22d7f795a56e5f064a0b6df4bb971d5a7f3223c7c8540a9031c2189cfb93abaa",
+      "signature": "yQxRaad5h367rBpgAmy+GKjUSuPzJMb6BswAq0ZVhMaYHWd7lDWNQBVyzCyPzopPWFC4xulXE+xXUNOKcgHyDw==",
+      "envelopeDigest": "5f11f815d741fbb813ffefbac5fb12e61a0370fb60b29f21ce0bd783701f14ed"
+    },
+    "attestationDigest": "5f11f815d741fbb813ffefbac5fb12e61a0370fb60b29f21ce0bd783701f14ed",
+    "recordedBy": "ADMIN",
+    "recordedAt": "2026-11-14T20:45:00.000Z"
+  },
+  "exactIdentity": {
+    "repositoryOrModelId": "admissary-fixture/current",
+    "revision": "2222222222222222222222222222222222222222",
+    "tokenizerRevision": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "artifactManifestDigest": "c53792fd93890a024df00b3d60e6e875831599d090927e92f36c95a0a34815ed",
+    "contractDigest": "1c6de99bfe798dad9551dca7db5a80367403705ddbe19f3b25c4115e21f0ee72",
+    "policyDigest": "d7a32ab506dafa271ff2e59d5073f68c2258c17e7f1ed8a634dd0b9901191596",
+    "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+    "evidenceGraphRootDigest": "dc644a867461bbbdb4baea51ba66599ec1cf274cdc58f4cd6a4f2ac293529029",
+    "environmentId": "r10d-audit-production",
+    "workloadId": "banking-routing-v1"
+  },
+  "timeline": [
+    {
+      "recordedAt": "2026-11-15T08:44:53.013Z",
+      "appendSequence": 25,
+      "orderBasis": "SERVER_RECORDED_TIME",
+      "occurredAt": "2026-11-14T20:41:00.000Z",
+      "source": "PRODUCT",
+      "type": "QUALIFICATION_REQUESTED",
+      "actorId": "OPERATOR",
+      "detail": "candidate=candidate-r10d-current; contract=r10d-audit-contract@1.0.0; execution=REQUESTED_NOT_RUN"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:53.079Z",
+      "appendSequence": 26,
+      "orderBasis": "SERVER_RECORDED_TIME",
+      "occurredAt": "2026-11-14T20:42:00.000Z",
+      "source": "PRODUCT",
+      "type": "QUALIFICATION_COMPLETED",
+      "actorId": "ADMIN",
+      "detail": "state=QUALIFIED; exactBinding=true; evidence=dc644a867461bbbdb4baea51ba66599ec1cf274cdc58f4cd6a4f2ac293529029"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:53.110Z",
+      "appendSequence": 27,
+      "orderBasis": "SERVER_RECORDED_TIME",
+      "occurredAt": "2026-11-14T20:43:00.000Z",
+      "source": "PRODUCT",
+      "type": "DEPLOYMENT_PROVISIONING",
+      "actorId": "OPERATOR",
+      "detail": "qualification=qualification-4739098b3c98a158c4bb031c"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:53.135Z",
+      "appendSequence": 6,
+      "orderBasis": "SERVER_RECORDED_TIME",
+      "occurredAt": "2026-11-14T20:43:00.000Z",
+      "source": "ASSURANCE",
+      "type": "DEPLOYMENT_REGISTERED",
+      "actorId": null,
+      "detail": "identity=44c0ab7e12ec780665eb4b98f7eb19dd9ac799dae2afbd2b2a4d31e0c1e8e26c"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:53.152Z",
+      "appendSequence": 28,
+      "orderBasis": "SERVER_RECORDED_TIME",
+      "occurredAt": "2026-11-14T20:43:00.000Z",
+      "source": "PRODUCT",
+      "type": "DEPLOYMENT_ACTIVE",
+      "actorId": "OPERATOR",
+      "detail": "qualification=qualification-4739098b3c98a158c4bb031c; reconciledMatchingProvisioning=true"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:53.208Z",
+      "appendSequence": 7,
+      "orderBasis": "SERVER_RECORDED_TIME",
+      "occurredAt": "2026-11-14T20:44:00.000Z",
+      "source": "ASSURANCE",
+      "type": "APPROVAL_GRANTED",
+      "actorId": null,
+      "detail": "approval=approval-3092cab5432082ff9613cd6a; scope=44c0ab7e12ec780665eb4b98f7eb19dd9ac799dae2afbd2b2a4d31e0c1e8e26c"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:53.265Z",
+      "appendSequence": 29,
+      "orderBasis": "SERVER_RECORDED_TIME",
+      "occurredAt": "2026-11-14T20:45:00.000Z",
+      "source": "PRODUCT",
+      "type": "ATTESTATION_RECORDED",
+      "actorId": "ADMIN",
+      "detail": "attestation=attestation-5f11f815d741fbb813ffefba"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:53.420Z",
+      "appendSequence": 8,
+      "orderBasis": "SERVER_RECORDED_TIME",
+      "occurredAt": "2026-11-14T20:50:00.000Z",
+      "source": "ASSURANCE",
+      "type": "APPROVAL_REVOKED",
+      "actorId": null,
+      "detail": "approval-3092cab5432082ff9613cd6a; actor=APPROVER; Incident response: current release revoked; investigate and roll back"
+    }
+  ],
+  "rollbackTargets": [
+    {
+      "deploymentId": "deployment-r10d-baseline",
+      "candidateId": "candidate-r10d-baseline",
+      "candidateDisplayName": "R10D BASELINE exact acceptance candidate",
+      "candidateRepositoryOrModelId": "admissary-fixture/baseline",
+      "candidateRevision": "1111111111111111111111111111111111111111",
+      "qualificationRunId": "qualification-a71dd01c05a9d8dc66b54787",
+      "contractId": "r10d-audit-contract",
+      "contractVersion": "1.0.0",
+      "attestationDigest": "9144d6029edaccb6d92de0aa2f0562ab8d507ac41e3432d934896c8763c59b8c",
+      "approvalId": "approval-6cb0837e835a2e981ab78387",
+      "createdAt": "2026-11-14T20:33:00.000Z",
+      "reason": "QUALIFIED_EXACT_BOUND_APPROVED_CURRENT_ATTESTED_SAME_SCOPE"
+    }
+  ],
+  "auditDigest": "04034ff0ad60f92c92fc6c18d1d6b73a6827e0a761eeb492540b9dcbacdc9c69"
+}

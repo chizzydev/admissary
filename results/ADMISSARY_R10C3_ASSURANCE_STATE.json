@@ -1,0 +1,297 @@
+{
+  "schema": "admissary-continuous-assurance/v1",
+  "revision": 10,
+  "deployments": [
+    {
+      "deploymentId": "case-b-exact-deployment",
+      "qualificationRunId": "r10c3-requalified-fixture-run",
+      "qualificationState": "QUALIFIED",
+      "exactArtifactBindingProven": true,
+      "identity": {
+        "candidateRepository": "fixture/qualified-model",
+        "candidateRevision": "changed-after-approval",
+        "tokenizerRevision": "89abcdef0123456789abcdef0123456789abcdef",
+        "artifactManifestDigest": "f1589211c168272d0cdccabc9156994811224f929bad042845a1d1580ed4d1bf",
+        "contractId": "banking-support-prod",
+        "contractVersion": "1.0.0",
+        "contractDigest": "3fe08a35055e4d5fff40fb9b0325b772a44d358ec5adaa8308b7bc9dd5381ba4",
+        "policyVersion": "1.0.0",
+        "policyDigest": "d7a32ab506dafa271ff2e59d5073f68c2258c17e7f1ed8a634dd0b9901191596",
+        "evaluationSuite": "banking-routing-v1",
+        "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+        "evidenceGraphRootDigest": "requalified-graph-root",
+        "environmentId": "acceptance-production",
+        "workloadId": "banking-routing"
+      },
+      "lifecycleState": "EXPIRED",
+      "activeApprovalId": "approval-45a0f141de280c4fcd8985ce",
+      "monitoringStatus": "HEALTHY",
+      "monitoringPolicy": {
+        "maxEvidenceAgeMs": 3600000,
+        "failClosedWhenOverdue": true
+      },
+      "lastSuccessfulCheckAt": "2026-11-14T20:30:00.000Z",
+      "lastCheckAt": "2026-11-14T20:30:00.000Z",
+      "latestInvalidatedNodes": [],
+      "createdAt": "2026-11-14T20:00:00.000Z",
+      "updatedAt": "2026-11-14T21:48:00.000Z"
+    },
+    {
+      "deploymentId": "revocation-fixture",
+      "qualificationRunId": "revocation-qualified-run",
+      "qualificationState": "QUALIFIED",
+      "exactArtifactBindingProven": true,
+      "identity": {
+        "candidateRepository": "fixture/qualified-model",
+        "candidateRevision": "0123456789abcdef0123456789abcdef01234567",
+        "tokenizerRevision": "89abcdef0123456789abcdef0123456789abcdef",
+        "artifactManifestDigest": "f1589211c168272d0cdccabc9156994811224f929bad042845a1d1580ed4d1bf",
+        "contractId": "banking-support-prod",
+        "contractVersion": "1.0.0",
+        "contractDigest": "3fe08a35055e4d5fff40fb9b0325b772a44d358ec5adaa8308b7bc9dd5381ba4",
+        "policyVersion": "1.0.0",
+        "policyDigest": "d7a32ab506dafa271ff2e59d5073f68c2258c17e7f1ed8a634dd0b9901191596",
+        "evaluationSuite": "banking-routing-v1",
+        "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+        "evidenceGraphRootDigest": "08c3d3b604cc7893e097351276547bc668e67d32934788ec62fd1f9b483e5124",
+        "environmentId": "revocation-environment",
+        "workloadId": "banking-routing"
+      },
+      "lifecycleState": "REVOKED",
+      "activeApprovalId": "approval-8c3efb7fc8cb4340ecc4e0f7",
+      "monitoringStatus": "HEALTHY",
+      "monitoringPolicy": {
+        "maxEvidenceAgeMs": 3600000,
+        "failClosedWhenOverdue": true
+      },
+      "lastSuccessfulCheckAt": "2026-11-14T20:00:00.000Z",
+      "lastCheckAt": "2026-11-14T20:00:00.000Z",
+      "latestInvalidatedNodes": [],
+      "createdAt": "2026-11-14T20:00:00.000Z",
+      "updatedAt": "2026-11-14T20:15:00.000Z"
+    }
+  ],
+  "approvals": [
+    {
+      "approvalId": "approval-80ba0dc8947ebb4da204e089",
+      "scope": {
+        "deploymentId": "case-b-exact-deployment",
+        "qualificationRunId": "r10c3-qualified-fixture-run",
+        "environmentId": "acceptance-production",
+        "workloadId": "banking-routing",
+        "candidateIdentityDigest": "cb7b59ab6f968a3564c564eaac268e4ec6934414502a0a8aa3a18aead3c63c12",
+        "contractDigest": "3fe08a35055e4d5fff40fb9b0325b772a44d358ec5adaa8308b7bc9dd5381ba4",
+        "policyDigest": "d7a32ab506dafa271ff2e59d5073f68c2258c17e7f1ed8a634dd0b9901191596",
+        "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+        "evidenceGraphRootDigest": "08c3d3b604cc7893e097351276547bc668e67d32934788ec62fd1f9b483e5124",
+        "fullIdentityDigest": "71cc7a0cb6691754b46ca74e2930dd4baa1757eb05dd035e9f6cf35900fa8d24"
+      },
+      "state": "APPROVED",
+      "actorId": "acceptance-approver",
+      "issuedAt": "2026-11-14T20:01:00.000Z",
+      "expiresAt": "2026-11-14T22:01:00.000Z",
+      "stateChangedAt": "2026-11-14T20:01:00.000Z",
+      "reason": "Acceptance fixture exact deployment approved"
+    },
+    {
+      "approvalId": "approval-45a0f141de280c4fcd8985ce",
+      "scope": {
+        "deploymentId": "case-b-exact-deployment",
+        "qualificationRunId": "r10c3-requalified-fixture-run",
+        "environmentId": "acceptance-production",
+        "workloadId": "banking-routing",
+        "candidateIdentityDigest": "46e0a22439165511fd83feb5c470cb867b4d6f329743c8383b7a7a5e5d5b0c5b",
+        "contractDigest": "3fe08a35055e4d5fff40fb9b0325b772a44d358ec5adaa8308b7bc9dd5381ba4",
+        "policyDigest": "d7a32ab506dafa271ff2e59d5073f68c2258c17e7f1ed8a634dd0b9901191596",
+        "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+        "evidenceGraphRootDigest": "requalified-graph-root",
+        "fullIdentityDigest": "6d50ea85d86d7ef8c11dd2d3a812bdb387202ec025d1c16ffefed0675791c98e"
+      },
+      "state": "EXPIRED",
+      "actorId": "acceptance-approver-2",
+      "issuedAt": "2026-11-14T20:47:00.000Z",
+      "expiresAt": "2026-11-14T21:47:00.000Z",
+      "stateChangedAt": "2026-11-14T21:48:00.000Z",
+      "reason": "Approved requalified exact deployment"
+    },
+    {
+      "approvalId": "approval-8c3efb7fc8cb4340ecc4e0f7",
+      "scope": {
+        "deploymentId": "revocation-fixture",
+        "qualificationRunId": "revocation-qualified-run",
+        "environmentId": "revocation-environment",
+        "workloadId": "banking-routing",
+        "candidateIdentityDigest": "cb7b59ab6f968a3564c564eaac268e4ec6934414502a0a8aa3a18aead3c63c12",
+        "contractDigest": "3fe08a35055e4d5fff40fb9b0325b772a44d358ec5adaa8308b7bc9dd5381ba4",
+        "policyDigest": "d7a32ab506dafa271ff2e59d5073f68c2258c17e7f1ed8a634dd0b9901191596",
+        "evaluationDigest": "8eb57a06283737e394409976cf6bfb011c6537e53c64935065021f5ba39ae5f2",
+        "evidenceGraphRootDigest": "08c3d3b604cc7893e097351276547bc668e67d32934788ec62fd1f9b483e5124",
+        "fullIdentityDigest": "4a25a7809733f1208f402ec9306072900473cc9a8c495a13b721e03dd21204f8"
+      },
+      "state": "REVOKED",
+      "actorId": "security-approver",
+      "issuedAt": "2026-11-14T20:01:00.000Z",
+      "expiresAt": null,
+      "stateChangedAt": "2026-11-14T20:15:00.000Z",
+      "reason": "Incident response"
+    }
+  ],
+  "watchChecks": [
+    {
+      "checkId": "watch-a59deb3abd5b5173fe7de646",
+      "deploymentId": "case-b-exact-deployment",
+      "source": "HUGGING_FACE",
+      "outcome": "CHECK_ERROR",
+      "checkedAt": "2026-11-14T20:10:00.000Z",
+      "previousSnapshotDigest": "acceptance-previous-snapshot",
+      "currentSnapshotDigest": null,
+      "changes": [],
+      "invalidatedNodes": [],
+      "errorCode": "HF_TIMEOUT",
+      "errorDetail": "Controlled monitoring outage"
+    },
+    {
+      "checkId": "watch-1abfc900d3e602cb6564b091",
+      "deploymentId": "case-b-exact-deployment",
+      "source": "HUGGING_FACE",
+      "outcome": "MATERIAL_CHANGE",
+      "checkedAt": "2026-11-14T20:30:00.000Z",
+      "previousSnapshotDigest": "bde39d170a17d1e204ebd955e52420af236a41e8e86e1d33d0dfdbefd0e102d5",
+      "currentSnapshotDigest": "4b7194c8377907c99128a601da3e60f0dca6e08e82c42b1c5308873cfba1fa90",
+      "changes": [
+        "REPOSITORY_REVISION"
+      ],
+      "invalidatedNodes": [
+        "control:license-policy",
+        "control:workload",
+        "decision:qualification",
+        "evaluation:workload",
+        "evidence:artifact",
+        "source:artifact"
+      ],
+      "errorCode": null,
+      "errorDetail": null
+    }
+  ],
+  "reassessments": [
+    {
+      "requestId": "reassessment-ea679b835e161981f911ed97",
+      "deploymentId": "case-b-exact-deployment",
+      "previousQualificationRunId": "r10c3-qualified-fixture-run",
+      "requestedAt": "2026-11-14T20:30:00.000Z",
+      "reason": "Model revision changed after approval",
+      "invalidatedNodes": [
+        "control:license-policy",
+        "control:workload",
+        "decision:qualification",
+        "evaluation:workload",
+        "evidence:artifact",
+        "source:artifact"
+      ],
+      "status": "COMPLETED",
+      "completedAt": "2026-11-14T20:45:00.000Z",
+      "replacementQualificationRunId": "r10c3-requalified-fixture-run"
+    }
+  ],
+  "events": [
+    {
+      "recordedAt": "2026-11-15T08:44:46.191Z",
+      "appendSequence": 1,
+      "eventId": "deployment_registered-e79ab7705f340f3b30e1f425",
+      "deploymentId": "case-b-exact-deployment",
+      "occurredAt": "2026-11-14T20:00:00.000Z",
+      "type": "DEPLOYMENT_REGISTERED",
+      "detail": "identity=71cc7a0cb6691754b46ca74e2930dd4baa1757eb05dd035e9f6cf35900fa8d24"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:46.203Z",
+      "appendSequence": 2,
+      "eventId": "approval_granted-8793e40df0f9c0ed51229a63",
+      "deploymentId": "case-b-exact-deployment",
+      "occurredAt": "2026-11-14T20:01:00.000Z",
+      "type": "APPROVAL_GRANTED",
+      "detail": "approval=approval-80ba0dc8947ebb4da204e089; scope=71cc7a0cb6691754b46ca74e2930dd4baa1757eb05dd035e9f6cf35900fa8d24"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:46.215Z",
+      "appendSequence": 3,
+      "eventId": "watch_error-007d3a1d3991efa53ab36008",
+      "deploymentId": "case-b-exact-deployment",
+      "occurredAt": "2026-11-14T20:10:00.000Z",
+      "type": "WATCH_ERROR",
+      "detail": "HF_TIMEOUT: Controlled monitoring outage"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:46.228Z",
+      "appendSequence": 4,
+      "eventId": "material_change_detected-f4d876597ba43707d781e3d2",
+      "deploymentId": "case-b-exact-deployment",
+      "occurredAt": "2026-11-14T20:30:00.000Z",
+      "type": "MATERIAL_CHANGE_DETECTED",
+      "detail": "REPOSITORY_REVISION; invalidated=control:license-policy,control:workload,decision:qualification,evaluation:workload,evidence:artifact,source:artifact"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:46.229Z",
+      "appendSequence": 5,
+      "eventId": "reassessment_requested-5f2c4e48f794baa95832c30f",
+      "deploymentId": "case-b-exact-deployment",
+      "occurredAt": "2026-11-14T20:30:00.000Z",
+      "type": "REASSESSMENT_REQUESTED",
+      "detail": "reassessment-ea679b835e161981f911ed97"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:46.243Z",
+      "appendSequence": 6,
+      "eventId": "reassessment_completed-c2aa301e10785d0175612c5d",
+      "deploymentId": "case-b-exact-deployment",
+      "occurredAt": "2026-11-14T20:45:00.000Z",
+      "type": "REASSESSMENT_COMPLETED",
+      "detail": "reassessment-ea679b835e161981f911ed97; replacement=r10c3-requalified-fixture-run; qualification=QUALIFIED"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:46.254Z",
+      "appendSequence": 7,
+      "eventId": "approval_granted-a70407518564bddb3bd23bf2",
+      "deploymentId": "case-b-exact-deployment",
+      "occurredAt": "2026-11-14T20:47:00.000Z",
+      "type": "APPROVAL_GRANTED",
+      "detail": "approval=approval-45a0f141de280c4fcd8985ce; scope=6d50ea85d86d7ef8c11dd2d3a812bdb387202ec025d1c16ffefed0675791c98e"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:46.266Z",
+      "appendSequence": 8,
+      "eventId": "approval_expired-d72503e512baa389f24ac42a",
+      "deploymentId": "case-b-exact-deployment",
+      "occurredAt": "2026-11-14T21:48:00.000Z",
+      "type": "APPROVAL_EXPIRED",
+      "detail": "approval-45a0f141de280c4fcd8985ce"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:46.277Z",
+      "appendSequence": 9,
+      "eventId": "deployment_registered-c3fabda15e4da4ddf2af23b7",
+      "deploymentId": "revocation-fixture",
+      "occurredAt": "2026-11-14T20:00:00.000Z",
+      "type": "DEPLOYMENT_REGISTERED",
+      "detail": "identity=4a25a7809733f1208f402ec9306072900473cc9a8c495a13b721e03dd21204f8"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:46.287Z",
+      "appendSequence": 10,
+      "eventId": "approval_granted-fb370cd0c6e0bd470d9fa06c",
+      "deploymentId": "revocation-fixture",
+      "occurredAt": "2026-11-14T20:01:00.000Z",
+      "type": "APPROVAL_GRANTED",
+      "detail": "approval=approval-8c3efb7fc8cb4340ecc4e0f7; scope=4a25a7809733f1208f402ec9306072900473cc9a8c495a13b721e03dd21204f8"
+    },
+    {
+      "recordedAt": "2026-11-15T08:44:46.295Z",
+      "appendSequence": 11,
+      "eventId": "approval_revoked-e1193d62b72ed32e2a70049a",
+      "deploymentId": "revocation-fixture",
+      "occurredAt": "2026-11-14T20:15:00.000Z",
+      "type": "APPROVAL_REVOKED",
+      "detail": "approval-8c3efb7fc8cb4340ecc4e0f7; actor=security; Incident response"
+    }
+  ]
+}
