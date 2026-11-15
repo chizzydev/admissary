@@ -89,10 +89,15 @@ button:disabled {
   margin-top:5px
 }
 .mark {
-  background:var(--ink);
-  color:var(--paper);
-  padding:4px 7px;
-  font:23px Georgia
+  flex:0 0 41.21875px;
+  width:41.21875px;
+}
+.mark img {
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:1;
+  object-fit:contain;
 }
 .eyebrow {
   font-size:12px;
